@@ -1,0 +1,18 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mjbook}
+
+\newcounter{problem}[chapter]
+\renewcommand{\theproblem}{\thechapter.\arabic{problem}}
+
+\newenvironment{problem}{
+	\refstepcounter{problem}
+	\par\noindent\textbf{Problem \theproblem. }\itshape
+}{
+	\par
+}
+
+\newenvironment{solution}{
+	\par\noindent\textbf{Solution. }
+}{
+	\par
+}
