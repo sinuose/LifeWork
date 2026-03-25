@@ -1,8 +1,14 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{mjbook}
-
+% problem env
 \newcounter{problem}[chapter]
 \renewcommand{\theproblem}{\thechapter.\arabic{problem}}
+% defintion env
+\newcounter{definition}[chapter]
+\renewcommand{\thedefinition}{\thechapter.\arabic{definition}}
+% theorem env
+\newcounter{theorem}[chapter]
+\renewcommand{\thetheorem}{\thechapter.\arabic{theorem}}
 
 \newenvironment{problem}{
 	\refstepcounter{problem}
@@ -13,6 +19,20 @@
 
 \newenvironment{solution}{
 	\par\noindent\textbf{Solution. }
+}{
+	\par
+}
+
+\newenvironment{definition}{
+	\refstepcounter{definition}
+	\par\noindent\textbf{Definition \thedefinition. }\itshape
+}{
+	\par
+}
+
+\newenvironment{theorem}{
+	\refstepcounter{theorem}
+	\par\noindent\textbf{Theorem \thetheorem. }\itshape
 }{
 	\par
 }

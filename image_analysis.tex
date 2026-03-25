@@ -1,0 +1,74 @@
+\chapter{Digital Image Theory and Application}
+
+I have been working on images at my lab for quite some time now. This is a summary and documentation of the things i have learned while on the job. 
+
+\section{Images as a Hilbert Space}
+
+At its core, images are taken by a camera array, which contains \textit{pixels}. Each pixel is one point of the image, or a binning of millions of photons hitting the image, creating a smooth description of some object being photographed. Definitions of the image can be done in 2 ways; theoretical and practical.
+\begin{definition}
+    Let $f(x,y,z)$ be a field in $\mathbb{R}^3$. Let $\hat P$ be the projection operator such that $\hat P:\mathbb{R}^3 \rightarrow L_2(\mathbb{R}^2)$. Then the digital image is defined as $g(x,y) = \hat{P}f(x,y,z)$.
+\end{definition}
+the results of this defintion imply that the dimension $z$ is integrated out. For instance, images of physical objects are the integration of the density function of space, $\rho(x,y,z)$, or when using a light emission system, the optical field density $I(x,y,z)$.
+
+This defintion of the image lives in the vector-space of $\mathbb{R}^2$, which allows for a set of known transformations. Affine transformations are defined by a transformation matrix $\mathbf{T}$ and a shift $\vec{v}$. 
+\begin{equation}
+    f_T(\vec{x}) = f(\mathbf{T}^{-1}(\vec{x}) + \vec{b})
+\end{equation}
+
+For group transformations, we can define the action $(g\circ f)(\vec{x}) = f(g^{-1}\vec{x})$. This definition implies linearity for sums of scalar transformations of images;
+\begin{equation}
+    g (af_1 + bf_2) = a(g \circ f_1) + b (g \circ f_2)
+\end{equation}
+Furthermore, we can define the group as being part of $SO(2)$. This group includes the rotation matrices, which gives the norm-preservation property;
+\begin{equation}
+    |g\circ f| = |f|_{L_2}
+\end{equation}
+
+Naturally, the functions we produce want to have some sense of similarity between them. Ie, how similar are two images? To do this, we can re-use the idea of a generalized angle. Two images can be the same in terms of angle, but have different magnitudes. This can be interpretted as a measure in distance. From QM, we know that a square-integratable set of functions with angle and distance are defined in the Hilbert space.
+\begin{definition}
+    Let $\mathscr{H}$ denote the Hilbert space; Elements of $\mathscr{H}$ must satisfy the following criteria. Let $a,b \in \mathscr{H}$:
+    \begin{enumerate}
+        \item Elements have an inner product: $\langle a, b \rangle$
+        \item  Norm Property: $\langle a, a \rangle > 0$
+        \item  Zero Property: $\langle a, a \rangle = 0$ if $x=0$
+        \item Inner product commutation: $\langle a, b \rangle = \langle b, a \rangle^*$
+        \item Linearity for constants: $\langle a, e_1b_1 + e_2b_2 \rangle = e_1^*\langle a, b_1 \rangle + e_2^*\langle a, b_2 \rangle$
+        \item  Angle: $A(a,b) = \langle a,b \rangle$
+        \item Distance: $d(a,b) = \sqrt{\langle a-b,a-b \rangle}$
+    \end{enumerate}
+\end{definition}
+
+From QM, we know about the existence of unitary operators. Below is a defintion that we can use to define rotation operations.
+\begin{definition}
+    Let $U$ be a unitary operator acting on $f$. $U_\theta : L_2(\mathbb{R}^2) \rightarrow L_2(\mathbb{R}^2)$ such that the norm is preserved $|U_\theta f| = |f|$.
+\end{definition}
+
+\subsection{Rotational Symmetry}
+
+Let $U_\theta$ be a unitary rotation operator in $SO(2)$.
+
+We can define exact symmetry as an identical copy due to rotations; $U_\theta f = f$. We know that our images will contain some noise; $U_\theta (f + \eta) = f + U_\theta \eta$. These disturbances will not be symmetrical. 
+
+\begin{definition}
+    Let the rotational symmetry be defined as how similar the image is to its rotated counterparts normalized by the norm of the image. 
+    \begin{equation}
+        S(f) = \sup_\theta \frac{\langle f, U_\theta f\rangle}{|f|^2} = 1 - \inf_\theta \frac{| f- U_\theta f|}{|f|}
+    \end{equation}
+    We can also define the maximum symmetry being $S(f) = 1$, whereas minimum symmetry, or a total orthogonal set, $S(f) = 0$.
+\end{definition}
+This function is bounded on $[0, 1]$. The supremum clause defines the largest possible deviations from a perfect symmetry. 
+
+This definition uses the auto-correlation of the image with its rotational counter-part, however, integrates over the radial-ness of the image. For parts of the image that are only radially symetric for a set of angles, we can define the measure over a radial average;
+
+For instance, say that the image is symmetric over a wide range of angles, but contains portions where the symmetry is broken by a mis-alignment or blip, these would be integrated over in the symmetry measure. 
+
+\begin{definition}
+    Let the radial average be defined as the integral over angles $\theta_0$.
+    \begin{equation}
+        f_0(r, \Delta \theta, \theta_0) = \frac{1}{2\pi}\int_{\theta_0}^{\theta_0 + \Delta \theta}f(r,\theta) d\theta 
+    \end{equation}
+    Then, define the symmetry metric as the ratio between the norm of the image, and the norm of the radial averaged-portion;
+    \begin{equation}
+        S(r,\theta_0, \Delta \theta) = \frac{|f_0|^2}{|f|^2}
+    \end{equation}
+\end{definition}
