@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.8)  29 MAR 2026 23:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.8)  30 MAR 2026 22:52
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -189,20 +189,20 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -261,18 +261,18 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 (C:\Users\mj\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 16.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
 
  (C:\Users\mj\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 16.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
 
 
 (C:\Users\mj\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 16
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 22
 .
 
 (C:\Users\mj\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
@@ -293,12 +293,19 @@ Chapter 1.
 ]
 Chapter 2.
 [5]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 38--38
+ []   
+ []
 
- [6])
-(probability.tex [7] [8
 
-]
+Underfull \vbox (badness 1424) has occurred while \output is active []
+
+ [6]
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 84--84
+ []   
+ []
+
+[7]) (probability.tex [8]
 Chapter 3.
 <figures/probability/prob_birthday.pdf, id=42, 462.52798pt x 346.89601pt>
 File: figures/probability/prob_birthday.pdf Graphic file (type pdf)
@@ -309,7 +316,9 @@ ine 23.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (image_analysis.tex [9] [10 <./figures/probability/prob_birthday.pdf>]
+) (image_analysis.tex [9
+
+] [10 <./figures/probability/prob_birthday.pdf>]
 Chapter 4.
 [11
 
@@ -320,13 +329,13 @@ L3 programming layer <2025-12-24>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4069 strings out of 467871
- 61392 string characters out of 5419829
- 481783 words of memory out of 5000000
- 32886 multiletter control sequences out of 15000+600000
+ 4073 strings out of 467871
+ 61485 string characters out of 5419829
+ 481834 words of memory out of 5000000
+ 32890 multiletter control sequences out of 15000+600000
  638804 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,10n,65p,1087b,297s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,10n,65p,1087b,295s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/mj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmb
 x10.pfb><C:/Users/mj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
 cm/cmbx12.pfb><C:/Users/mj/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
@@ -346,7 +355,7 @@ s/mj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C
 bm10.pfb><C:/Users/mj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
 /symbols/msbm7.pfb><C:/Users/mj/AppData/Local/Programs/MiKTeX/fonts/type1/publi
 c/rsfs/rsfs10.pfb>
-Output written on main.pdf (12 pages, 233628 bytes).
+Output written on main.pdf (12 pages, 235723 bytes).
 PDF statistics:
  159 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

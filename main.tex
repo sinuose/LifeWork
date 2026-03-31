@@ -6,7 +6,13 @@
 \usepackage{mathrsfs}
 \usepackage{graphicx}
 
-
+\newcommand{\fullpageboxline}[1][1.5em]{%
+	\vspace{#1}%                      % Vertical margin above
+	\noindent\hspace{2cm}%            % Left horizontal margin
+	\makebox[\dimexpr\linewidth-4cm\relax]{\dotfill}% % Dotted line
+	\hspace{2cm}%                     % Right horizontal margin
+	\vspace{#1}%                      % Vertical margin below
+}
 \usepackage{mjbook}
 
 \title{Martin's Life Work}
