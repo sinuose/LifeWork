@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1774464921.85747 "/Users/korsk/Documents/Github/LifeWork/main.tex" "main.pdf" "main" 1774464922.29302 0
-  "/Users/korsk/Documents/Github/LifeWork/main.tex" 1774463112.68574 413 aeb95896b877f376c496f0b40a06cb30 ""
+["pdflatex"] 1774651698.14166 "/Users/korsk/Documents/Github/LifeWork/main.tex" "main.pdf" "main" 1774651698.57687 0
+  "/Users/korsk/Documents/Github/LifeWork/main.tex" 1774651697.41105 499 f57b0966d8f53eeab3d72d7d4408c40b ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -40,6 +40,7 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb" 1248133631 35022 e40946b20bfdcd1099eafb2bcd9f25dd ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
@@ -50,6 +51,9 @@
   "/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty" 1734129479 7984 7dbb9280f03c0a315425f1b4f35d43ee ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty" 1572645307 1057 525c2192b5febbd8c1f662c9468335bb ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty" 1701727651 17865 1a9bd36b4f98178fa551aca822290953 ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty" 1160617237 26750 ce139c05a983e19ddca355b43e29c395 ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty" 1160617237 3457 d9077efe6b74c5a094199256af8d7d9a ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/algorithms/algorithm.sty" 1251330371 3249 15763257e50278eef5db1952ccde229c ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty" 1359763108 5949 3f3fd50a8cc94c3d4cbf4fc66cd3df1c ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty" 1359763108 13829 94730e64147574077f8ecfea9bb69af4 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd" 1359763108 961 6518c6525a34feb5e8250ffa91731cff ""
@@ -61,6 +65,7 @@
   "/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty" 1717359999 2444 71618ea5f2377e33b04fb97afdd0eac2 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/base/bk10.clo" 1738182759 8288 9e3b333d9260ecc53bbddb26e4d0b22c ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/base/book.cls" 1738182759 23268 24ec0168da5de0ccc9a2593a79692068 ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty" 1738182759 5525 9dced5929f36b19fa837947f5175b331 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1739306980 46850 d87daedc2abdc653769a6f1067849fe0 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/float/float.sty" 1137110151 6749 16d2656a1984957e674b149555f1ea1d ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty" 1578002852 41601 9cf6c5257b1bc7af01a58859749dd37a ""
@@ -75,9 +80,10 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1753406041 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1741450574 3345740 46b66fdb0378f7bf5921b5eabf1762b8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "image_analysis.tex" 1774464921.60902 5238 b5e15d4e138b2d8c6ab9d75079ecce45 ""
-  "main.aux" 1774464922.23845 1017 59503476401c3d92d8e14c56a577e18d "pdflatex"
-  "main.tex" 1774463112.68574 413 aeb95896b877f376c496f0b40a06cb30 ""
+  "compsci.tex" 1774651647.71963 2582 7c0a9d3c20220e5363ebbeb1e6567e08 ""
+  "image_analysis.tex" 1774549051.54176 5415 e816ae4aacec89a35b474bc188555ded ""
+  "main.aux" 1774651698.52156 1483 7dca189649e8ed8b43a8ec390b8f48dd "pdflatex"
+  "main.tex" 1774651697.41105 499 f57b0966d8f53eeab3d72d7d4408c40b ""
   "measure_theory.tex" 1774460804.00538 4416 4ce820df7a34739ae7f6e6a1789ec4ad ""
   "mjbook.sty" 1774461857.45391 799 0dd49f4725ba7d310e2e189f67f9ac9f ""
   (generated)
