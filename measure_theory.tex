@@ -90,6 +90,11 @@
 
 \fullpageboxline
 \section{Measureable Functions}
+Measureable functions are defined as maps between Measureable spaces. Let $(E, \mathcal{E})$ and $(F, \mathcal{F})$ be measurable spaces. A measurable function is defined as 
+\[
+f : E \rightarrow F, \quad f^{-1}B \in \epsilon \quad \forall B \in \mathcal{F}
+\]
+
 \subsection{Problems}
 
 \begin{problem}
@@ -113,3 +118,51 @@
 	\end{align*}
 	\fullpageboxline
 \end{solution}
+
+\section{Measures}
+Let $(E, \mathcal{E})$ be a measurable space. A measure on $(E, \mathcal{E})$ is defined as a map $\mu : \mathcal{E} \rightarrow \bar{\mathbb{R}}_+$ where $\bar{\mathbb{R}}_+ = [0, +\infty]$. The measure has properties;
+\begin{align*}
+	\mu(\emptyset) &= 0 \\
+	\mu\left(\bigcup_n A_n\right) &= \sum_n \mu\left( A_n\right)\text{ for every disjointed sequence }(A_n) \in \mathcal{E} \\
+\end{align*}
+
+The definition of the measure contains several properties;
+\begin{enumerate}
+	\item If $A\cap B = \emptyset$ Then $\mu(A\cap B) = \mu(A) + \mu(B)$
+	\item If $A\subset B$ Then $\mu(A) \leq \mu(B)$
+	\item If $A_n \nearrow A$ Then $\mu(A_n) \nearrow \mu(A)$
+	\item $\mu\left(\bigcup_n A_n\right) \leq \sum_n \mu(A_n)$ 
+\end{enumerate}
+
+Some examples of measures are listed below for the measureable space $(E, \mathcal{E})$;
+\begin{enumerate}
+	\item Dirac Measure: \[\delta_x(A) = \begin{cases}
+		1 & x \in A \\ 0 & x\notin A 
+	\end{cases}\]
+	\item Counting Measure: Let D be a fixed subset of $E$. The counting measure counts the number of points $A\cap D$. We interpret this as all elements outside D have zero measure and all elements of D have equal measure. \[ \#_D(A) = \sum_{x\in D} \delta_x(A),\quad A \in \mathcal{E}\]
+	\item Discrete Measure: Let $D$ be a countable subset of $E$, and $m(x)$ a positive number.  \[\mu(A) = \sum_{x\in D} m(x) \delta_x(A), \quad A\in \mathcal{E}\]
+\end{enumerate}
+
+\subsection{Problems}
+
+\fullpageboxline
+\section{Integration}
+Let $(E, \mathcal{E}, \mu)$ be a measure space. Here we define $\mathcal{E}$ as the sigma algebra of all $\mathcal{E}$-measureable functions, which are all measurable functions mapping to the Borel sigma-algebra. 
+
+We define the 'integral of $f$ with respect to $\mu$' as:
+\begin{equation}
+	\mu f = \mu(f) = \int_E\mu(dx)f(x) = \int_E fd\mu
+\end{equation}
+
+\begin{definition}
+	Let $f$ be simple and positive, such that it has the form $f(x0) = \sum_{i =1}^{n} a_i 1_{A_i}(x)$. Then we define \[\mu f = \sum_{i= 1}^{n} a_i \mu(A_i)\]
+\end{definition}
+
+This definition can be used on different measures to see how the integral is defined. 
+\begin{enumerate}
+	\item Dirac Measure: \[\mu f = \delta_x(A) f(x) = f(A)\]
+	\item Discrete Measure: \[\mu f = \sum_{x\in D} m(x)f(x)\]
+	\item Lebesgue Integrals:\[\mu f = \text{Leb}_E f = \int_E \text{Leb}_E(dx) f(x) = \int_E dx f(x)\] Note that if the lebesgue exists, so does the riemann integral, which is reminded by the notation in the last equality. Note that the converse is false. 
+\end{enumerate}
+
+The main idea of the integral with respect to a measure is packaged in how the measure acts on infintesimal pieces $dx$. Since the measure gives different weights to different parts of the set. We can use a result that approximates a measureable function $f$ as a convergent sequence of simple functions. That is, we can approximate $f$ using simple functions that partition the domain in a way that converges to the value of the integral. 

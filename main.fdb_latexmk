@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1775017586.62647 "/Users/korsk/Documents/Github/LifeWork/main.tex" "main.pdf" "main" 1775017587.14125 0
-  "/Users/korsk/Documents/Github/LifeWork/main.tex" 1775017586.49246 716 cb0c893d913e562f5d65be19791146fa ""
+["pdflatex"] 1775843739.37026 "/Users/korsk/Documents/Github/LifeWork/main.tex" "main.pdf" "main" 1775843739.8597 0
+  "/Users/korsk/Documents/Github/LifeWork/main.tex" 1775584523.57993 741 09a9df0cd64852e7f69d2e708b57537b ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -32,8 +32,10 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm" 1229303445 692 1b6510779f0f05e9cbf03e0f6c8361e6 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1248133631 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb" 1248133631 32007 e8fa0078355f39467039935974716569 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1248133631 37912 77d683123f92148345f3fc36a38d9ab1 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
@@ -89,11 +91,12 @@
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1741450574 3345740 46b66fdb0378f7bf5921b5eabf1762b8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "compsci.tex" 1774651647.71963 2582 7c0a9d3c20220e5363ebbeb1e6567e08 ""
+  "electromagnetism.tex" 1775615794.2229 2811 97ac17f8a2604cd39c32e7c83c85b15a ""
   "figures/probability/prob_birthday.pdf" 1775017267.65528 12640 7aa3fb06cc086e1a428e6f900e867c7c ""
   "image_analysis.tex" 1774549051.54176 5415 e816ae4aacec89a35b474bc188555ded ""
-  "main.aux" 1775017587.07327 2169 7bd7778b3f18b864eaea5c71b00d655a "pdflatex"
-  "main.tex" 1775017586.49246 716 cb0c893d913e562f5d65be19791146fa ""
-  "measure_theory.tex" 1775017267.65688 8396 c007801b4de585bd23b013d8fc090e77 ""
+  "main.aux" 1775843739.79532 2996 185831e7594461b76238c0fb79a9114b "pdflatex"
+  "main.tex" 1775584523.57993 741 09a9df0cd64852e7f69d2e708b57537b ""
+  "measure_theory.tex" 1775843739.19271 11628 dd5ab6d350a1f197eddf179aec7c6392 ""
   "mjbook.sty" 1774461857.45391 799 0dd49f4725ba7d310e2e189f67f9ac9f ""
   "probability.tex" 1775017267.65711 1766 045802c020b7405d8aea281b68b0c945 ""
   (generated)
