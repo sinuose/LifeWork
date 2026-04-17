@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1775843739.37026 "/Users/korsk/Documents/Github/LifeWork/main.tex" "main.pdf" "main" 1775843739.8597 0
-  "/Users/korsk/Documents/Github/LifeWork/main.tex" 1775584523.57993 741 09a9df0cd64852e7f69d2e708b57537b ""
+["pdflatex"] 1776447516.25026 "/Users/korsk/Documents/Github/LifeWork/main.tex" "main.pdf" "main" 1776447516.74607 0
+  "/Users/korsk/Documents/Github/LifeWork/main.tex" 1776446766.84113 757 53ac3c2bec56c60732ba11ed735a9e07 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -90,15 +90,16 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1753406041 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1741450574 3345740 46b66fdb0378f7bf5921b5eabf1762b8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "compsci.tex" 1774651647.71963 2582 7c0a9d3c20220e5363ebbeb1e6567e08 ""
+  "compsci.tex" 1775939750.31421 2648 0042c31053d3e710057a7a680dbd1971 ""
   "electromagnetism.tex" 1775615794.2229 2811 97ac17f8a2604cd39c32e7c83c85b15a ""
   "figures/probability/prob_birthday.pdf" 1775017267.65528 12640 7aa3fb06cc086e1a428e6f900e867c7c ""
   "image_analysis.tex" 1774549051.54176 5415 e816ae4aacec89a35b474bc188555ded ""
-  "main.aux" 1775843739.79532 2996 185831e7594461b76238c0fb79a9114b "pdflatex"
-  "main.tex" 1775584523.57993 741 09a9df0cd64852e7f69d2e708b57537b ""
+  "main.aux" 1776447516.6841 3806 c2feb93bff699b6e1731ded419a5070a "pdflatex"
+  "main.tex" 1776446766.84113 757 53ac3c2bec56c60732ba11ed735a9e07 ""
   "measure_theory.tex" 1775843739.19271 11628 dd5ab6d350a1f197eddf179aec7c6392 ""
   "mjbook.sty" 1774461857.45391 799 0dd49f4725ba7d310e2e189f67f9ac9f ""
-  "probability.tex" 1775017267.65711 1766 045802c020b7405d8aea281b68b0c945 ""
+  "optics.tex" 1776447516.13385 3162 ad1e363a3f74568225bc779a53e2d4f2 ""
+  "probability.tex" 1776446766.84179 4749 cd1bfb39b219a735a2c56c8b326a3c34 ""
   (generated)
   "main.aux"
   "main.log"

@@ -5,26 +5,30 @@
 \end{problem}
 \begin{solution}
 	\textbf{(a)}
-	The input beam is a single wavelength of light at a fixed power. $I_{in} = |\vec E_0| = 1$ W/cm$^2$. The input beam will hit a beam splitter and split in half towards two mirrors. Each mirror has a respective reflectivity, which reduces its intensity. The light then passes back towards the beam splitter, splitting one more time before reaching the detector. We can first write down the all the waves of interest;
+	The input beam is a single wavelength of light at a fixed power. $I_{in} = |\vec E_0| = 1$ W/cm$^2$. The input beam will hit a beam splitter and split in half towards two mirrors. Each mirror has a respective reflectivity, which reduces its intensity. The light then passes back towards the beam splitter, splitting one more time before reaching the detector. We can first write down the all the waves of interest. First, note that $I = |\vec E|^2$ and that $r = \sqrt{R}$
 	\begin{align}
 		I_{in} &= |E_0 \cdot \hat x| = 1 \quad [\textbf{W/cm}^2] \\
-		I_{out} &= \bigg|E_0 \cdot \bigg(\frac{1}{2} \cdot 0.81 \cdot \frac{1}{2}\bigg) e^{ik2d_1} + E_0 \cdot \bigg(\frac{1}{2} \cdot 1\cdot  \frac{1}{2}\bigg) e^{ik2d_2}\bigg| \\
+		I_{out} &= |E_1 + E_2|^2\\
+		&= \bigg|E_0 \frac{r}{2}e^{i2kd_1} + E_0 \frac{1}{2}e^{i2kd_1}\bigg|^2\\
+		&= \bigg|E_0 \frac{0.9}{2}e^{i2kd_1} + E_0 \frac{1}{2}e^{i2kd_1}\bigg|^2\\
 	\end{align}
 	Knowing the form of the output intensity, we can write out the norm of the out intensity. 
 	\begin{align*}
-		I_{out} &= E_0\bigg[ 0.2025^2 + 0.25^2  + 0.10125  \cos(2k(d_1- d_2))\bigg]^{\frac{1}{2}} \\
-			    &= E_0\bigg[ 0.1035 + 0.10125  \cos(2k\Delta d))\bigg]^{\frac{1}{2}} \\
+		I_{out} &= |E_0|^2\left( 0.45^2 + 0.5^2  + 0.45 \cos(2k(d_1- d_2))\right) \\
+			    &= |E_0|^2\left( 0.4525 + 0.45  \cos(2k\Delta d))\right) \\
 	\end{align*} 
 	Thus, we can see a minimum and a maximum based on the form of the cosine term. The minimum of cosine is -1 and the maximum is 1. In addition, we know from $I_{in}$ that the total power $E_0^2 = 1$, so we can plug in the limits and obtain the min and max.  
 	\begin{equation}
 		\boxed{
 			\begin{aligned}
-				I_{\textbf{min}} &= 0.0474 \quad [\textbf{W/cm}^2] \\
-				I_{\textbf{max}} &= 0.4525 \quad [\textbf{W/cm}^2] \\
+				I_{\textbf{min}} &= 0.9025 \quad [\textbf{W/cm}^2] \\
+				I_{\textbf{max}} &= 0.0025 \quad [\textbf{W/cm}^2] \\
 			\end{aligned}
 		}
 	\end{equation}
 	
+	\fullpageboxline
+
 	\textbf{(b)}
 	In the case of a second frequency aligning with the maximums at $\Delta d = 3\mu$m, we can inspect the cosine term and discover if there is any thing similar.
 	
@@ -46,8 +50,11 @@
 		\boxed{
 		\lambda_2 = 545.\bar{45} \quad \textbf{[nm]}}
 	\end{equation}
+
+	\fullpageboxline
+
 	\textbf{(c)}
-	Suppose $lambda_1 \rightarrow \lambda_2$, what changes? We can see that the only wavelength dependent term is the argument of the cosine. This term changes the amount of $\Delta d$ required to see the maxima/minima. This does \textbf{not} change the amount of signal that the detector measures. Thus, all answers except $\mathcal{A}$ are incorrect.
+	Suppose $\lambda_1 \rightarrow \lambda_2$, what changes? We can see that the only wavelength dependent term is the argument of the cosine. This term changes the amount of $\Delta d$ required to see the maxima/minima. This does \textbf{not} change the amount of signal that the detector measures. Thus, all answers except $\mathcal{A}$ are incorrect.
 	
 	\begin{equation}
 		\boxed{
