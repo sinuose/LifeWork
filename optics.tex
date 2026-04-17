@@ -1,0 +1,57 @@
+\chapter{Optics}
+\newpage
+\begin{problem}
+	Solution Provided by Martin Jasinski, Neil Jadav. % Problem goes here
+\end{problem}
+\begin{solution}
+	\textbf{(a)}
+	The input beam is a single wavelength of light at a fixed power. $I_{in} = |\vec E_0| = 1$ W/cm$^2$. The input beam will hit a beam splitter and split in half towards two mirrors. Each mirror has a respective reflectivity, which reduces its intensity. The light then passes back towards the beam splitter, splitting one more time before reaching the detector. We can first write down the all the waves of interest;
+	\begin{align}
+		I_{in} &= |E_0 \cdot \hat x| = 1 \quad [\textbf{W/cm}^2] \\
+		I_{out} &= \bigg|E_0 \cdot \bigg(\frac{1}{2} \cdot 0.81 \cdot \frac{1}{2}\bigg) e^{ik2d_1} + E_0 \cdot \bigg(\frac{1}{2} \cdot 1\cdot  \frac{1}{2}\bigg) e^{ik2d_2}\bigg| \\
+	\end{align}
+	Knowing the form of the output intensity, we can write out the norm of the out intensity. 
+	\begin{align*}
+		I_{out} &= E_0\bigg[ 0.2025^2 + 0.25^2  + 0.10125  \cos(2k(d_1- d_2))\bigg]^{\frac{1}{2}} \\
+			    &= E_0\bigg[ 0.1035 + 0.10125  \cos(2k\Delta d))\bigg]^{\frac{1}{2}} \\
+	\end{align*} 
+	Thus, we can see a minimum and a maximum based on the form of the cosine term. The minimum of cosine is -1 and the maximum is 1. In addition, we know from $I_{in}$ that the total power $E_0^2 = 1$, so we can plug in the limits and obtain the min and max.  
+	\begin{equation}
+		\boxed{
+			\begin{aligned}
+				I_{\textbf{min}} &= 0.0474 \quad [\textbf{W/cm}^2] \\
+				I_{\textbf{max}} &= 0.4525 \quad [\textbf{W/cm}^2] \\
+			\end{aligned}
+		}
+	\end{equation}
+	
+	\textbf{(b)}
+	In the case of a second frequency aligning with the maximums at $\Delta d = 3\mu$m, we can inspect the cosine term and discover if there is any thing similar.
+	
+	\begin{align*}
+		\cos(2k\Delta d) &= \cos \left(\frac{4\pi}{\lambda} \Delta d\right)\\
+						 &= \cos \left(2 \pi n\right), \quad n \in \mathbb{Z}\\
+	\end{align*}
+	Thus, we can solve the relation for $\lambda_1$;
+	\begin{equation}
+		n = \frac{2}{\lambda} \Delta d = \frac{6 \cdot  10^{-6}}{600 \cdot 10^{-9}} = \frac{1}{10^{-1}} = 10
+	\end{equation}
+	Neighboring frequencies with the \textbf{same} maxima at $\Delta d = 3 \cdot 10^{-6}$ can be found by varying $n$ by $\pm 1$;
+	\begin{align}
+		\lambda_{n=11} &= \frac{6 \cdot 10^-6}{11} = 545.\bar{45} \cdot 10^{-9} \\
+		\lambda_{n=9} &= \frac{6 \cdot 10^-6}{9} = 666.\bar{6} \cdot 10^{-9} 
+	\end{align}
+	Thus, the closes wavelength from the original, ie $$\arg \min_{\lambda_2}[\lambda_1 - \lambda_2]$$
+	\begin{equation}
+		\boxed{
+		\lambda_2 = 545.\bar{45} \quad \textbf{[nm]}}
+	\end{equation}
+	\textbf{(c)}
+	Suppose $lambda_1 \rightarrow \lambda_2$, what changes? We can see that the only wavelength dependent term is the argument of the cosine. This term changes the amount of $\Delta d$ required to see the maxima/minima. This does \textbf{not} change the amount of signal that the detector measures. Thus, all answers except $\mathcal{A}$ are incorrect.
+	
+	\begin{equation}
+		\boxed{
+		\textbf{Correct Answer: }\mathcal{A}}
+	\end{equation}
+	
+\end{solution} 

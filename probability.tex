@@ -43,7 +43,7 @@ And written in set notation;
 \end{equation}
 
 The moments of the multivariate distribution are defined as \[\left\langle \prod_{i=1}X^{m_i}_i \right \rangle = \int x_1^{m_1}x_2^{m_1}\dots x_n^{m_n}P(x_1, x_2, \dots, x_n) dx_1 dx_2, \dots dx_n \]
-The characteristic function occurs as the product of fourier transforms;
+The characteristic function occurs as the product of Fourier transforms;
 \begin{align*}
 	G(k_1, \dots, k_n) &=\left\langle e^{i(k_1X_1 + \dots + k_nX_n)}\right\rangle \\
 					   &= \sum_{i=0}^{\infty} \frac{(ik_1)^{m_1} (ik_2)^{m_2}\dots(ik_n)^{m_n}}{m_1 ! m_2 ! \dots m_n!} \left\langle \prod_{i=1}X^{m_i}_i \right \rangle
@@ -62,5 +62,13 @@ When normalized, this matrix forms the correlation coefficients between the rand
 	\rho_{i,j} = \frac{ \left \langle X_i X_j\right \rangle - \left \langle X_i\right \rangle\left \langle X_j\right \rangle}{\sqrt{( \left \langle X_i^2\right \rangle - \left \langle X_i\right \rangle^2)( \left \langle X_j^2\right \rangle - \left \langle X_j\right \rangle^2)}}
 \end{equation}
 \chapter{Stochastic Processes}
+
+\section{Point Processes}
+Define a point process by the following rules. The sample space is consisting of a set of states which consist of $s = 0, 1, 2, \dots$. For each $s$, there is a set of $s$ real numbers $\tau$ which is increasing. 
+
+The probability distribution of these states is given by a sequence of non-negative functions $Q_s$. The normalization is given by;
+\begin{equation}
+	1 = Q_0 + \int_{-\infty}^{\infty} d\tau_1 Q_1(\tau_1) + \int_{-\infty}^{\infty} d\tau_1\int_{-\infty}^{\infty} d\tau_2 Q_2(\tau_1, \tau_2) + \dots
+\end{equation}
 
 
