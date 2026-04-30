@@ -71,4 +71,118 @@ The probability distribution of these states is given by a sequence of non-negat
 	1 = Q_0 + \int_{-\infty}^{\infty} d\tau_1 Q_1(\tau_1) + \int_{-\infty}^{\infty} d\tau_1\int_{-\infty}^{\infty} d\tau_2 Q_2(\tau_1, \tau_2) + \dots
 \end{equation}
 
+It is common to permit only symmetric functions of $Q_s(t_1, \dots, t_s)$ such that there are $s!$ permutations for each $Q_s$. Then the normalization condition becomes simple to write as a series;
+\begin{equation}
+	1 = Q_0 + \sum_{s=1}^\infty \frac{1}{s!}\int_{-\infty}^\infty Q_s(t_1, \dots, t_s) dt_1 \cdot \dots \cdot dt_s
+\end{equation}
 
+Here it appears that $Q_s(t_1, \dots, t_s)$ is known as the probability of the sequence of events where $s$ dots occur at some vector $t_1$. Here, $t$ can denote a time in a temporal process, as well as spatial coordinates. 
+
+For example, consider an ideal gas. The ideal gas has a volume in $\mathbb{R}^3$. Such a system can be defined by the unique property of each state, which in this case, can be the energy of the system. The number of discrete microstates is given by the relation to entropy \[S = k_b \ln \Omega \] Thus, we can find the number of microstates \[\Omega = e^{S/k_b}\] the probability of a single state, which consists of a state variable is proportional by definition of probability;
+\begin{equation}
+	P(N, U, P, V) = Q_s(U) = \frac{1}{\Omega} = e^{-S/k_b} = e^{-\beta (U + PV - \mu N)}
+\end{equation}
+This is defined as the Janossy density for a single state. The normalization condition is 
+\begin{align*}
+	1 &= \sum_{n=0}^N e^{-\beta (U + PV - \mu n)} \\
+	  &= e^{-\beta (U + PV)}\sum_{n=0}^N e^{\beta\mu n} \\
+	  &= e^{-\beta (U + PV)}\frac{1-e^{\beta\mu N}}{1-e^{\beta\mu}} \\	
+\end{align*}
+
+Another example is for a general counting process. Suppose that $Q_s(t_1, \dots, t_s)$ is the probability of exactly $s$ detections at intervals $dt_s$. We can compute the average number of dots by defining \[N(t) = \sum_{j=1}^s\mathbf{1}_{t_{j-1} < t < t_j}\]. This just counts the number of dots by summing each interval by an indicator function. 
+\begin{align*}
+	\langle N(t) \rangle &= \sum_{s=0}^\infty \frac{1}{s!} \int_{-\infty}^\infty dt_1 \dots dt_s Q_s(t_1, \dots, t_s) \sum_{j=1}^s\mathbf{1}_{t_{j-1} < t < t_j} \\
+	s\text{ symmetric integrals over }[t_a, t_b]&= \sum_{s=1}^\infty \frac{s}{s!} \int_{t_a}^{t_b}dt_1\int_{-\infty}^\infty \dots dt_s Q_s(t_1, \dots, t_s) \\
+	&= \sum_{s=1}^\infty \frac{1}{(s-1)!} \int_{t_a}^{t_b}dt_1\int_{-\infty}^\infty \dots dt_s Q_s(t_1, \dots, t_s) 
+ \end{align*}
+ 
+ And similarly for the second moment,
+ 
+ \begin{align*}
+ 	\langle N(t)^2 \rangle 
+ 	&= \sum_{s=0}^\infty \frac{1}{s!} \int_{-\infty}^\infty dt_1 \dots dt_s Q_s(t_1, \dots, t_s)\left[\sum_{i=1}^s\mathbf{1}_{t_{i-1} < t < t_i}\right] \left[\sum_{j=1}^s\mathbf{1}_{t_{j-1} < t < t_j}\right] \\ 
+ 	&= \sum_{s=0}^\infty \frac{1}{s!} \int_{-\infty}^\infty dt_1 \dots dt_s Q_s(t_1, \dots, t_s)\left[\sum_{i=j}\mathbf{1}_{t_{j-1} < t < t_j} + \sum_{i\neq j}\mathbf{1}_{t_{j-1} < t < t_j}\right] \\ 
+ 	s\text{ cases where } (i = j) \rightarrow &= \langle N \rangle + \sum_{s=0}^\infty \frac{1}{s!} \int_{-\infty}^\infty dt_1 \dots dt_s Q_s(t_1, \dots, t_s)\left[\sum_{i\neq j}\mathbf{1}_{t_{j-1} < t < t_j}\right] \\ 
+ 	s\text{ ways to fix }i, (s-1) \text{ fix }j &= \langle N \rangle + \sum_{s=2}^\infty \frac{s(s-1)}{s!} \int_{t_a}^{t_b} dt_1 \int_{t_a}^{t_b} dt_2 \int_{-\infty}^\infty dt_3 \dots dt_s Q_s(t_1, \dots, t_s) \\ 
+ 	&= \langle N \rangle + \sum_{s=2}^\infty \frac{1}{(s-2)!} \int_{t_a}^{t_b} dt_1 \int_{t_a}^{t_b} dt_2 \int_{-\infty}^\infty dt_3 \dots dt_s Q_s(t_1, \dots, t_s) \\ 
+ \end{align*}
+ 
+ Thus, we have recovered the variance of a general process being that of a Poisson process;
+ \[\langle N \rangle = \langle N^2 \rangle - \langle N \rangle^2\]
+ 
+ This is suprising as we haven't said anything about how $Q_s$ is distributed!
+ 
+ \subsection{Poisson processes}
+ Random dot events are independent if the Janossy Density factorizes into the form of an independent joint probability density;
+ \begin{equation}
+ 	Q_s(t_1, \dots, t_s) = e^{-\nu}p(\tau_1) \dots p(\tau_s)
+ \end{equation}
+ 
+ In this case, one can see that if we define \[\langle N \rangle = \nu =  \int_{t_a}^{t_b}p(\tau)d\tau\] we find the following result.
+ 
+ \begin{align*}
+ 	\langle e^{ikN} \rangle &= e^{-\nu}\sum_{s=1}^\infty \frac{1}{s!}\left[\int_{\infty}^{\infty}e^{ik\sum_{\sigma} 1_{t_\sigma}}p(\tau)d\tau\right]^s \\
+ 	&= \exp \left[\int_{\infty}^{\infty}e^{ik\sum_{\sigma} 1_{t_\sigma}}p(\tau)d\tau - \nu \right]\\
+ 	&= \exp \left[\int_{\infty}^{\infty}\left(e^{ik\sum_{\sigma} 1_{t_\sigma}} - 1 \right)p(\tau)d\tau \right]\\
+	\text{surviving terms are only in }[t_a, t_b]&= \exp \left[\left(e^{ik} - 1 \right)\int_{t_a}^{t_b}p(\tau)d\tau \right]
+ \end{align*}
+ This characteristic function is precisely that of the Poisson distribution, notably that the probability of $N$ dots falling in an interval $[t_a, t_b]$ is;
+ \begin{equation}
+ 	P(N) = \frac{\langle N \rangle^N}{N!}e^{-\langle N \rangle}
+ \end{equation}
+ 
+ This result is that an independent waiting time, or an independent process probability gives rise to a Poisson distributed process. 
+ 
+ \subsection{Stochastic Variables and Properties}
+ As known, we can define a stochastic process for a given random variable and some function. Typically, if this is a value of time, it is known as a general stochastic process.
+ 
+ \begin{equation}
+ 	Y_X(t) = f(X, t)
+ \end{equation}
+ 
+ For example, assume the form $Y(t) = \psi(t)X$. Assume that here $\psi(t) > 0$ such that the math works out nicely, otherwise, the probability inequality will switch signs. 
+ \begin{equation}
+ 	Y(t) = \psi(t)X
+ \end{equation}
+ If we know the distribution of $X$, one can write that
+ \begin{equation}
+ 	F_X(x) = P(X \leq x) = \int_{-\infty}^x f_X(x)dx
+ \end{equation}
+ Thus, we can calculate the CDF of the transformed random variable;
+ 
+ \begin{align*}
+ 	P(Y \leq y) &= P(\psi(t) X \leq y) \\
+ 	&= F_X\left(\frac{1}{\psi(t)}y\right), \quad \psi(t) > 0
+ \end{align*}
+The requirement on $\psi(t)$ is a valid one, as if the function is ever equal to 0, then the process is not random as it is simply 0 for that time. We can then calculate the PDF of Y;
+\begin{align*}
+	f_Y(y) &= \frac{d}{dy} F_X\left(\frac{1}{\psi(t)} y\right)\\
+	&= \frac{1}{|\psi(t)|} f_X\left(\frac{1}{\psi(t)} y\right)
+\end{align*}
+
+\subsubsection{Expectations}
+We can take expectations as normal on the random variable. It is interesting to see how the expectations collapse;
+\begin{equation}
+	\average{Y(t)} = \int_{-\infty}^{\infty}Y_x(t) P_X(x)dx
+\end{equation}
+For the above example, we find a the same solution using the definition of the underlying distribution and from the transformed one;
+\begin{align*}
+	\average{Y(t)} &= \psi(t)\int_{-\infty}^{\infty}x f_X(x)dx \\
+	&= \int_{-\infty}^{\infty} yf_Y(y)dy \\
+	&= \int_{-\infty}^{\infty} \psi(t) x  \frac{1}{|\psi(t)|} f_X\left(\frac{1}{\psi(t)} y\right) dy \\
+	&= \int_{-\infty}^{\infty} x  f_X\left(x\right) \psi(t) dx \\
+	&= \psi(t)\int_{-\infty}^{\infty}x f_X(x)dx \\
+\end{align*}
+
+\subsubsection{Autocorrelation}
+As a reminder, the auto-correlation is defined as
+\begin{equation}
+	\kappa(i, j) = \average{(X_i - \average{X_i}) (X_j - \average{X_j})}
+\end{equation}
+so, for a stochastic process, the function is a function of two time points;
+\begin{align*}
+	\kappa(t_1, t_2) &= \average{(Y(t_1) - \average{Y(t_1)}) (Y(t_2) - \average{Y(t_2)})}\\
+	&= \average{Y(t_1)Y(t_2)} - \average{Y(t_2)}\average{Y(t_1)}
+\end{align*}
+Once again, for the separable example above, we see that the time dependent functions factor out;
+\[\kappa(t_1, t_2) = \psi(t_1)\psi(t_2)\left[\average{x^2} - \average{x}^2\right]\]
