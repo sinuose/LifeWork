@@ -186,3 +186,30 @@ so, for a stochastic process, the function is a function of two time points;
 \end{align*}
 Once again, for the separable example above, we see that the time dependent functions factor out;
 \[\kappa(t_1, t_2) = \psi(t_1)\psi(t_2)\left[\average{x^2} - \average{x}^2\right]\]
+
+\subsection{Stationary Processes}
+As we write earlier, a general stochastic process $Y$ depends on some variables and some random variables. A stationary stochastic processes is one that has a stationary, or non-unique varinace and mean along the temporal variable. Typically, these are reserved to contain meand and variances that coincide with the time-step between time.
+
+For example, consider two processes; the Wiener process, and the Ornstein-Uhlenbeck process.
+
+
+The Wiener process is defined as the following,
+\begin{align*}
+	W_t - W_s &\sim \mathcal{N}(0, t-s) \\
+\end{align*}
+probabilistically, this is describing the probability of moving to some $W_t$ given some $W_s$. We can fully defined this process by defining the transition probability, as well as the initial distributive probability;
+\begin{align*}
+	P_1(y_1, t) &= \frac{1}{\sqrt{2\pi t}}e^{-\frac{y_1^2}{2t}} \\
+	P_{1|1}(y_2, t_2 | y_1 , t_1) &= \frac{1}{\sqrt{2\pi(t-s)}}e^{-\frac{(y_2-y_1)^2}{2(t-s)}}
+\end{align*}
+
+This is compared to the Ornstein-Uhlenbeck process, which is notably defined as Markov and Stationary, with an autocorrelation of $e^{-\tau}$. Let $\tau = t-s$;
+\begin{align*}
+	P_1(y_1, t) &= \frac{1}{\sqrt{2\pi}}e^{-\frac{y_1^2}{2}} \\
+	P_{1|1}(y_2, t_2 | y_1 , t_1) &= \frac{1}{\sqrt{2\pi(1-e^{-2\tau})}}e^{-\frac{(y_2-y_1)^2}{2(1-e^{-2\tau})}}
+\end{align*}
+
+As one can see, the OH process is stationary as it forgets its initial position, whilst the Wiener process has a memory of this, hence, it is not markovian in the default sense. 
+
+
+\subsection{Markov Processes}
