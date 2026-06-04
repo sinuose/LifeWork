@@ -61,6 +61,81 @@ When normalized, this matrix forms the correlation coefficients between the rand
 \begin{equation}
 	\rho_{i,j} = \frac{ \left \langle X_i X_j\right \rangle - \left \langle X_i\right \rangle\left \langle X_j\right \rangle}{\sqrt{( \left \langle X_i^2\right \rangle - \left \langle X_i\right \rangle^2)( \left \langle X_j^2\right \rangle - \left \langle X_j\right \rangle^2)}}
 \end{equation}
+
+\subsection{Transformations}
+Transformations of random-variables answer the question of given $X$ with PMF/PDF $f_X$, how does one calculate the distribution of some $Y = r(X)$? The ben-br notes define a simple process;
+\begin{theorem}
+	The transformation of a random variable can be given by the following procedure;
+	\begin{itemize}
+		\item For each $y$, find the set $A_y = \{x : r(x) \leq y\}$
+		\item Find the CDF of $y$ 
+		\begin{equation}
+			F_Y(y) = \int_{A_y}f_X(x) dx	
+		\end{equation}
+		\item The PDF is the derivative of the CDF;
+		\begin{equation}
+			f_Y(y) = F'(y)
+		\end{equation}
+	\end{itemize}
+\end{theorem}
+
+For transformations that are strictly monotone, then there is a well-defined inverse, $s = r^{-1}$, then the process is a simple formula;
+\begin{equation}
+	f_Y(y) = f_X(s(y))\Bigg| \frac{ds(y)}{dy}\Bigg|
+\end{equation}
+
+\begin{example}
+	Let $X \sim \text{Exp}(\lambda)$ and $r = \xi^2$. Then how can we find the transformation $Y = r(X)$?
+
+	\begin{enumerate}
+		\item Using the general method, we can calculate the PDF exactly; 
+		\begin{align*}
+			p(Y \leq y) &= p(r(X) \leq y)\\
+			 			&= p(X^2 \leq y) \\
+						&= p(X \leq \sqrt{y}) \\
+			F_Y(y) &= 1 - e^{-\lambda \sqrt{y}}\\
+			f_Y(y) &= \frac{\lambda}{2\sqrt{y}}e^{-\lambda \sqrt{y}}
+		\end{align*}
+		\item Since $r(X)$ is a monotonic function with an inverse $s(x) = \sqrt{x}$ then we can compute the formula directly;
+		\begin{align*}
+			f_Y(y) &= \lambda e^{-\lambda \sqrt{y}} \cdot \Bigg| \frac{1}{2\sqrt{y}}\Bigg| \\
+			&=\frac{\lambda}{2\sqrt{y}}e^{-\lambda \sqrt{y}}
+		\end{align*}
+		Thus, both methods yield the correct transformed PDF.
+	\end{enumerate}
+\end{example}
+
+\subsection{Expectations}
+
+The expectation of a random variable is given by the explicit integral over the CDF. Specifically, we are interested in the value that is most likely to occur. This can be formalized by adding all of the cumulative probability over the range of values. Here we assume that $X$ is non-negative, which eases the bounds of integration. Otherwise, this can be recast to have a negative sign to ensure all regions are positive;
+\begin{align*}
+	\int_0^\infty p(X \geq x) dx = \int_0^\infty \left( \int_x^\infty f_Y(y) dy \right) dx
+\end{align*}
+This integral sweeps a region in $xy$ space. This region is fixing $x$ from $0 \rightarrow \infty$. Then, $y$ integrates from $x$ to infinity; 
+\[
+0 \leq x, \quad x \leq y \leq \infty
+\]
+Thus, we can integrate instead over $x$ which is from $0$ to $y$, then overall all space;
+\begin{align*}
+	\int_0^\infty \left( \int_x^\infty f_Y(y) dy \right) dx &= \int_0^\infty \left( \int_0^y f_Y(y) dx \right) dy \\
+	&= \int_0^\infty y f_Y(y) dy \\
+	&:= \mathbb{E}[y]
+\end{align*}
+
+Thus, the expectation is defined more commonly by the law of the unconscious statistician;
+\begin{theorem}
+	Expectation of random variable or function of a random variable is defined by a CDF of a random variable;
+	\begin{equation}
+		\mathbb{E}\left[r(x)\right] = \int_{\Omega}r(x) f_X(x) dx
+	\end{equation}
+\end{theorem}
+
+\subsection{Characteristic Functions}
+
+
+
+
+
 \chapter{Stochastic Processes}
 
 \section{Point Processes}
@@ -209,7 +284,115 @@ This is compared to the Ornstein-Uhlenbeck process, which is notably defined as 
 	P_{1|1}(y_2, t_2 | y_1 , t_1) &= \frac{1}{\sqrt{2\pi(1-e^{-2\tau})}}e^{-\frac{(y_2-y_1)^2}{2(1-e^{-2\tau})}}
 \end{align*}
 
-As one can see, the OH process is stationary as it forgets its initial position, whilst the Wiener process has a memory of this, hence, it is not markovian in the default sense. 
+As one can see, the OH process is stationary as it forgets its initial position, whilst the Wiener process has a memory of this, hence, it is not markovian.
 
+\subsection{Power Spectra}
+
+\subsection{Probabilisitic Hierarchy}
+
+The probabilistic Hierarchy is defined as a way to form a joint distribution for a stochastic process. Specifically, we can write down the following statement;
+\begin{equation}
+	P(y_1, t_1 ; y_2, t_2; \dots ; y_n, t_n) = \int \delta(y_1 - Y_x(t_1)) \delta(y_2 - Y_x(t_2)) \dots \delta(y_n - Y_x(t_n))p_X(x) dx
+\end{equation}
+Here, $Y_x(t)$ is a realization of a process. We are then integrating over this realization weighted by the probability of each random value. 
+
+\begin{example}
+	Suppose that $Y_x(t) = X \cos(\omega t)$ for $X\sim \mathcal{N}(0,1)$. Then, we can find $P(y_1, t_1)$
+
+	\begin{align*}
+		P(y_1, t_1) &= \int \delta(y_1 - Y_x(t_1)) P_X(x) dx\\
+		&= \int \delta(y_1 - x\cos(\omega t)) \frac{1}{\sqrt{2\pi}}e^{-x^2/2} dx \\
+	\end{align*}
+	Using the fact that \[\delta(y_1 - x\cos(\omega t)) = \frac{1}{\cos(\omega t)} \delta(x-\frac{y}{\cos(\omega t)})\]º
+	\begin{align*}
+		&= \int \delta(y_1 - x\cos(\omega t)) \frac{1}{\sqrt{2\pi}}e^{-x^2/2} dx \\
+		&=\frac{1}{\cos(\omega t)} \int \delta(x-\frac{y_1}{\cos(\omega t)})  \frac{1}{\sqrt{2\pi}}e^{-x^2/2} dx \\
+		&= \frac{1}{\cos(\omega t)}  \frac{1}{\sqrt{2\pi}}e^{-\left(\frac{y_1}{\cos(\omega t)}\right)^2/2} 
+	\end{align*}
+
+	Thus, 
+	\begin{equation}
+		\boxed{
+	P(y_1, t_1) = \frac{1}{\cos(\omega t)}  \frac{1}{\sqrt{2\pi}}e^{-\frac{\left(y_1\right)^2}{2\cos^2(\omega t)}} }
+	\end{equation}
+\end{example}
 
 \subsection{Markov Processes}
+
+Markov processes are defined by a set of probabilistic equations. 
+
+\subsection{Chapman-Kolmogorov Equations}
+
+\subsection{Problems}
+
+\begin{problem}
+	Find the mean-squared distance after $N$ steps on a random walk on a 2D square lattice when U-turns are forbidden.
+\end{problem}
+
+\begin{solution}
+	The transition probability of this problem requires we know of the current and previous locations. Let $n$ be the $(x,y)$ position at some time, and $m$ be the position at the previous time. Let $\xi_1 = n_1 - m_1$ be the difference of the two times. Since the steps have equal probability, we can write the transition matrix of this problem. Let $\uparrow, \downarrow, \rightarrow, \leftarrow$ denote the vectors of length 1 moving in the respective directions.
+
+	\begin{equation}
+		\begin{aligned}
+			T(\xi_2 | \xi_1) &= \frac{\delta(\xi_1 - \rightarrow)}{3} \left[ \delta(\xi_2 - \leftarrow) + \delta(\xi_2 - \uparrow) + \delta(\xi_2 - \downarrow)\right]\\
+							&+ \frac{\delta(\xi_1 - \leftarrow)}{3} \left[ \delta(\xi_2 - \rightarrow) + \delta(\xi_2 - \uparrow) + \delta(\xi_2 - \downarrow)\right] \\
+							&+ \frac{\delta(\xi_1 - \uparrow)}{3} \left[ \delta(\xi_2 - \rightarrow) + \delta(\xi_2 - \leftarrow) + \delta(\xi_2 - \downarrow)\right] \\
+							&+ \frac{\delta(\xi_1 - \downarrow)}{3} \left[ \delta(\xi_2 - \rightarrow) + \delta(\xi_2 - \uparrow) + \delta(\xi_2 - \leftarrow)\right]
+		\end{aligned}
+	\end{equation}
+	Given this transition, we can calculate the either the characteristic function or moments explicitly. Since there aren't that many delta functions to calculate, we can directly calculate the moments. From the defintion of $\xi$, we have that;
+	\begin{equation}
+		\vec x_n = \vec{x_0} + \sum_{j=1}^N \vec \xi_j
+	\end{equation}
+	Thus, assume that $x_0=0$ and we can compute moments around $\vec x$ instead of $\xi$.
+
+	\begin{equation}
+		\begin{aligned}
+			\average{\vec x^2} &= \average{\left[\sum_{j=1}^N \vec \xi_j\right]^2} \\
+			&= \average{\left[\sum_{j=1}^N \vec \xi_j\right]\left[\sum_{i=1}^N \vec \xi_i\right]} \\
+			&= \average{\sum_{i=1}^N \sum_{j=1}^N \vec \xi_i\vec \xi_j} \\
+			&= \sum_{i=1}^N\average{\vec{\xi_i}^2} + 2\sum_{i=1}^N \sum_{j=1}^{i-1} \average{\vec \xi_i \vec \xi_j}
+		\end{aligned}
+	\end{equation}
+
+	We compute the moments explicitly. Note that $\rightarrow + \leftarrow = 0 ; \uparrow + \downarrow = 0$;
+	\begin{equation*}
+		\begin{aligned}
+			\average{\xi} &= \sum_{\xi_1}\left[\sum_{\xi_2} \xi_2 T(\xi_2 | \xi_1)\right] P(\xi_1)\\&= \frac{1}{4}\left(\frac{1}{3}(\uparrow + \rightarrow + \leftarrow) + \frac{1}{3}(\downarrow + \rightarrow + \leftarrow) + \frac{1}{3}(\uparrow + \downarrow + \leftarrow) + \frac{1}{3}(\uparrow + \rightarrow + \downarrow)\right) \\
+			&= 0 
+		\end{aligned}
+	\end{equation*}
+
+	This being said, we can compute the square moment and the correlation in time. It can be easily shown that since $\rightarrow \cdot \rightarrow^T = 1$, then $\average{\xi_i^2} = 1$. The correlation can be computed for jointwise distance $|i-j|$. We will use the recursive property to find the correlation.
+
+	\begin{equation*}
+		\begin{aligned}
+			\average{\xi_{j+1} | \xi_j} &= \frac{1}{3}\left(\xi_j + \perp + (- \perp)\right) \\
+			&= \frac{1}{3}\xi_j
+		\end{aligned}
+	\end{equation*}
+	Thus, from the recursive property of the correlation;
+	\begin{equation}
+		\average{\xi_{j+k}\xi_j} = {3}^{-k}
+	\end{equation}
+
+	Then, the MSD is fully calculated;
+	\begin{equation*}
+		\begin{aligned}
+			\average{\vec{x^2}} &= \sum_{i=1}^N\average{\vec{\xi_i}^2} + 2\sum_{i=1}^N \sum_{j=1}^{i-1} \average{\vec \xi_i \vec \xi_j}\\
+			 &= N + 2\sum_{i=1}^N \sum_{j=1}^{i-1} \lambda^{i-j}\\
+			 &= N + 2\lambda\sum_{k=0}^{N-1} (N-k)\lambda^{k}\\
+			 &= N + 2\lambda\left[\frac{(N-1)(1-\lambda^{N})}{1-\lambda} - \frac{\lambda -(N-1)\lambda^{N}+(N-1)\lambda^{N+1}}{(1-\lambda)^2}\right]\\
+			&= N + 2\lambda\left[\frac{N}{1-\lambda} - \frac{(1-\lambda^N)}{(1-\lambda)^2}\right]\\
+			&= \frac{N(1+\lambda)}{1-\lambda} - \frac{2\lambda(1-\lambda^N)}{(1-\lambda)^2}\\
+		\end{aligned}
+	\end{equation*}
+	Thus, we have that the MSD after $N$ steps is the equation above, for $\lambda = 1/3$;
+	\begin{equation}
+		\average{\vec{x^2}} = \frac{N(1+\lambda)}{1-\lambda} - \frac{2\lambda^2(1-\lambda^N)}{(1-\lambda)^2}
+	\end{equation}
+
+	Note that since $N(1+\lambda)/(1-\lambda) = 2N$ There is a higher order of diffusivity compared to the free case, which $N$.
+
+
+\end{solution}
