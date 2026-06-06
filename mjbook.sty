@@ -13,11 +13,18 @@
 \newcounter{example}[chapter]
 \renewcommand{\theexample}{\thechapter.\arabic{example}}
 
+
 \newenvironment{problem}{
 	\refstepcounter{problem}
 	\par\noindent\textbf{Problem \theproblem. }\itshape
 }{
 	\par
+}
+
+\newenvironment{proof}{
+	\par\noindent\textbf{Proof. }
+}{
+	$\blacksquare$\par
 }
 
 \newenvironment{solution}{

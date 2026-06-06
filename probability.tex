@@ -1,6 +1,6 @@
 \chapter{Probability}
 
-\subsection{Combinatorics}
+\section{Combinatorics}
 \begin{problem}
 	Given $N$ people in a room, what is the probability that $2$ or more people share a birthday?
 \end{problem}
@@ -28,7 +28,7 @@
 \end{solution}
  
  \newpage
-\subsection{Multivariate Distributions}
+\section{Multivariate Distributions}
 
 Let $\mathbf{X}$ be a random vector with components $X_1, \dots X_n$. The distribution is arrives from is $P(x_1, x_2, \dots x_n)$. 
 
@@ -52,7 +52,8 @@ Where one extracts the coefficients from the expansion. The log of this function
 \begin{equation}
 	\log[	G(k_1, \dots, k_n)] = \sum_{i=0}^{\infty} \frac{(ik_1)^{m_1} (ik_2)^{m_2}\dots(ik_n)^{m_n}}{m_1 ! m_2 ! \dots m_n!} \left \langle \prod_{i=1}X^{m_i}_i \right \rangle_c 
 \end{equation}
-\subsection{Covariance Matrix}
+
+\section{Covariance Matrix}
 The covariance matrix is defined as the $n \times n$ matrix $\left \langle X_i X_j\right \rangle_c$ Which stands for the second cumulant, or the variance.
 \begin{equation}
 	\left \langle X_i X_j\right \rangle_c = \left \langle X_i X_j\right \rangle - \left \langle X_i\right \rangle\left \langle X_j\right \rangle
@@ -61,7 +62,6 @@ When normalized, this matrix forms the correlation coefficients between the rand
 \begin{equation}
 	\rho_{i,j} = \frac{ \left \langle X_i X_j\right \rangle - \left \langle X_i\right \rangle\left \langle X_j\right \rangle}{\sqrt{( \left \langle X_i^2\right \rangle - \left \langle X_i\right \rangle^2)( \left \langle X_j^2\right \rangle - \left \langle X_j\right \rangle^2)}}
 \end{equation}
-
 \subsection{Transformations}
 Transformations of random-variables answer the question of given $X$ with PMF/PDF $f_X$, how does one calculate the distribution of some $Y = r(X)$? The ben-br notes define a simple process;
 \begin{theorem}
@@ -208,7 +208,7 @@ Another example is for a general counting process. Suppose that $Q_s(t_1, \dots,
  
  This result is that an independent waiting time, or an independent process probability gives rise to a Poisson distributed process. 
  
- \subsection{Stochastic Variables and Properties}
+ \section{Stochastic Variables and Properties}
  As known, we can define a stochastic process for a given random variable and some function. Typically, if this is a value of time, it is known as a general stochastic process.
  
  \begin{equation}
@@ -262,7 +262,7 @@ so, for a stochastic process, the function is a function of two time points;
 Once again, for the separable example above, we see that the time dependent functions factor out;
 \[\kappa(t_1, t_2) = \psi(t_1)\psi(t_2)\left[\average{x^2} - \average{x}^2\right]\]
 
-\subsection{Stationary Processes}
+\section{Stationary Processes}
 As we write earlier, a general stochastic process $Y$ depends on some variables and some random variables. A stationary stochastic processes is one that has a stationary, or non-unique varinace and mean along the temporal variable. Typically, these are reserved to contain meand and variances that coincide with the time-step between time.
 
 For example, consider two processes; the Wiener process, and the Ornstein-Uhlenbeck process.
@@ -286,9 +286,8 @@ This is compared to the Ornstein-Uhlenbeck process, which is notably defined as 
 
 As one can see, the OH process is stationary as it forgets its initial position, whilst the Wiener process has a memory of this, hence, it is not markovian.
 
-\subsection{Power Spectra}
-
-\subsection{Probabilisitic Hierarchy}
+\section{Power Spectra}
+\section{Probabilisitic Hierarchy}
 
 The probabilistic Hierarchy is defined as a way to form a joint distribution for a stochastic process. Specifically, we can write down the following statement;
 \begin{equation}
@@ -317,13 +316,13 @@ Here, $Y_x(t)$ is a realization of a process. We are then integrating over this 
 	\end{equation}
 \end{example}
 
-\subsection{Markov Processes}
+\section{Markov Processes}
 
 Markov processes are defined by a set of probabilistic equations. 
 
-\subsection{Chapman-Kolmogorov Equations}
+\section{Chapman-Kolmogorov Equations}
 
-\subsection{Problems}
+\section{Problems}
 
 \begin{problem}
 	Find the mean-squared distance after $N$ steps on a random walk on a 2D square lattice when U-turns are forbidden.

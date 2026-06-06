@@ -6,10 +6,13 @@
 \usepackage{mathrsfs}
 \usepackage{graphicx}
 \usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{svg}
 
 \usepackage{algorithm}
 \usepackage{algpseudocode}
 \newcommand{\average}[1]{\left\langle{#1}\right\rangle}
+\newcommand{\R}{\mathbb{R}}
 \newcommand{\fullpageboxline}[1][1.5em]{
 	\vspace{#1}
 	\noindent\hspace{2cm}
@@ -34,11 +37,14 @@
 	% \end{equation}
 	
 	% but i can fix it!
-	\input{electromagnetism}
-	\input{optics}
+	\input{calculus12}
 
 	\input{measure_theory}
 	\input{probability}
+	
+	\input{electromagnetism}
+	\input{optics}
+	
 	\input{image_analysis}
 	\input{compsci.tex}
 	
