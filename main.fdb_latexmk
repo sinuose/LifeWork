@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1780707229.61426 "/Users/korsk/Documents/Github/LifeWork/main.tex" "main.pdf" "main" 1780707230.34943 0
+["pdflatex"] 1780937718.95159 "/Users/korsk/Documents/Github/LifeWork/main.tex" "main.pdf" "main" 1780937719.67582 0
   "/Users/korsk/Documents/Github/LifeWork/main.tex" 1780638239.49606 924 7088b0374a1f5a63c2278072399ecf83 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -131,13 +131,13 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1753406041 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1741450574 3345740 46b66fdb0378f7bf5921b5eabf1762b8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "calculus12.tex" 1780707229.35879 10735 d2f2a0c70edbf3d58cd4e73a1bfbb3f3 ""
+  "calculus12.tex" 1780937718.70752 16426 56f86a922d73180235fd9a9b81dfbdf8 ""
   "compsci.tex" 1775939750.31421 2648 0042c31053d3e710057a7a680dbd1971 ""
   "electromagnetism.tex" 1775615794.2229 2811 97ac17f8a2604cd39c32e7c83c85b15a ""
   "figures/probability/prob_birthday.pdf" 1775017267.65528 12640 7aa3fb06cc086e1a428e6f900e867c7c ""
   "figures/set_theory/function-mapping.pdf" 1780638387.08557 20945 052bef2e888363c9a654ed95a8cb5dbf ""
   "image_analysis.tex" 1774549051.54176 5415 e816ae4aacec89a35b474bc188555ded ""
-  "main.aux" 1780707230.25553 6766 ce81c02a1604d8af192de33aa1998868 "pdflatex"
+  "main.aux" 1780937719.58086 6933 4a8c1d4dcb98b0869c205c357bf7d188 "pdflatex"
   "main.tex" 1780638239.49606 924 7088b0374a1f5a63c2278072399ecf83 ""
   "measure_theory.tex" 1775843739.19271 11628 dd5ab6d350a1f197eddf179aec7c6392 ""
   "mjbook.sty" 1780540053.3819 1086 63158194559b1079f4e3a595a462da66 ""

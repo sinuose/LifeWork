@@ -155,3 +155,89 @@ Remark that if $f$ is a bijective map, then $f^{-1}(f(A)) = f(f^{-1}(A))$.
         \item $A \times \emptyset = \emptyset$
     \end{enumerate}
 \end{problem}
+
+\clearpage
+\section{The Real Number System}
+
+The real numbers are defined by a set of axioms. There are various ways to treat this. I am going to just state all of the properties upfront and then proceed with the consequences of their existence. 
+
+
+\begin{theorem}
+    \label{thm:realnumber}
+    \textbf{Axioms of the Real Number System:} These are the axioms that define the set of real numbers. The properties are stated outright, then the consequences are listed in further statements.
+   
+    \begin{enumerate}[label=F\arabic{*}:]
+        \item \textbf{Commutativity}; Let $a, b \in \R$, then $a + b = b + a$, and $a \cdot b = b \cdot a$. 
+        \item \textbf{Associativity}; Let Let $a, b, c \in \R$, then $(a + b) + c = a + (b + c)$, and $a \cdot (b \cdot c) = (a\cdot b) \cdot c$.
+        \item \textbf{Distributitivity}; $a \cdot (b + c) = ab + ac$
+        \item \textbf{Existence of Neutral Numbers}; $a + 0 = a$, $a \cdot 1 = a$
+        \item \textbf{Existence of Additive and Multiplicative Inverse Numbers}; For any $a 
+         \in \R$ there exists a number $b$ such that $a + b = 0$, where $b = -a$. Simiarily, there exists a number $c$ such that $a \cdot c = 1$, where $c = a^{-1}$.
+    \end{enumerate}
+    \begin{enumerate}[label=O\arabic{*}:]
+        \setcounter{enumi}{5}
+        \item \textbf{Order}; There is a subset of $\R$ known as $\R_+$ such that the two properties are satisified:
+        \begin{itemize}
+            \item If $a, b \in \R_+$, $a + b \in \R_+$, $a \cdot b \in \R_+$. 
+            \item For any $a \in \R$ only one of the following is true. \[a\in \R_+,\quad a = 0,\quad -a \in \R_+\]. 
+        \end{itemize}
+        The numbers such that $a \in \R_+$ are known as positive numbers, while the numbers such that $-a \in \R_+$ are known as negative numbers. 
+    \end{enumerate}
+    \begin{enumerate}[label=LUB\arabic{*}:]
+        \setcounter{enumi}{6}
+        \item \textbf{Least Upper Bound}; A nonempty set of real numbers that is bounded from above will have a least upper bound. 
+    \end{enumerate}
+\end{theorem}
+
+The real number system is completely defined by the Thm. \ref{thm:realnumber}. We can now form the properties and rules of algebra on the real number system. 
+
+\begin{enumerate}
+    \item In a sum or product of many numbers, the parentheses can be omitted; $(a + (b + c)) + d = a + ((b + c) + d) = (a + b) + (c + d) = \dots$ by F1 and F2.
+    \item  In a product of many numbers, order is immaterial; $a \cdot b \cdot c = b \cdot a \cdot c = c \cdot a \cdot b = \dots$
+    \item For any $a,b \in \R$ the equation $x + a = b$ has one and only one solution. For, if $x\in \R$ then see the following computation.
+    \begin{align*}
+        x &= x + 0\\
+        &= x + ((a) + (-a))\\
+        &= (x + a) +(- a)\\
+        &= b + (-a) \\
+        x &= b + (-a)
+    \end{align*}
+    Thus, $x = b + (-a)$ is the only solution.
+    \item For any $a,b \in \R$, with exception $a\neq 0$ the equation $xa = b$ has one and only one solution.
+    \begin{align*}
+        x &= xa a^{-1} \\
+        &= (x a) \cdot a^{-1} \\
+       x &= b a^{-1} 
+    \end{align*}
+    Thus, the element 1 is unique from F4. we define $a^{-1} = \frac{1}{a}$
+
+    \item For any element $a\in R$, $a \cdot 0 + a \cdot 0 = a\cdot (0 + 0) = a \cdot 0 = a \cdot 0 + 0$. So both $a \cdot 0$ and $0$ are solutions of the equation $x + a \cdot 0 = 0$. Thus, if a product of numbers is 0 then at least one of the element must be 0. for if $ab = 0$ and $a\neq 0$ then we can multiply both sides by $a^{-1}$ to get $b = 0$. Hence, the illegitimacy of division by 0. 
+    \item Solutions of the equation $x + (-a) = 0$ are given by $-(-a)$ given by (3.). By F5, we have $-(-a) + (-a) = 0$, so $-(-a) = a$ for any $a \in \R$.
+    \item $(a^{-1})^{-1} = a$ for any non-zero $a \in \R$.  Since $a \cdot a^{-1} = 1$ by F5,  and we know that $a^{-1} \neq 0$, then F4 implies that  $(a^{-1})^{-1}$ and $a$ are equal as both are solutions to $x + a^{-1} = 1$.
+    \item $-(a+b) = (-a) + (-b)$ for all $a,b \in \R$ as both are solutions to the equation $x + (a + b) = 0$. 
+    \item $(ab)^{-1} = a^{-1} b^{-1}$ for any $a,b \in \R$, $a,b \neq 0$. Both are solutions to the equation $x(ab) = 1$. 
+    
+    From this, we can define the rules of the fraction;
+    \begin{align*}
+        \frac{ac}{bc} &= ac (bc)^{-1} = ab^{-1} c c^{-1} = ab^{-1} = \frac{a}{b} \\
+        \frac{a}{b} \cdot \frac{c}{d} &= ab^{-1} c d^{-1} =ac (bd)^{-1} = \frac{ac}{bd} \\
+        \frac{a}{b} + \frac{c}{d} &= ab^{-1} + cd^{-1} =ab^{-1}d d^{-1} + c b b^{-1} d^{-1} \\
+        &= (ad + cb) \cdot (b^{-1} d^{-1}) = \frac{ad + cb}{bd}
+    \end{align*}
+    \item $a \cdot (-1) = -a$ for all $a\in \R$. Since $(-1) \cdot a + a = a((-1) + 1) = a \cdot 0 = 0$. We have that $(-1) \cdot a$ and $a$ are solutions to the equation $x + a = 0$, hence are equal. 
+    
+    A consequence of this is that $-a \cdot b = (-1) \cdot a \cdot b = -ab$ and $(-a) \cdot (-b) = (-1) \cdot (-1)\cdot  a\cdot b = ab$
+\end{enumerate}
+
+These are the field properties of the real numbers and apply to fields such as the rational and complex numbers. To define the reals, The order and LUB properties need to be applied. We can now discuss the order properties of the real numbers. 
+
+\begin{enumerate}
+    \item If $a,b \in \R$ only one of the following statements is true;
+    \begin{align*}
+        a &< b \\
+        a &= b \\
+        a &> b \\
+    \end{align*}
+    This is the case as we apply $(a-b)$ then the number must fit in one of three subsets, being $a\in \R_+, -a \in \R_+, a\in \{0\}$.
+    \item if $a >b$ and $b>c$ then $a-b \in \R_+$ and $b - c\in R_+$. Thus, $a - c = (a-b) + (b-c) \in \R_+$. So, $a > c$.
+\end{enumerate}

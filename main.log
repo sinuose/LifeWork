@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  5 JUN 2026 17:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  8 JUN 2026 09:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -409,15 +409,21 @@ Package pdftex.def Info: figures/set_theory/function-mapping.pdf  used on input 
 
 [4]
 
-[5 <./figures/set_theory/function-mapping.pdf>]) (./measure_theory.tex
+[5 <./figures/set_theory/function-mapping.pdf>]
 
 [6
 
 ]
+
+[7
+
+]) (./measure_theory.tex
+
+[8]
 Chapter 2.
 
 
-[7
+[9
 
 ]
 Overfull \hbox (8.88884pt too wide) in paragraph at lines 38--38
@@ -429,7 +435,7 @@ Underfull \vbox (badness 1424) has occurred while \output is active []
 
 
 
-[8]
+[10]
 Overfull \hbox (6.66663pt too wide) in paragraph at lines 78--78
   []    
  []
@@ -446,7 +452,7 @@ Overfull \hbox (6.66663pt too wide) in paragraph at lines 92--92
 
 
 
-[9]
+[11]
 Overfull \hbox (8.88884pt too wide) in paragraph at lines 118--120
    []    
  []
@@ -458,15 +464,15 @@ Overfull \hbox (6.66663pt too wide) in paragraph at lines 149--149
 
 
 
-[10]) (./probability.tex
+[12]) (./probability.tex
 
-[11]
+[13]
 
-[12
+[14
 
 ]
 Chapter 3.
-<figures/probability/prob_birthday.pdf, id=77, 462.52798pt x 346.89601pt>
+<figures/probability/prob_birthday.pdf, id=84, 462.52798pt x 346.89601pt>
 File: figures/probability/prob_birthday.pdf Graphic file (type pdf)
 <use figures/probability/prob_birthday.pdf>
 Package pdftex.def Info: figures/probability/prob_birthday.pdf  used on input line 24.
@@ -476,20 +482,20 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[13]
-
-[14 <./figures/probability/prob_birthday.pdf>]
-
 [15]
 
-[16]
+[16 <./figures/probability/prob_birthday.pdf>]
+
+[17]
+
+[18]
 Chapter 4.
 
 Underfull \vbox (badness 1092) has occurred while \output is active []
 
 
 
-[17
+[19
 
 ]
 Overfull \hbox (1.7355pt too wide) detected at line 183
@@ -498,31 +504,31 @@ Overfull \hbox (1.7355pt too wide) detected at line 183
 
 
 
-[18]
-
-[19]
-
 [20]
 
 [21]
 
-[22]) (./electromagnetism.tex
+[22]
 
 [23]
 
-[24
+[24]) (./electromagnetism.tex
+
+[25]
+
+[26
 
 ]
 Chapter 5.
 
 
-[25]) (./optics.tex
+[27]) (./optics.tex
 
-[26]
+[28]
 Chapter 6.
 
 
-[27
+[29
 
 ]
 Overfull \hbox (6.66663pt too wide) in paragraph at lines 39--39
@@ -531,24 +537,24 @@ Overfull \hbox (6.66663pt too wide) in paragraph at lines 39--39
 
 
 
-[28]
+[30]
 Overfull \hbox (6.66663pt too wide) in paragraph at lines 70--70
   []    
  []
 
 ) (./image_analysis.tex
 
-[29]
+[31]
 
-[30
+[32
 
 ]
 Chapter 7.
 
 
-[31]) (./compsci.tex
+[33]) (./compsci.tex
 
-[32]
+[34]
 Chapter 8.
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--7
@@ -560,29 +566,29 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[33
+[35
 
 ]
 
-[34] (./main.aux)
+[36] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 7733 strings out of 473190
- 135067 string characters out of 5715801
- 571184 words of memory out of 5000000
- 30789 multiletter control sequences out of 15000+600000
+ 7734 strings out of 473190
+ 135083 string characters out of 5715801
+ 571211 words of memory out of 5000000
+ 30790 multiletter control sequences out of 15000+600000
  571689 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,13n,93p,1124b,319s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on main.pdf (34 pages, 403056 bytes).
+Output written on main.pdf (36 pages, 416068 bytes).
 PDF statistics:
- 296 PDF objects out of 1000 (max. 8388607)
- 173 compressed objects within 2 object streams
+ 302 PDF objects out of 1000 (max. 8388607)
+ 177 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
