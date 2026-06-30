@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1781306573.40015 "main.bcf" "main.bbl" "main" 1781307533.62899 0
-  "main.bcf" 1781307533.52845 108563 34ed75e3c98a6c7d87fb54573d39246b "pdflatex"
+["biber main"] 1781306573.40015 "main.bcf" "main.bbl" "main" 1782840115.50462 0
+  "main.bcf" 1782840115.40378 108563 34ed75e3c98a6c7d87fb54573d39246b "pdflatex"
   "references.bib" 1781306573.18607 168 d6bc952cc872bd1375a7694b59e16eba ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1781307532.5809 "/Users/korsk/Documents/Github/LifeWork/main.tex" "main.pdf" "main" 1781307533.62926 0
+["pdflatex"] 1782840114.41917 "/Users/korsk/Documents/Github/LifeWork/main.tex" "main.pdf" "main" 1782840115.50489 0
   "/Users/korsk/Documents/Github/LifeWork/main.tex" 1781306533.94777 1015 495e6d0bb37c6279d2ea5a54cc552a8f ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -153,16 +153,16 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1753406041 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1741450574 3345740 46b66fdb0378f7bf5921b5eabf1762b8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "calculus12.tex" 1781307531.05564 26581 40fc4baaf9c4654f09b67f1bbd1a2974 ""
+  "calculus12.tex" 1782840114.20596 30623 52ec41fc05060e730491cc499c758f99 ""
   "compsci.tex" 1775939750.31421 2648 0042c31053d3e710057a7a680dbd1971 ""
   "electromagnetism.tex" 1775615794.2229 2811 97ac17f8a2604cd39c32e7c83c85b15a ""
   "figures/probability/prob_birthday.pdf" 1775017267.65528 12640 7aa3fb06cc086e1a428e6f900e867c7c ""
   "figures/real_analysis/triangle_inequality.png" 1781290037.0777 15073 9efe96d9738bf84ba734bb575623950b ""
   "figures/set_theory/function-mapping.pdf" 1780638387.08557 20945 052bef2e888363c9a654ed95a8cb5dbf ""
   "image_analysis.tex" 1774549051.54176 5415 e816ae4aacec89a35b474bc188555ded ""
-  "main.aux" 1781307533.52694 8128 8ebcd6f2021f2d44e0f2510965b2be2e "pdflatex"
+  "main.aux" 1782840115.40215 8232 a2334cf451bad18ebca85586580e6151 "pdflatex"
   "main.bbl" 1781306575.12294 2044 af0aaad43b823b64836aa38bdc7092cd "biber main"
-  "main.run.xml" 1781307533.52945 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
+  "main.run.xml" 1782840115.40438 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
   "main.tex" 1781306533.94777 1015 495e6d0bb37c6279d2ea5a54cc552a8f ""
   "measure_theory.tex" 1775843739.19271 11628 dd5ab6d350a1f197eddf179aec7c6392 ""
   "mjbook.sty" 1781290443.36622 1086 63158194559b1079f4e3a595a462da66 ""

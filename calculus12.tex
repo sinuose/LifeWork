@@ -396,6 +396,109 @@ Using this, we can write numbers that are not rational.
 \dots
 
 \subsection{Square Roots}
-\dots
+
+We will discuss the Schwarz inequality as it is useful later;
+\begin{definition}
+    The Schwarz inequality is defined as
+    \begin{equation}
+        |a_1b_1 + a_2b_2 + \dots + a_nb_n| \leq \sqrt{a_1^2 + a_2^2 + \dots + a_n^2}  \sqrt{b_1^2 + b_2^2 + \dots + b_n^2}
+    \end{equation}
+\end{definition}
+\begin{proof}
+    We start with the fact that
+    \begin{equation}
+        0 \leq (\alpha a_1 - \beta b_1)^2 + (\alpha a_2 - \beta b_2)^2 + \dots + (\alpha a_n - \beta b_n)^2
+    \end{equation}
+    the goal of writing this equation is to factor it out into the RHS. We can multiple each term out;
+    \begin{align*}
+        0 &\leq (\alpha a_1 - \beta b_1)^2 + (\alpha a_2 - \beta b_2)^2 + \dots + (\alpha a_n - \beta b_n)^2\\
+        &= \alpha^2(a_1^2 + a_2^2 + \dots) + \beta^2(b_1^2 + b_2^2 + \dots)- 2\alpha\beta(a_1b_1 + a_2b_2+\dots)
+    \end{align*}
+    We can let $\beta = \sqrt{a_1^2 + a_2^2 + \dots}, \alpha = \sqrt{b_1^2 + b_2^2 + \dots}$ to add the square terms together; 
+    \begin{align*}
+        0 &\leq 2 (b_1^2 + b_2^2 + \dots) (a_1^2 + a_2^2 + \dots) - 2\alpha\beta(a_1b_1 + a_2b_2+\dots)\\
+        (a_1b_1 + a_2b_2+\dots)&\leq \frac{1}{\alpha\beta}(b_1^2 + b_2^2 + \dots) (a_1^2 + a_2^2 + \dots) \\
+        &= \sqrt{a_1^2 + a_2^2  + \dots}\sqrt{b_1^2 + b_2^2 + \dots} 
+    \end{align*}
+    or,
+    \begin{equation}
+        |a_1b_1 + a_2b_2+\dots +a_nb_n|\leq \sqrt{a_1^2 + a_2^2  + \dots+a_n}\sqrt{b_1^2 + b_2^2 + \dots+b_n} 
+    \end{equation}
+\end{proof}
+As a corollary, note that using the property of the absolute value, 
+\begin{definition}
+    \begin{equation}
+       \sqrt{\sum_j (a_j - b_j)^2 } \leq  \sqrt{\sum_j a_j^2 } + \sqrt{\sum_j b_j^2 }
+    \end{equation}
+\end{definition}
+\begin{proof}
+    \begin{align*}
+        \sum_j (a_j - b_j)^2  &= \sum_j a_j^2 + b_j^2 - 2a_jb_j \\
+        &= (a_1^2 + \dots) + (b_1^2 + \dots) - 2(a_1b_1 + a_2b_2 + \dots)\\
+        \text{Schwarz }&\leq(a_1^2 + \dots) + (b_1^2 + \dots) +2\sqrt{a_1^2 +\dots}\sqrt{b_1^2 +\dots}\\
+        &=\left[\sqrt{a_1^2 + \dots} + \sqrt{b_1^2 + \dots}\right]^2
+    \end{align*}
+    Thus, we have shown that;
+    \begin{equation}
+        \sqrt{\sum_j (a_j - b_j)^2}\leq \sqrt{a_1^2 + a_2^2+ \dots+ a_n^2} + \sqrt{b_1^2 + b_2^2+ \dots+ b_n^2}
+    \end{equation}
+\end{proof}
+
+
+
 \subsection{Problems}
+
+\section{Metric Spaces}
+
+A metric space is defined as a set $E$ with a rule $d(q,p)$ $\forall q, p \in E$. If $d$ satisfies
+\begin{equation}
+    \begin{aligned}
+        d(q,p) &\geq 0,\\
+        d(q, p) &= 0, \quad \text{iff. }q=p, \\
+        d(q,p) &= d(p, q), \\
+        d(q,r) &\leq d(q, p) + d(p, r).
+    \end{aligned}
+\end{equation}
+\begin{example}
+Let $E = \R$ with rule $d(q, p) = |q-p|$. 
+The first three properties are trivial. 
+\begin{proof}
+    We aim to show that 
+    \begin{equation*}
+        |q - r| \leq |q - p| + |p - r|
+    \end{equation*}
+    This proof utilizes the property of the absolute value;
+    \begin{equation}
+        |a + b| \leq |a| + |b|
+    \end{equation}
+    Thus, 
+    \begin{align*}
+        |q - r| &= |q + p - p - r| \\
+        &= |(q-p)  + (p - r)| \\
+        &\leq |(q-p)|  + |(p - r)| \\
+        &= |q - p| + |p - r|
+    \end{align*}
+\end{proof} 
+Thus, $E = \R$ is a metric space. 
+\end{example}
+
+
+\begin{example}
+    Let $E^n = \R^n$ with rule $d(x, z) = \sqrt{(x_1 - z_1)^2 + (x_2 - z_2)^2 + \dots + (x_n - z_n)^2}$. 
+    \begin{proof}
+        As before the first three properties are trivial. The triangle inequality is proven by using the Schwarz inequality and it's corollary;
+        \begin{align*}
+            \sqrt{\sum_j (x_j - z_j)^2} &=  \sqrt{\sum_j (x_j - p_j+p_j - z_j)^2} \\
+            &=  \sqrt{\sum_j ((x_j - p_j)+ (p_j - z_j))^2} \\
+            &=  \sqrt{\sum_j (a_j+ b_j)^2} \\
+            &\leq \sqrt{\sum_j a_j^2} +\sqrt{\sum_j b_j^2} \\
+            &= \sqrt{\sum_j (x_j - p_j)^2} +\sqrt{\sum_j (p_j - z_j)^2} \\
+        \end{align*}
+        This shows;
+        \begin{equation}
+            d(x,z) \leq d(x, p) + d(p, z)
+        \end{equation}
+    \end{proof}
+    Thus, $E^n$ is a metric space. 
+\end{example}
 
