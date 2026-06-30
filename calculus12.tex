@@ -1,5 +1,7 @@
 \chapter{Calculus}
 
+We start with Real Analysis. This loosely following \cite{intro2realanalysis}
+
 \section{Set Theory}
 The elements of a set can be chosen abstractly. For instance, in a university, a set of people can contain students, teachers, and faculty. We denote the objects of the set as generalized things. For instance, numbers, animals, and personal emotions are all things that we can place in a set.
 
@@ -156,11 +158,59 @@ Remark that if $f$ is a bijective map, then $f^{-1}(f(A)) = f(f^{-1}(A))$.
     \end{enumerate}
 \end{problem}
 
+\begin{solution}
+    \begin{enumerate}[label=\arabic{*}.]
+        \item Let $x\in A^c$. $x\notin A$. Thus, $(A^c)^c = A$.
+        \item If $x\in A$ and $x \in A$ and $A$ is the same set, logically, the union of both sets is just the set. Similarily, the intersection with itself is just itself as all points are covered witin the same set. The set $\emptyset$ is defined as the set which contains nothing. Thus, $A \cup \emptyset$ is the union of the set $A$ with nothing. Since $\emptyset$ doesn't add anything new to the set, one logically writes that $A\cup \emptyset = A$.
+        \item let $x\in A$ Since $x \notin \emptyset$ then $x \notin A \cap \emptyset$. However, nothing intersects with the emptyset, so naturally, $A\cap \emptyset = \emptyset$ as there is nothing to intersect over. 
+        \item The cartesian product of the emptyset is again defined by the property of the emptyset having no elements. Since there is no ordered pair formed when taking the cartesian product with the emptyset, the logical output set is a set with no elements, which is the emptyset. 
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}
+    Prove the following statements:
+    \begin{enumerate}[label=\arabic{*}.]
+        \item $A^c \cup B^c = (A \cap B)^c$
+        \item $A \cap (B \cup C) = (A\cap B) \cup (A\cap C)$
+        \item $A \cup (B \cap C) = (A\cup B) \cap (A\cup C)$
+    \end{enumerate}
+\end{problem}
+\begin{problem}
+    We prove each statement from top to bottom. To show equalities, we need to show that the LHS equates the the RHS.
+
+    Let $x\in A\cap B$. Since $x$ is in both $A$ and $B$, then $x\notin A^c \cup B^c$. Thus, since $x$ is general; $A^c \cup B^c = (A \cap B)^c$. Similarily, let $x\in A^c \cup B^c$, then by logical, $x$ can be every value within except the points which overlap in $A$ and $B$ as their complements do not touch points which are contained in both sets. 
+
+    Let $x\in A \cap (B\cup C)$ This set is in both $A$ and $(B\cup C)$. Thus, $x\in A, B\cup C \rightarrow, A, B \rightarrow, x \in (A\cap B)$. $x\in A, B\cup C \rightarrow, A, C \rightarrow, x \in (A\cap C)$. So, $x$ must be in one or the other. $A \cap (B \cup C) = (A\cap B) \cup (A\cap C)$
+
+    Let $x\in A \cup (B\cap C)$, or $x$ is in $A$ or $B$ and $C$. Thus, we have two inclusions, $x \in A\cup B$, or its in $A$ or $B$ and $A \cup C$, or $A$ or $C$. Since $x$ must at least be in $A$, the left term is easy to see, however, if $x\in (B \cap C)$ it must be in both $B\cap C$. Thus, $A \cup (B \cap C) = (A\cup B) \cap (A\cup C)$.
+\end{problem}
+
+\begin{problem}
+    Show the following;
+    \begin{align*}
+            B \cap \left(\bigcup_{i=1}^\infty X_i\right) &=     \bigcup_{i=1}^\infty B \cap X_i  \\
+            \left(\bigcup_{i=1}^\infty X_i\right)^c &=     \bigcap_{i=1}^\infty X_i^c
+    \end{align*}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[label=\arabic{*}.]
+        \item Let $x\in B \cap (\cup X_i)$. Since $x\in \cup X_i$ there exists at least one $j$ such that $x\in X_j$. If $x\in B$ and $x\in X_j$ then there exists at least one non-zero entry such that $x\in B\cap X_j$. Thus, since $x$ is general, we have that $B \cap (\cup X_i) = \cup (B\cap X_i)$.
+        
+        \item Let $x\in \cup X_i$. There exists that for at least one integer $j$, $x\in X_j$. Thus, $x \notin X_j^c, \rightarrow x\notin \cap x_j^c$. Since $x$ is general, we have that $(\cup X)^c = \cap X_{i}^c$.
+    \end{enumerate}
+\end{solution}
+
+
+
+
 \clearpage
 \section{The Real Number System}
 
+
 The real numbers are defined by a set of axioms. There are various ways to treat this. I am going to just state all of the properties upfront and then proceed with the consequences of their existence. 
 
+\subsection{Axioms and Order}
 
 \begin{theorem}
     \label{thm:realnumber}
@@ -240,4 +290,112 @@ These are the field properties of the real numbers and apply to fields such as t
     \end{align*}
     This is the case as we apply $(a-b)$ then the number must fit in one of three subsets, being $a\in \R_+, -a \in \R_+, a\in \{0\}$.
     \item if $a >b$ and $b>c$ then $a-b \in \R_+$ and $b - c\in R_+$. Thus, $a - c = (a-b) + (b-c) \in \R_+$. So, $a > c$.
+    \item If $a > b$ and $c \geq d$, then $ a + c \geq b + d$. This implies that $a - b \in \R_+, c - d \in \R_+ \cup \{0\}$. Thus, $(a+c) - (b+d) = (a-b) + (c-d) \in \R_+$.
+    \item If $a > b > 0$ and $c \geq d > 0$, then $ac > bd$. For $a-b \in \R_+$ and $c \in \R_+$, then $ac - bc = (a-b)c \in \R_+$. Similarily, $c-d \in \R_+ \cup \{0\}$, $b\in\R_+$, and so $bc - bd \in \R_+ - \{0\}$. Thus, it follows that $ac - bd = (ac - bc) + (bc- bd) \in \R_+$, that is, $ac > bd$.
+    \item \textbf{Rules for addition and multiplication of real numbers;} 
+    \begin{itemize}
+        \item $(a_+) + (a_+) = (a_+)$
+        \item $(a_-) + (a_-) = (a_-)$
+        \item $(a_+) \cdot (a_+) = (a_+)$
+        \item $(a_-) \cdot (a_-) = (a_+)$
+        \item $(a_+) \cdot (a_-) = (a_-)$
+    \end{itemize}
+    \item For any $a \in \R, a^2 \in \R_+$. More tightly, $a^2 \geq 0$ where the equality is $0^2 = 0$ and special exceptions are $1^2 = 1$.
+    \item If $a>0$, then $1/a >0$. 
+    \item If $a > b >0$ then $1/b > 1/a$.
 \end{enumerate}
+
+We can introduce exponentiation from the consequent multiplication of identical elements. \[a^n = a \cdot a \cdot a \cdot \dots\]
+\subsection{Absolute Value}
+The absolute value is defined as the following piecewise function;
+\[|a| = \begin{cases}
+    a  & \text{if }a > 0 \\ 
+    0  & \text{if }a = 0 \\
+    -a & \text{if }a < 0 \\
+\end{cases}\]
+The absolute value has several properties;
+\begin{enumerate}[label=\arabic{*}.]
+    
+    \item $|a| \geq 0$ for all $a \in \R$ and $|a| = 0$ iff. $a=0$.
+    \item $|ab| = |a| \cdot |b|$ for all $a \in \R$.
+    \item $|a|^2 = a^2$ for all $a \in \R$.
+    \item $|a + b| \leq |a| + |b|$ for all $a,b \in \R$.
+    \item $|a - b| \geq ||a| - |b||$ for all $a,b \in \R$.
+\end{enumerate}
+
+The triangle inequality (4.) is of utmost importance. See in Fig. \ref{fig:tri_ineq}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width= 0.5\linewidth]{figures/real_analysis/triangle_inequality.png}
+    \caption{visualization of the triangle inequality; $|x + y| \leq |x| + |y|$ for all $x,y \in \R$.}
+    \label{fig:tri_ineq}
+\end{figure}
+
+\begin{proof}
+    The proof of (4.) will be finished.
+\end{proof}
+
+\subsection{Least Upper Bound Property.}
+
+The final concept for the real number system is the property of the least upper bound (LUB). If $S \subset \R$, then an upper bound for the set $S$ is a number $a\in \R$ such that $s \leq a$ for each $s \in S$. If such a number exists, $S$ is bounded from above. We call a real number $y$ a \textbf{least upper bound} of the set $S$ if $y$ is an upper bound for $S$, and if $a$ is any given upper bound for $S$, then $y \leq a$. 
+
+A non-empty, finite subset $S \subset \R$ will always have a LUB. We need to justify \textit{LUB7}, which states that a non-empty set of real numbers, bounded from above, will always have a LUB. 
+
+The consequences of the LUB are listed;
+\begin{enumerate}[label=\arabic{*}.]
+    \item For any real number $x$, there an an integer such that $n > x$. 
+    \begin{proof}
+        By contradiction, suppose there is a number that doesn't obey this. Then, $n \leq x$ and thus is bounded from above. Since The set of integers is non-empty and bounded from above by the number $a$. However, for each integer $n$, $n+1$ is aso an integer. So, $n + 1 \leq a$. Thus, $n \leq a-1$ is also an upper bound. Since $a -1 < a$, $a-1$ is not an upper boumd, hence this is a contradiction. 
+    \end{proof}
+    \item For any positive number $a$ there exists an integer $n$ such that $\frac{1}{n} < a$. 
+    \begin{proof}
+        Since $a \in \R$, by the field property, $a^{-1} = 1/a \in \R$. Since we prove that for all real numbers, there exists $n>x$ we have that there exists integer $j > a$ such that $1/a > 1/j$ by the order property. Hence, $1/j > 0$.
+    \end{proof}
+    \item For any $x\in \R$, there is an integer $n$ such that $n \leq x < n+1$.
+    \begin{proof}
+        Let $N$ be an integer such that $|N| > x$. Then, we have that $x$ is bounded by the inequality $-N < x < N$. We have that this forms the set $\{-N, -N + 1, \dots , 0, 1, 2, \dots, N\}$. We can choose $n$ arbitraily along this such that $n \leq x < n+1$
+    \end{proof}
+    \item For any $x\in \R$ and positive integer $N$ there is an integer $n$ such that \[\frac{n}{N} < x < \frac{n+1}{N}\]
+    \begin{proof}
+        We can first rewrite this equation by multiplying each set by $N$, \[n < Nx < n+1\]
+        We need to show that $N\cdot x \in \R$. Since $x\in \R$ and $N \in \mathbb{Z} \subset \R$ we have that $x\cdot N \in \R$ by the field properties. Thus, let $y = Nx \in \R$, by (3.) we have \[n \leq y < n + 1\]
+    \end{proof}
+    \item if $x, a \in \R, a > 0$ then there exists a rational number $r$ such that $|x - r| < a$. That is, we can approximate a real number as closely as we wish by a rational number.
+    \begin{proof}
+        We first use (2.) to find a positive integer $n$ such that $\frac{1}{n}< a$. By (4.) we can use that for $x$ there exists $\frac{n}{N} < x < \frac{n+1}{N}$. Rewriting this by subtracting $n/N$; 
+        \begin{align*}0 < x - \frac{n}{N} &< \frac{1}{N} \\
+        &\quad \quad \quad < a\end{align*}
+        Thus, We have that $|x - \frac{n}{N}| < a$
+    \end{proof}
+\end{enumerate}
+\subsection{Decimals}
+For a given set of integers, $a_1, a_2, \dots a_n \in \{0, 1, 2, \dots, 9\}$, we can write the decimal representation as \[a_0.a_1a_2a_3\dots = \frac{a_0}{10^0} +\frac{a_1}{10^1} + \frac{a_2}{10^2} + \dots + \frac{a_n}{10^n}\]
+
+Suppose $n, m \in \mathbb{Z}, m < n$. Then, we have the inequality that;
+\begin{align*}
+    a_0.a_1a_2\dots a_m &\leq a_0.a_1a_2\dots a_n \\
+    &= a_0.a_1a_2\dots a_m + a_{m+1} \cdot 10^{-(m+1)} + \dots + a_n \cdot 10^{-n} \\
+    &\leq a_0.a_1a_2\dots a_m + 9 \cdot 10^{-(m+1)} + \dots + 9 \cdot 10^{-n} \\
+\end{align*}
+If we add a 1 to the last entry, it rounds up to the decimal in question;
+\begin{align*}
+    a_0.a_1a_2\dots a_m \leq  a_0.a_1a_2\dots a_n < a_0.a_1a_2\dots a_m + 10^{-m} 
+\end{align*}
+Formally, the infinite decimal $a_0.a_1a_2\dots$ is a representation of the least upper bound. Ie, every infinite decimal is a decimal expansion for a definite real number and we can use the infinite decimal iteself as a symbol for the number. 
+\begin{equation}
+    a_0.a_1a_2\dots = \text{LUB}\{a_0.a_1a_2\dots a_n : n \in \mathbb{Z}_+\}
+ \end{equation}
+and, for any positive integer $n$ we have teh inequality
+\[
+a_0.a_1a_2\dots a_n \leq a_0.a_1a_2\dots \leq  a_0.a_1a_2\dots a_n + 10^{-n}
+\]
+
+Using this, we can write numbers that are not rational.
+
+\dots
+
+\subsection{Square Roots}
+\dots
+\subsection{Problems}
+
