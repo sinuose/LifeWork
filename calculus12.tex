@@ -502,3 +502,57 @@ Thus, $E = \R$ is a metric space.
     Thus, $E^n$ is a metric space. 
 \end{example}
 
+
+\section{Polynomials}
+
+The polynomial function is defined as a map consisting of a sum of indeterminant variables $x$, meaning they are not yet known or determined, raised to an positive integer power. The degree of the polynomial is defined by the power leading of the leading term. Let $x\in \R$ and $f$ be a map. The general polynomial function of the $n$-th degree is defined as;
+\begin{equation}
+    f(x) = \sum_{j=0}^{n}a_j x^j
+\end{equation}
+where $a_j$ are real-valued constants. The degree of $n$ fixes the leading constant to be non-zero, $a_n \neq 0$.
+
+The polynomials of first and second degree, known as the linear and quadratic forms, are most famous and widely used. These functions are used so much that they are taught in high-school as introductory mathematics. 
+
+\begin{definition}
+    Let $x\in\R$ and the constants $a_1$ and $a_0 \in \R \setminus 0$. The linear map, $f:\R \rightarrow \R$ is defined as
+    \begin{equation}
+        f(x) = a_1 x + a_0
+    \end{equation}
+    where $a_1$ is defined as the slope of the line, and $a_0$ is defined as the intercept of the line. 
+\end{definition} 
+
+
+
+\begin{definition}
+    Let $x\in\R$ and the constants $a_2$, $a_1$, and $a_0 \in \R$. The standard-form of the quadratic map, $f:\R \rightarrow \R$ is defined as
+    \begin{equation}
+        f(x) = a_2x^2 + a_1 x + a_0
+    \end{equation}
+    where $a_2 \in \R \setminus 0$ and $a_1$ and $a_0 \in \R$. The quadratic form can be factored in various ways to describe different properties of it. The vertex-form is defined as
+    \begin{equation}
+        f(x) = a_2(x-h)^2 + k
+    \end{equation}
+    where the substitutions $h$ and $k$ define the position of the vertex. These constants, easily derived using a derivative, are given as
+    \begin{equation}
+        h = -\frac{a_1}{2a_2}\,, \quad k = a_0 - \frac{a_1^2}{4a_2}\,.
+    \end{equation}
+\end{definition} 
+
+The solutions of a univariate polynomial, known as the roots, exist if and only if $f(z) = 0$ for a polynomial solution $z$. If a polynomial has $N$ solutions $z_i$, the form of the factored polynomial simply exists as
+\begin{equation}
+    f(x) = c(x-z_n)(x-z_{n-1}) \dots (x-z_2)(x-z_1)
+\end{equation}
+where $z_i$ can be a complex number. In the case of positive coefficients only, there exists at most $n$ solutions. 
+
+To factor a polynomial, 
+\begin{equation}
+f(x) = a_n x^n a_{n-1}x^{n-1}+ \dots +a_1 x + a_0\,,
+\end{equation}
+the rational root test can be used where $a_i \in \mathbf{Z}$ and $a_n, a_0 \neq 0$. The rational root theorem states that candidate numbers $q$ can be defined as 
+\begin{equation}
+    q = \frac{p}{q}\,,
+\end{equation}
+such that $p$ is an integer factor of $a_0$ and $q$ is an integer factor of $a_n$. Thus, all possible roots consist candidates $q$ for all factors $p, q$.
+
+The applications of the polynomials are wide. For example, see Gaussian integrals, Legendre polynomials, and free-energy landscapes, where quadratic solutions are generally made to ensure Gaussianeity.
+

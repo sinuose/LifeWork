@@ -19,6 +19,43 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
+    \entry{nasa2017seh}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=72f826272be1a819ed284b8ed8310d76}{%
+           family={{National Aeronautics and Space Administration}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {National Aeronautics}%
+        {Space Administration}%
+      }
+      \list{location}{1}{%
+        {Washington, D.C.}%
+      }
+      \strng{namehash}{72f826272be1a819ed284b8ed8310d76}
+      \strng{fullhash}{72f826272be1a819ed284b8ed8310d76}
+      \strng{fullhashraw}{72f826272be1a819ed284b8ed8310d76}
+      \strng{bibnamehash}{72f826272be1a819ed284b8ed8310d76}
+      \strng{authorbibnamehash}{72f826272be1a819ed284b8ed8310d76}
+      \strng{authornamehash}{72f826272be1a819ed284b8ed8310d76}
+      \strng{authorfullhash}{72f826272be1a819ed284b8ed8310d76}
+      \strng{authorfullhashraw}{72f826272be1a819ed284b8ed8310d76}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{NASA/SP-2016-6105}
+      \field{title}{NASA Systems Engineering Handbook}
+      \field{type}{Special Publication}
+      \field{version}{Revision 2}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://ntrs.nasa.gov/citations/20170001761
+      \endverb
+      \verb{url}
+      \verb https://ntrs.nasa.gov/citations/20170001761
+      \endverb
+    \endentry
     \entry{intro2realanalysis}{book}{}{}
       \name{author}{1}{}{%
         {{hash=f45a9ebcc1154d3cd08cd2b06d0e5a84}{%

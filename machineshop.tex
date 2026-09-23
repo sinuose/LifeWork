@@ -6,7 +6,124 @@ The basics of drawings, screws, and conventions styles are all listed here as th
 
 \section{Safety}
 
-\textcolor{red}{Safety is the most important thing in the machine shop and lab. There is no replacement part for a missing fin}
+\begin{center}
+\Huge{\textbf{\textcolor{red}{Safety is the most important thing in the machine shop and lab.}}}    
+\end{center}
+
+That being said, here are a list of safety rules that if one adheres to, they should never be injured.
+
+\begin{enumerate}
+    \item Wear safety goggles at all times. When using moving machines, don't use gloves unless you are aware that if they are caught in something, you will be dragged into that machine. 
+    \item Be aware of yourself and your surroundings. 
+\end{enumerate}
+
+The machine shop has a lot of moving parts. If you are aware of what those parts are and know not to displace or cause those parts to move near you, this will improve your odds of survival. 
+
+\begin{enumerate} [resume]
+    \item No hanging clothing or long hair. Ensure jewelry is removed before operation of moving parts. Hair should be tied up or kept in a hat.
+    \item When operating a device that is spinning, remember, as with gloves, that if something is caught in it, it will be dragged into the rotating machine until it is stopped. 
+\end{enumerate}
+
+Recall from Chap. TBD that objects with angular momentum will conserve that momentum unless acted upon. This principle is known as Newton's second law, which is often forgotten about unless stated explicitly.
+
+\begin{enumerate}[resume]
+    \item Never use your hands to remove chips as they can be sharp.
+    \item Keep areas clean, as they should be. If something is out of place, put it back.
+\end{enumerate}
+
+This cleanliness principle is actually very useful in life as well. The area you reside in will largely dictate your mood and performance. Removing tripping hazards is also a bonus. 
+
+\begin{enumerate}[resume]
+    \item Never work alone.
+    \item Don't use a cell-phone or watch TV. The machine shop is a place of work, not play. 
+    \item If a machine is broken or not working properly - report it. Peoples safety is more important than a broken piece of replaceable\footnote{Although, if you had to save the entirety of CERN or one person's life, this might raise some questions. Should I have a section on ethics?} equipment.
+    \item If you are hurt, please get help before you no longer can\footnote{In the event of death of life-altering infection.}.  
+\end{enumerate}
+
+\section{Units}
+
+There are several methods of units in the machine shop. The two main ways of describing length are the imperial and metric measures. The main dimensions which need to be described are units of length, depth, radius or diameter, screw type, gear type, and angles and bores. The dimensions and tolerances, set by the American Society of Mechanical Engineers (ASME) is a guideline for a universal set of standards for technical drawings. 
+
+\subsection{Length}
+
+Length, denoted by an arrow symbol, describes the length of dimensions of a drawing.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/machine-shop/box_dim.png}
+    \caption{Basic Dimensions with size tolerances of a box shape. Lengths, denoted by a pair of arrows, are listed alongside a numerical measurement, typically associated with a unit convention such as imperial or metric. The tolerance, denoted by the plus/minus sign, writes the maximum and minimum lengths of the part. }
+\end{figure}
+
+\subsection{Diameter}
+
+The unit of diameter, typically denoted by a $\emptyset$ or \textbf{DIA}, is associated with the length of the end to end, passing through the center of a circular shape or angle, shown in the example of Fig. \ref{fig:circle_dim}.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/machine-shop/circle_dim.png}
+    \caption{Basic Dimensions with size tolerances of a circular shape. Lengths, denoted by a pair of arrows, are listed alongside a numerical measurement, typically associated with a unit convention such as imperial or metric. The tolerance, denoted by the plus/minus sign, writes the maximum and minimum lengths of the part. The diameter of the circle is noted by the symbol $\emptyset$, which explicitly states the diameter of the shape. Here, pictured is the nominal diameter, or outer-diameter abbreviated OD. The ordinal diameter, or inner-diameter abbreviated ID. }
+    \label{fig:circle_dim}
+\end{figure}
+
+\subsection{Screws and Holes}
+
+\clearpage
+\section{Technical Drawings}
+
+Picture yourself in the machine shop. You just finished your CAD and model. You have the parts and the machines. How are you going to turn the block of metal into a finished product? The answer lies in a drawing that a machinist, like yourself or a friend, can easily make and digest. This document loosely following the \textsc{NASA} Engineering Drawing Standards Manual, found in Ref. \cite{nasa2017seh}.
+
+Lines are the fundamental block of all drawings. Lines should be all roughly the same thickness/width and straight. Different styles of lines can be used to represent different things. Several lines, such as dimensions, centering or symmetries, hidden areas, or breaks can be represented by a set of dotted or partially dashed lines, shown in Fig. \ref{fig:line_styles}.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{figures/machine-shop/line_styles.png}
+    \caption{Line Types and Conventions.}
+    \label{fig:line_styles}
+\end{figure}
+
+Phantom lines can be used to indicate an alternate position of the part or a repeated detail. For instance, consider a spring with a repeated coil structure. Here, phantom lines are used to show a symmetry along various angles or variations.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/machine-shop/coil_phantom.png}
+    \caption{Coiled spring with repeated details.}
+    \label{fig:coil}
+\end{figure}
 
 
-\section{Technical Drawing}
+\clearpage
+\subsection{Projection Types}
+
+The projection of a drawing is important to consider. For instance, the projection of a cut can dictate the topology of the structure as one must consider which face details are made on.
+
+The two main projection methods are known as the first-angle and third-angle projection, which are typically found in the ISO and ASME respectfully. The ISO is used in most countries, while the ASME is used in the US, Canada, Japan, and Australia. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{figures/machine-shop/projections.jpg}
+    \caption{First and third angle projection style.}
+\end{figure}
+
+
+\subsection{Examples}
+Example technical drawings, as well as a template for hand-drawn drawings can be found in Fig. \ref{fig:example_drawing}, as well as an attached PDF.
+
+\begin{figure}[htbp]
+    \centering
+    % Rotates the image 90 degrees counter-clockwise
+    \includegraphics[width=1.3\textwidth, angle=-90]{figures/machine-shop/example_drawing.png} 
+    \caption{Example technical drawing.}
+    \label{fig:example_drawing}
+\end{figure}
+
+\clearpage
+\includepdf[pages=-]{figures/machine-shop/a3_martin.pdf}
+
+
+\section{Band-saw}
+
+\section{Drill-press}
+
+\section{Lathe}
+
+
