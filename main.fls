@@ -129,6 +129,11 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftp
 INPUT /usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 INPUT /usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 INPUT /usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+INPUT /usr/local/texlive/2025/texmf-dist/tex/generic/dirtree/dirtree.sty
+INPUT /usr/local/texlive/2025/texmf-dist/tex/generic/dirtree/dirtree.sty
+INPUT /usr/local/texlive/2025/texmf-dist/tex/generic/dirtree/dirtree.tex
+INPUT /usr/local/texlive/2025/texmf-dist/tex/generic/dirtree/dirtree.tex
+INPUT /usr/local/texlive/2025/texmf-dist/tex/generic/dirtree/dirtree.tex
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/algorithms/algorithm.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/algorithms/algorithm.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
@@ -312,6 +317,8 @@ INPUT image_analysis.tex
 INPUT ./compsci.tex
 INPUT ./compsci.tex
 INPUT compsci.tex
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
 INPUT ./machineshop.tex
 INPUT ./machineshop.tex
 INPUT machineshop.tex
@@ -328,7 +335,6 @@ INPUT ./figures/machine-shop/circle_dim.png
 INPUT ./figures/machine-shop/circle_dim.png
 INPUT ./figures/machine-shop/circle_dim.png
 INPUT ./figures/machine-shop/circle_dim.png
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
 INPUT ./figures/machine-shop/line_styles.png
 INPUT ./figures/machine-shop/line_styles.png
 INPUT ./figures/machine-shop/line_styles.png
@@ -360,7 +366,6 @@ INPUT ./figures/machine-shop/a3_martin.pdf
 INPUT ./figures/machine-shop/a3_martin.pdf
 INPUT ./figures/machine-shop/a3_martin.pdf
 INPUT ./figures/machine-shop/a3_martin.pdf
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT main.aux
 INPUT main.run.xml
 OUTPUT main.run.xml

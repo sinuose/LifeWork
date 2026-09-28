@@ -2,6 +2,48 @@
 
 This is mainly about algorithmns as i dont know shit about computers
 
+\section{Working in C++}
+
+A great language to use in physics programming is C++ and Python. C++ is described first as it is more technical and requires a tad more effort. 
+
+\section{Makefiles}
+
+Suppose that the file structure of a given project consists of a main file, and some function files that contain functions that are used in the main file. Such a file structure is shown as:
+\dirtree{%
+.1 my-project/.
+.2 iterate.cpp/.
+.2 iterate.h/.
+.2 finalize.cpp/.
+.2 execute.cpp/.
+.2 initialize.cpp/.
+.2 wait.cpp /.
+}
+
+This complex file structure requires linking of each header file, known as a library, to the main file which is labelled as \textbf{iterate.cpp}. This can be done using a program known as Makefile. Makefile is a library manager that links library paths together during the compilation step. Below is the Makefile for the above example:
+\begin{verbatim}
+    CC = clang++
+
+    all: 
+        $(CC) iterate.cpp initialize.cpp execute.cpp finalize.cpp wait.cpp -o one
+\end{verbatim}
+Let's walk through this. \textbf{CC} is a variable for the language. Here, we use the \textsc{clang++} compiler. Other options are \textsc{g++} or \textsc{gcc}. In Makefile, the variable is always a string and can be initiated by setting a name and a value. To call the variable, use the $\mathdollar$ symbol before the variable.
+
+\begin{verbatim}
+    CXX = g++
+    CXXFLAGS := -Wall
+    CXXFLAGS +=  -02
+
+   main:
+    $(CC) $(CXXFLAGS)iterate.cpp execute.cpp finalize.cpp initialize.cpp wait.cpp -o one
+
+// called g++ -Wall -02 iterate.cpp execute.cpp finalize.cpp initialize.cpp wait.cpp -o one
+\end{verbatim}
+
+
+
+
+
+
 \section{Dynamic Programming}
 Dynamic programming is something i dont understnad\\
 
