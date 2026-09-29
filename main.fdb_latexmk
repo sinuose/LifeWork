@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1790374607.09788 "main.bcf" "main.bbl" "main" 1790375271.43508 0
-  "main.bcf" 1790375271.30784 108629 ccc166f4e652466e5a5b494189689441 "pdflatex"
+["biber main"] 1790374607.09788 "main.bcf" "main.bbl" "main" 1790641189.90318 0
+  "main.bcf" 1790641189.77965 108629 ccc166f4e652466e5a5b494189689441 "pdflatex"
   "references.bib" 1790032005.81243 606 d3bfbe008f5a24d936c61d77efde0d7f ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1790375269.74645 "/Users/korsk/Documents/Github/LifeWork/main.tex" "main.pdf" "main" 1790375271.43541 0
+["pdflatex"] 1790641188.448 "/Users/korsk/Documents/Github/LifeWork/main.tex" "main.pdf" "main" 1790641189.90349 0
   "/Users/korsk/Documents/Github/LifeWork/main.tex" 1790374210.48246 1088 3f14bbfbdf335c7a9f98c2fe2f5a10d8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -170,7 +170,7 @@
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1741450574 3345740 46b66fdb0378f7bf5921b5eabf1762b8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "calculus12.tex" 1790121616.82622 33612 1094961b17e37ec1a13c8dd50368d8c3 ""
-  "compsci.tex" 1790375269.50686 4260 02ad425e7b53b8252a92840616acc8c4 ""
+  "compsci.tex" 1790641186.50869 6495 bc501195f9ee0aee65a40ada915b106f ""
   "electromagnetism.tex" 1775615794.2229 2811 97ac17f8a2604cd39c32e7c83c85b15a ""
   "figures/machine-shop/a3_martin.pdf" 1790034201.24866 640036 8c2a6aff5d867a34fb2962dacfd89d3f ""
   "figures/machine-shop/box_dim.png" 1790032686.07408 47434 1c3f365970b73b89998b3f5a27003715 ""
@@ -184,9 +184,9 @@
   "figures/set_theory/function-mapping.pdf" 1780638387.08557 20945 052bef2e888363c9a654ed95a8cb5dbf ""
   "image_analysis.tex" 1774549051.54176 5415 e816ae4aacec89a35b474bc188555ded ""
   "machineshop.tex" 1790034311.0738 7303 6c9c93a158d95edc0c1e6a25b97dc376 ""
-  "main.aux" 1790375271.30625 11846 89c4f3be6b856065268ac7626224dca2 "pdflatex"
+  "main.aux" 1790641189.77785 11942 e84fc8bfee545fcc35ccd2d06d4b4a13 "pdflatex"
   "main.bbl" 1790374617.32795 3482 b3a996674007d70083574b3fce460572 "biber main"
-  "main.run.xml" 1790375271.30873 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
+  "main.run.xml" 1790641189.78028 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
   "main.tex" 1790374210.48246 1088 3f14bbfbdf335c7a9f98c2fe2f5a10d8 ""
   "measure_theory.tex" 1775843739.19271 11628 dd5ab6d350a1f197eddf179aec7c6392 ""
   "mjbook.sty" 1781290443.36622 1086 63158194559b1079f4e3a595a462da66 ""

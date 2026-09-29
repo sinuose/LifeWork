@@ -39,8 +39,61 @@ Let's walk through this. \textbf{CC} is a variable for the language. Here, we us
 // called g++ -Wall -02 iterate.cpp execute.cpp finalize.cpp initialize.cpp wait.cpp -o one
 \end{verbatim}
 
+\section{CMake}
 
+As nice as Makefiles are, it appears that they ar enot used that often anymore in larger projects. Why is this? probably due to power-scaling of these computer science people - whatever, not my problem. 
 
+To use CMake, we need to first download it.
+
+A CMake project consists of a file and a CMakeLists.txt file. The CMakeLists.txt file is a specific file, similar to a Makefile. Below is an example file structure, as well as an associated CMakeLists.txt file along with some comments.
+
+\dirtree{%
+.1 my-project/.
+.2 app/.
+.3 main.cpp/.
+.2 include/.
+.3 json/.
+.4 json.hpp/.
+.3 iscat\_file\_load/.
+.4 iscat\_file\_load.hpp/.
+.2 src/.
+.3 iscat\_file\_load.cpp/.
+.2 CMakeLists.txt/.
+}
+
+\begin{verbatim}
+    cmake_minimum_required(VERSION 3.20)
+
+    project(some_project CXX)
+    
+    #json
+    add_library(jsonLib INTERFACE)
+    target_include_directories(jsonLib INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/json)
+
+    #iscat file load
+    add_library(iscat_file_load src/iscatloader.cpp)
+    target_include_directories(iscat_file_load PUBLIC include)
+    target_link_libraries(iscat_file_load PUBLIC HDF5::HDF5)
+
+    #HDF5
+    #add_subdirectory(include/h5pp)
+    find_package(HDF5 REQUIRED COMPONENTS CXX)
+
+    # add executable
+    add_executable(main ${PROJECT_SOURCE_DIR}/app/main.cpp)
+    # link libraries
+    target_link_libraries(main PRIVATE jsonLib)
+    target_link_libraries(main PRIVATE iscat_file_load)
+\end{verbatim}
+The explanations of each flags are listed in the list below;
+\begin{itemize}
+    \item cmake\_minimum\_required - Minimum required version of cmake
+    \item project - defined project variable and version of C++
+    \item add\_library - adds library. See explanation
+    \item target\_include\_directories - tells the compiler where \textbf{.h} and \textbf{.hpp} files are located.
+    \item target\_link\_library - The compiler will provide the target with the library. For instance passing in \textbf{(main\_program PRIVATE jsonLib)} will provide main with the functions and definitions in the library \textbf{jsonLib}. The flag ensures that nothing derived from the target main\_program will inherit functions in jsonLib. 
+    \item find\_package - searches for external libraries. 
+\end{itemize}
 
 
 

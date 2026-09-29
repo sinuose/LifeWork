@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  25 SEP 2026 15:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  28 SEP 2026 17:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -895,28 +895,43 @@ Overfull \hbox (50.95448pt too wide) in paragraph at lines 40--40
 [43
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
+Overfull \hbox (3.7049pt too wide) in paragraph at lines 87--87
+[]    \OT1/cmtt/m/n/10 target_include_directories(jsonLib INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/json)[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[44]
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
 
-) (./machineshop.tex
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[44]
+
+
+[45] (./machineshop.tex
+
+[46]
 Chapter 9.
 
 Underfull \vbox (badness 4479) has occurred while \output is active []
 
 
 
-[45
+[47
 
 ]
-<figures/machine-shop/box_dim.png, id=226, 293.095pt x 283.0575pt>
+<figures/machine-shop/box_dim.png, id=232, 293.095pt x 283.0575pt>
 File: figures/machine-shop/box_dim.png Graphic file (type png)
 <use figures/machine-shop/box_dim.png>
 Package pdftex.def Info: figures/machine-shop/box_dim.png  used on input line 53.
 (pdftex.def)             Requested size: 213.39568pt x 206.08603pt.
-<figures/machine-shop/circle_dim.png, id=228, 327.2225pt x 278.03876pt>
+<figures/machine-shop/circle_dim.png, id=234, 327.2225pt x 278.03876pt>
 File: figures/machine-shop/circle_dim.png Graphic file (type png)
 <use figures/machine-shop/circle_dim.png>
 Package pdftex.def Info: figures/machine-shop/circle_dim.png  used on input line 63.
@@ -927,10 +942,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[46 <./figures/machine-shop/box_dim.png>]
+[48 <./figures/machine-shop/box_dim.png>]
 
-[47 <./figures/machine-shop/circle_dim.png>]
-<figures/machine-shop/line_styles.png, id=238, 446.66875pt x 577.15625pt>
+[49 <./figures/machine-shop/circle_dim.png>]
+<figures/machine-shop/line_styles.png, id=245, 446.66875pt x 577.15625pt>
 File: figures/machine-shop/line_styles.png Graphic file (type png)
 <use figures/machine-shop/line_styles.png>
 Package pdftex.def Info: figures/machine-shop/line_styles.png  used on input line 79.
@@ -939,7 +954,7 @@ Package pdftex.def Info: figures/machine-shop/line_styles.png  used on input lin
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/machine-shop/coil_phantom.png, id=239, 268.00125pt x 141.52875pt>
+<figures/machine-shop/coil_phantom.png, id=246, 268.00125pt x 141.52875pt>
 File: figures/machine-shop/coil_phantom.png Graphic file (type png)
 <use figures/machine-shop/coil_phantom.png>
 Package pdftex.def Info: figures/machine-shop/coil_phantom.png  used on input line 88.
@@ -949,38 +964,38 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[48
+[50
 
 ]
 
-[49 <./figures/machine-shop/line_styles.png>]
+[51 <./figures/machine-shop/line_styles.png>]
 
-[50 <./figures/machine-shop/coil_phantom.png>]
-<figures/machine-shop/projections.jpg, id=252, 722.7pt x 1045.9075pt>
+[52 <./figures/machine-shop/coil_phantom.png>]
+<figures/machine-shop/projections.jpg, id=258, 722.7pt x 1045.9075pt>
 File: figures/machine-shop/projections.jpg Graphic file (type jpg)
 <use figures/machine-shop/projections.jpg>
 Package pdftex.def Info: figures/machine-shop/projections.jpg  used on input line 103.
 (pdftex.def)             Requested size: 426.79135pt x 617.67058pt.
-<figures/machine-shop/example_drawing.png, id=253, 612.2875pt x 467.7475pt>
+<figures/machine-shop/example_drawing.png, id=259, 612.2875pt x 467.7475pt>
 File: figures/machine-shop/example_drawing.png Graphic file (type png)
 <use figures/machine-shop/example_drawing.png>
 Package pdftex.def Info: figures/machine-shop/example_drawing.png  used on input line 114.
 (pdftex.def)             Requested size: 554.83005pt x 423.8737pt.
 
 
-[51
+[53
 
 ]
 
-[52 <./figures/machine-shop/projections.jpg>]
+[54 <./figures/machine-shop/projections.jpg>]
 
-[53 <./figures/machine-shop/example_drawing.png>]
-<figures/machine-shop/a3_martin.pdf, id=264, 1195.01462pt x 845.0471pt>
+[55 <./figures/machine-shop/example_drawing.png>]
+<figures/machine-shop/a3_martin.pdf, id=271, 1195.01462pt x 845.0471pt>
 File: figures/machine-shop/a3_martin.pdf Graphic file (type pdf)
 <use figures/machine-shop/a3_martin.pdf>
 Package pdftex.def Info: figures/machine-shop/a3_martin.pdf  used on input line 120.
 (pdftex.def)             Requested size: 1195.0117pt x 845.04504pt.
-<figures/machine-shop/a3_martin.pdf, id=266, page=1, 1195.01462pt x 845.0471pt>
+<figures/machine-shop/a3_martin.pdf, id=273, page=1, 1195.01462pt x 845.0471pt>
 File: figures/machine-shop/a3_martin.pdf Graphic file (type pdf)
 <use figures/machine-shop/a3_martin.pdf, page 1>
 Package pdftex.def Info: figures/machine-shop/a3_martin.pdf , page1 used on input line 120.
@@ -1003,18 +1018,18 @@ File: figures/machine-shop/a3_martin.pdf Graphic file (type pdf)
 <use figures/machine-shop/a3_martin.pdf, page 1>
 Package pdftex.def Info: figures/machine-shop/a3_martin.pdf , page1 used on input line 120.
 (pdftex.def)             Requested size: 597.50584pt x 422.52252pt.
-[54
+[56
 
 
  <./figures/machine-shop/a3_martin.pdf>])
 
-[55]
+[57]
 
-[56
+[58
 
 ]
 
-[57] (./main.aux)
+[59] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1024,18 +1039,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 16085 strings out of 473190
- 302751 string characters out of 5715801
+ 16097 strings out of 473190
+ 302889 string characters out of 5715801
  1163946 words of memory out of 5000000
- 39048 multiletter control sequences out of 15000+600000
+ 39060 multiletter control sequences out of 15000+600000
  573078 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,17n,93p,1124b,1252s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on main.pdf (57 pages, 1499255 bytes).
+Output written on main.pdf (59 pages, 1506585 bytes).
 PDF statistics:
- 447 PDF objects out of 1000 (max. 8388607)
- 244 compressed objects within 3 object streams
+ 453 PDF objects out of 1000 (max. 8388607)
+ 248 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  73 words of extra memory for PDF output out of 10000 (max. 10000000)
 
