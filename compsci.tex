@@ -2,11 +2,120 @@
 
 This is mainly about algorithmns as i dont know shit about computers
 
+
+\section{Github}
+
+Code is writing. Similar to how books are shared in a libary, code is shared through a worldwide network known as Github. Github consists of repositories, which act as book covers, which ensure that every project has a self-contained way to share it, read it, and use it. 
+
+This section describes Github and some of the features that I have found useful as a graduate student.
+
+\subsection{repositories and how to use them}
+
+Creating a new repository is as simple as clicking "New repository," opening it on the computer, and "Push"-ing it onto the github network. 
+
+Whenever you are adding something new to a github repository, it is wise to open a "Branch." Branches are designed to copy the current version of the code without breaking the current working version, typically referred to as "main" or "master." Branches can be made by clicking on the branch icon and creating a new Branch.
+
+When you want to collaborate on a piece of code, or specifically, want to change something, one can submit a "Pull Request" in which collaborators can offer advise to changes on code before they are pulled.
+
+To merge branches, one can submit a merge request. Once the merge request has been passed, one can delete a branch once it is transferred onto the main branch.
+
+\section{Working in Python}
+
+Python is an easy scripting language with many perks in the scientific community. Below are some things that i picked up while using it
+
+\subsection{numpy}
+
+Best library there is.
+
+\subsection{matplotlib}
+
+second ebst library there is/ 
+
+\subsection{dask}
+
+In many scientific and engineering applications, the amounts of data which need to be analyzed range from single text files, to large 6Tb datasets of images, metadata, and many involved parameters. In large cases, datasets cannot be opened all at once; for instance, how can a 5Tb dataset be parsed into the active RAM memory if even beefy systems have up to 128 gB of ram?
+
+To parse memory of this size, many approaches can be taken, as shown in the C++ section of this chapter. Luckily, developers more experienced than myself have written many APIs to do so. one such APi is known as \textsc{dask}, a \textsc{Python} library for parallel and distributed computing.
+
+The dask API consists of three main functionalities, \textbf{tasks}, \textbf{dataframes}, and \textbf{arrays}.
+
+\subsubsection{dask.tasks}
+
+\subsubsection{dask.dataframes}
+
+\subsubsection{dask.array}
+
+The \textsc{dask} array, referred in this section as simply a darray, consists of a coordinate array of many \textsc{numpy} arrays. 
+
+To learn this system, lets use an example in the lab - the Nikon \textsc{.nd2} format. The \textsc{.nd2} format is an image format which stores image data, as well as many meta-data, together in a single container which can be utilized in downstream pipelines. This format is also greatly used in many biological applications. The main reason to switch this format into a  \textsc{dask} array is to allow to offload the information of larger  \textsc{.nd2} files into chunks, allowing for faster analysis.
+
+Below is an outline of the  \textsc{.nd2} structure
+\dirtree{%
+.1 video.nd2.
+.2 Coordinates.
+.3 T .
+.4 values. 
+.4 attributes (units).
+.3 C.
+.4 values (color as a string).
+.3 Z.
+.4 values .
+.4 attributes (units).
+.3 Y.
+.4 values .
+.4 attributes (units).
+.3 X.
+.4 values .
+.4 attributes (units).
+.4 values .
+.4 attributes (units).
+.2 Attributes.
+.3 metadata:.
+.3 processed:.
+}
+
+Using the \textsc{toolsjasinski} code below, we can initialize this as a dask array;
+\begin{verbatim}
+    from src.toolsjasinski._parse_video import parse_video
+
+    path = r'src\toolsjasinski\tests\ALEX_Nanowells_10mWRL_50mWGL_3MM_2min.nd2'
+
+    video = parse_video(path)
+\end{verbatim}
+Now, the object \textsc{video} contains an xarray.Dataarray consisting of the chunked video information, as well as an attributes dictionary. We can see this by printing some properties of the file in question;
+
+\begin{verbatim}
+    print(video)
+    print(f"File Size: {video.nbytes/1e9:.2f} Gb")
+    print(video.sizes)
+
+    > OUTPUT
+
+    <xarray.DataArray '_dask_block-aacbdb2a18dff2e73fd9cf0b459a7cc1' (T: 2378,
+                                                                  C: 2, Z: 1,
+                                                                  Y: 512, X: 512)> Size: 2GB
+    dask.array<transpose, shape=(2378, 2, 1, 512, 512), dtype=uint16, chunksize=(1, 2, 1, 512, 512), chunktype=numpy.ndarray>
+    Coordinates:
+    * T        (T) float64 19kB 0.0 50.48 101.0 ... 1.199e+05 1.199e+05 1.2e+05
+    * C        (C) <U5 40B 'red' 'green'
+    * Z        (Z) float64 8B 0.0
+    * Y        (Y) float64 4kB 0.0 0.16 0.32 0.48 0.64 ... 81.28 81.44 81.6 81.76
+    * X        (X) float64 4kB 0.0 0.16 0.32 0.48 0.64 ... 81.28 81.44 81.6 81.76
+    Attributes:
+        metadata:   {'metadata': Metadata(contents=Contents(channelCount=2, frame...
+        processed:  images=[<1 field_type>] creator='N/A'
+    File Size: 2.49 Gb
+    Frozen({'T': 2378, 'C': 2, 'Z': 1, 'Y': 512, 'X': 512})
+\end{verbatim}
+
+
 \section{Working in C++}
 
 A great language to use in physics programming is C++ and Python. C++ is described first as it is more technical and requires a tad more effort. 
 
-\section{Makefiles}
+
+
+\subsection{Makefiles}
 
 Suppose that the file structure of a given project consists of a main file, and some function files that contain functions that are used in the main file. Such a file structure is shown as:
 \dirtree{%
@@ -39,7 +148,7 @@ Let's walk through this. \textbf{CC} is a variable for the language. Here, we us
 // called g++ -Wall -02 iterate.cpp execute.cpp finalize.cpp initialize.cpp wait.cpp -o one
 \end{verbatim}
 
-\section{CMake}
+\subsection{CMake}
 
 As nice as Makefiles are, it appears that they ar enot used that often anymore in larger projects. Why is this? probably due to power-scaling of these computer science people - whatever, not my problem. 
 
@@ -94,6 +203,18 @@ The explanations of each flags are listed in the list below;
     \item target\_link\_library - The compiler will provide the target with the library. For instance passing in \textbf{(main\_program PRIVATE jsonLib)} will provide main with the functions and definitions in the library \textbf{jsonLib}. The flag ensures that nothing derived from the target main\_program will inherit functions in jsonLib. 
     \item find\_package - searches for external libraries. 
 \end{itemize}
+
+\subsection{C++ Library Documentation}
+
+This section describes documentation for certain libraries as I use them so that i can understand what they do. They shouldn't be used as a replacement for the actual documentation, just notes.
+
+\subsection{HDF5 Files and their API}
+
+The hierarchical data format, HDF, is a set of file formats that is used to store and organize large amounts of data. These are developed for supercomputer purposes, as well as general large datasets, such as those used in machine learning in recent years.
+
+The HDF5 format consists of a large multi-dimensional array of identically typed elements. The datatype is defined across the dataset. The multi-dimensional array consists of a \textbf{Rank} and a set of \textbf{Dimensions}. The rank is a simple extensions from matrix algebra as the rank of a matrix.
+
+The main trouble in HDF5 files is their nested-ness, specifically in the case of datasets where there are long nested strcutures. In this case, it is often not obvious how to get the data that is stored. For example, we can use a dataset type that has been produced after imaging some particles. This is a particle-tracking dataset coined as the \textbf{ROI\_Traces} dataset style:
 
 
 
