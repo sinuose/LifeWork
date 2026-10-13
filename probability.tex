@@ -1,6 +1,41 @@
 \chapter{Probability}
 
+This section is written from my notes while enrolled in UBC's STAT 560 course on statistical inference and probability. These notes are supplemented by any further mentioned books. Notably, Erlan Cinlar's "Probability and Stochastics."
+
+\section{The Probability Measure}
+
+Let $\Omega$ be defined as the sample space. The set $\Omega$ is measurable if for any subset $A$ and $B$ of $\Omega$ the properties:
+\begin{align*}
+	A\cup B &\in \Omega\,, \\
+	A\cap B &\in \Omega\,, \\
+	A \setminus B &\in \Omega\,.
+\end{align*} 
+The collection, $\sigma_\Omega$, of subsets of $\Omega$ is called a sigma-algebra on $\Omega$ if it is closed under finite union and complement. This is opposed to a collection $O$ which may not be necessarily closed under union and complement but can still constitute an algebra. The pair, $(\Omega, \sigma_\Omega)$, is a measurable-space when $\sigma_\Omega$ is a sigma-algebra. Given a measurable-space, a measure, $\mu$, can be defined as a map $\mu: \sigma_\Omega \rightarrow \mathbb{R}^+$, such that $\mu(\emptyset) = 0$ and $\mu(\bigcup_n A_n) = \sum_{n}\mu(A_i)$.
+
+\begin{definition}
+	The probability measure on a measurable-space $(\Omega, \sigma_\Omega)$, $\mathbb{P}$ is defined by the following properties. Let $H$ and $K$ be events, or elements of $\Omega$:
+	\begin{align}
+		\mathbb{P}(\emptyset) = 0,&\quad \mathbb{P}(\Omega) = 1\,,\\
+		H \in K \rightarrow \mathbb{P}(H) &< \mathbb{P}(K)\,,\\
+		H \cap K = \emptyset \rightarrow \mathbb{P}(H \cup K) &= \mathbb{P}(H) + \mathbb{P}(K)\\
+		\text{if }H_n\text{ is disjoint}, \quad \mathbb{P}(\bigcup_n H_n) &= \sum_n \mathbb{P}(H_n)\\
+		\mathbb{P}(\bigcup_n H_n) &\leq \sum_n \mathbb{P}(H_n)
+	\end{align}
+	% missing sequential continuity
+\end{definition}
+For the purposes of applied statistics, one can simplify these properties into a set of axioms with no real issues. Let the space $(\Omega, \sigma_\Omega, \mathbb{P})$ be a probability space, then the following properties are true;
+\begin{enumerate}
+	\item $\mathbb{P}(A) \geq 0 \forall A \in \{A\}$
+	\item $\mathbb{P}(\Omega) = 1$.
+	\item if $A_n$ are disjoint, then $\mathbb{P}(\bigcup_n A_n) \leq \sum_n \mathbb{P}(A_n)$.
+\end{enumerate}
+
+\section{Sequences}
+
+Sequences are useful mathematical objects that are often used in proofs regarding measurable spaces. 
+
 \section{Combinatorics}
+
 \begin{problem}
 	Given $N$ people in a room, what is the probability that $2$ or more people share a birthday?
 \end{problem}
