@@ -108,6 +108,22 @@ Now, the object \textsc{video} contains an xarray.Dataarray consisting of the ch
     Frozen({'T': 2378, 'C': 2, 'Z': 1, 'Y': 512, 'X': 512})
 \end{verbatim}
 
+This shows our file size, as well as the array sizes and our coordinates. Each coordinate can be accessed, as well as their subclasses. For instance, we can extract the time array, as well as the distances of the image using the coordinates \textsc{T} and \textsc{X}.
+
+\begin{verbatim}
+    time_arr = video['T].values
+    px_size = video['X'].values[1]
+    px_unit = video['X'].attrs
+\end{verbatim}
+
+The \textsc{dask} array can be sliced and cast into a numpy array if the size is within the RAM of the computer;
+
+\begin{verbatim}
+    channel1All = np.array(video[:,0,0,:,:])
+    channel2All = np.array(video[:,1,0,:,:])
+    times = np.array(video.coords['T'].values)
+\end{verbatim}
+
 
 \section{Working in C++}
 
