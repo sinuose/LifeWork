@@ -30,37 +30,48 @@ For the purposes of applied statistics, one can simplify these properties into a
 	\item if $A_n$ are disjoint, then $\mathbb{P}(\bigcup_n A_n) \leq \sum_n \mathbb{P}(A_n)$.
 \end{enumerate}
 
-\section{Sequences}
 
-Sequences are useful mathematical objects that are often used in proofs regarding measurable spaces. 
+\subsection{Random Variables}
 
-\section{Combinatorics}
+Given a probability space $(\Omega, \mathcal{H}, p)$ and a measurable space $(E, \mathcal{E})$, a random variable, $X$, is defined as a map $X: \Omega \rightarrow E$ such that it is measurable relative to $\mathcal{H}$ and $\mathcal{E}$. That is if $X^{-1}A$ is an event in $\mathcal{E}$, then
+\begin{equation}
+	X^{-1}A = \{X \in A\} = \{\omega \in \Omega: X(\omega) \in A\}\,.
+\end{equation}
+What this means is that $X^{-1}A$ is the set of elements in the sample space such that $X$ acting on that set is in the event. Mathematically, this implies that the pre-image of $A$ under $X$ is contained within the sigma-algebra of the probability space, $\mathcal{H}$.
 
-\begin{problem}
-	Given $N$ people in a room, what is the probability that $2$ or more people share a birthday?
-\end{problem}
+The distribution of a random variable is denoted by the image measure of $p$. Here, let $\mu$ denote the image measure of $p$ under $X$;
+\begin{equation}
+	\mu(A) = p(X^{-1}A) = p(X \in A), \quad A \in \mathcal{E}\,.
+\end{equation}
+Here, $\mu$ is a probability measure on $(E, \mathcal{E})$ and is called the distribution of $X$. We need to show that if $\mu$ and some other measure is finite and agree\footnote{For every single set $A$ in the p-system $\mathcal{A}$, the two measures have the same numerical value.} on a p-system $\mathcal{C}$ on $E$, then they are identical. Defining a function $c:\mathbb{R}\rightarrow [0,1]$ we can specify,
+\begin{equation}
+	c(x) = \mu[-\infty, x] = \mathbb{P}(X\leq x), x \in \mathbb{R}\,.
+\end{equation}
+It should be noted that in traditional probability theory, these functions are very useful as they allow one to avoid the use of measures. 
 
-\begin{solution}
-	This problem is an exercise in counting. First, lets go case-by-case and write out the general solution. There are 365 days in total. If there is only 1 person in the room, only 1 day is taken. Once we place the second person in the room, we can calculate the probability of the two individuals not-sharing the same birthday;
+\subsection{Examples of Distributions}
+
+\begin{enumerate}
+	\item Poisson Distribution;
 	\begin{equation}
-		\mathbb{P}[\textbf{share birthday}] = 1 - \mathbb{P}[\textbf{ not share birthday}]
+		\mathbb{P}(x = n) = \frac{\lambda^n}{n!}e^{-\lambda}, \quad n \in \mathbb{N}\,.
 	\end{equation}
-	Ie, the second person has only $364$ days to choose from to not share. Thus, their probability of not sharing a birthday are $364/365$, ie the event space over the sample space. Likewise, the following person has now only $363$ days to choose from and so on. This relation can be multiplied together such that the overall probability of not sharing is that nobody in the room is sharing. This can be built using a product;
+	Alternatively, one can specify the corresponding distribution's probability measure, $\mu$.
 	\begin{equation}
-		\mathbb{P}[\textbf{not share birthday}] = \prod_{x=1}^N \frac{365 - x}{365}
+		\mu(A) = \sum_{n\in A}\frac{\lambda^n}{n!}e^{-\lambda}, A \subset \mathbb{N}\,.
 	\end{equation}
-	This gives us the probability that at least 2 people are sharing;
+	\item Exponential Distribution;
 	\begin{equation}
-		\mathbb{P}[\textbf{at least 2 share birthday}] = 1 - \prod_{x=1}^N \frac{365 - x}{365}
+		\mu(dx) =dx c e^{-cx}\,.
 	\end{equation}
-	Plotting this relation as a function of $N$, we can see the shape of this relation in Fig. \ref{prob_birthday}.
-	\begin{figure}[h!]
-		\centering
-		\includegraphics[width=0.75\textwidth]{figures/probability/prob_birthday.pdf}
-		\caption{Probability of at least 2 people in a room sharing a birthday as a function of $N$ people in the room. at $N=30, \mathbb{P} \approx 73\%$}
-		\label{prob_birthday}
-	\end{figure}
-\end{solution}
+\end{enumerate}
+
+
+% \section{Sequences}
+
+% Sequences are useful mathematical objects that are often used in proofs regarding measurable spaces. Sequences are fundamentally sets of numbers that follow patterns.
+
+% The notation $(A_n)$ denotes a sequence. The notation $A_n \nearrow A$ implies that as the sequence continues, the limit of the sequence approaches the value of $A$. 
  
  \newpage
 \section{Multivariate Distributions}
@@ -168,6 +179,35 @@ Thus, the expectation is defined more commonly by the law of the unconscious sta
 \subsection{Characteristic Functions}
 
 
+\section{Problems}
+
+\begin{problem}
+	Given $N$ people in a room, what is the probability that $2$ or more people share a birthday?
+\end{problem}
+
+\begin{solution}
+	This problem is an exercise in counting. First, lets go case-by-case and write out the general solution. There are 365 days in total. If there is only 1 person in the room, only 1 day is taken. Once we place the second person in the room, we can calculate the probability of the two individuals not-sharing the same birthday;
+	\begin{equation}
+		\mathbb{P}[\textbf{share birthday}] = 1 - \mathbb{P}[\textbf{ not share birthday}]
+	\end{equation}
+	Ie, the second person has only $364$ days to choose from to not share. Thus, their probability of not sharing a birthday are $364/365$, ie the event space over the sample space. Likewise, the following person has now only $363$ days to choose from and so on. This relation can be multiplied together such that the overall probability of not sharing is that nobody in the room is sharing. This can be built using a product;
+	\begin{equation}
+		\mathbb{P}[\textbf{not share birthday}] = \prod_{x=1}^N \frac{365 - x}{365}
+	\end{equation}
+	This gives us the probability that at least 2 people are sharing;
+	\begin{equation}
+		\mathbb{P}[\textbf{at least 2 share birthday}] = 1 - \prod_{x=1}^N \frac{365 - x}{365}
+	\end{equation}
+	Plotting this relation as a function of $N$, we can see the shape of this relation in Fig. \ref{prob_birthday}.
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.75\textwidth]{figures/probability/prob_birthday.pdf}
+		\caption{Probability of at least 2 people in a room sharing a birthday as a function of $N$ people in the room. at $N=30, \mathbb{P} \approx 73\%$}
+		\label{prob_birthday}
+	\end{figure}
+\end{solution}
+
+\fullpageboxline
 
 
 

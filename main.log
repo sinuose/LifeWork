@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  13 OCT 2026 12:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  29 OCT 2026 10:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -699,122 +699,181 @@ LaTeX Warning: No \author given.
 
 ]
 Chapter 1.
+<figures/measure_theory/venn_diagram_split.png, id=15, 939.51pt x 303.534pt>
+File: figures/measure_theory/venn_diagram_split.png Graphic file (type png)
+<use figures/measure_theory/venn_diagram_split.png>
+Package pdftex.def Info: figures/measure_theory/venn_diagram_split.png  used on input line 34.
+(pdftex.def)             Requested size: 426.79135pt x 137.88586pt.
 
 
 [3{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<figures/set_theory/function-mapping.pdf, id=27, 556.55426pt x 161.47829pt>
+
+[4 <./figures/measure_theory/venn_diagram_split.png>]
+<figures/set_theory/function-mapping.pdf, id=38, 556.55426pt x 161.47829pt>
 File: figures/set_theory/function-mapping.pdf Graphic file (type pdf)
 <use figures/set_theory/function-mapping.pdf>
-Package pdftex.def Info: figures/set_theory/function-mapping.pdf  used on input line 83.
+Package pdftex.def Info: figures/set_theory/function-mapping.pdf  used on input line 96.
 (pdftex.def)             Requested size: 426.79135pt x 123.83354pt.
 
 
-[4]
-
 [5 <./figures/set_theory/function-mapping.pdf>]
 
-[6
+[6]
+
+[7
 
 ]
 
-[7]
+[8]
 
-[8
+[9
 
 ]
 
-[9]
-<figures/real_analysis/triangle_inequality.png, id=66, 552.0625pt x 604.2575pt>
-File: figures/real_analysis/triangle_inequality.png Graphic file (type png)
-<use figures/real_analysis/triangle_inequality.png>
-Package pdftex.def Info: figures/real_analysis/triangle_inequality.png  used on input line 330.
-(pdftex.def)             Requested size: 213.39568pt x 233.5757pt.
-
-
-[10 <./figures/real_analysis/triangle_inequality.png (PNG copy)>]
+[10]
 
 [11]
+Overfull \hbox (6.66663pt too wide) in paragraph at lines 406--406
+  []    
+ []
 
-[12]
+
+Overfull \hbox (6.66663pt too wide) in paragraph at lines 449--449
+  []    
+ []
+
+
+
+[12
+
+]
 
 [13]
 
-[14]) (./measure_theory.tex
+[14]
+<figures/real_analysis/triangle_inequality.png, id=88, 552.0625pt x 604.2575pt>
+File: figures/real_analysis/triangle_inequality.png Graphic file (type png)
+<use figures/real_analysis/triangle_inequality.png>
+Package pdftex.def Info: figures/real_analysis/triangle_inequality.png  used on input line 571.
+(pdftex.def)             Requested size: 213.39568pt x 233.5757pt.
+
 
 [15]
 
-[16
-
-]
-Chapter 2.
-
+[16 <./figures/real_analysis/triangle_inequality.png (PNG copy)>]
 
 [17]
 
 [18]
-Overfull \hbox (8.88884pt too wide) in paragraph at lines 105--105
-  []     
- []
 
-
-Underfull \vbox (badness 1424) has occurred while \output is active []
-
-
-
-[19]
-Overfull \hbox (6.66663pt too wide) in paragraph at lines 145--145
-  []    
- []
-
-
-Overfull \hbox (8.88884pt too wide) in paragraph at lines 151--151
-  []     
- []
-
-
-Overfull \hbox (6.66663pt too wide) in paragraph at lines 159--159
-  []    
- []
-
-
+[19]) (./measure_theory.tex
 
 [20]
-Overfull \hbox (8.88884pt too wide) in paragraph at lines 185--187
-   []    
- []
+Chapter 2.
 
 
-Overfull \hbox (6.66663pt too wide) in paragraph at lines 216--216
+[21
+
+]
+
+[22]
+Overfull \hbox (6.66663pt too wide) in paragraph at lines 118--118
   []    
  []
 
 
 
-[21]) (./probability.tex
+[23]
 
-[22]
-Chapter 3.
-
-
-[23
-
-]
-<figures/probability/prob_birthday.pdf, id=113, 462.52798pt x 346.89601pt>
-File: figures/probability/prob_birthday.pdf Graphic file (type pdf)
-<use figures/probability/prob_birthday.pdf>
-Package pdftex.def Info: figures/probability/prob_birthday.pdf  used on input line 59.
-(pdftex.def)             Requested size: 320.0935pt x 240.08366pt.
+[24]
+Overfull \hbox (8.88884pt too wide) in paragraph at lines 226--226
+  []     
+ []
 
 
-[24 <./figures/probability/prob_birthday.pdf>]
 
 [25]
+Overfull \hbox (6.66663pt too wide) in paragraph at lines 266--266
+  []    
+ []
+
+
+Overfull \hbox (8.88884pt too wide) in paragraph at lines 272--272
+  []     
+ []
+
+
+Overfull \hbox (6.66663pt too wide) in paragraph at lines 280--280
+  []    
+ []
+
+
 
 [26]
 
 [27]
 
-[28
+[28]
+
+[29]
+<figures/measure_theory/dyadic_function.png, id=137, 794.97pt x 578.16pt>
+File: figures/measure_theory/dyadic_function.png Graphic file (type png)
+<use figures/measure_theory/dyadic_function.png>
+Package pdftex.def Info: figures/measure_theory/dyadic_function.png  used on input line 437.
+(pdftex.def)             Requested size: 426.79135pt x 310.40205pt.
+
+
+[30 <./figures/measure_theory/dyadic_function.png>]
+Overfull \hbox (8.88884pt too wide) in paragraph at lines 467--469
+   []    
+ []
+
+<figures/measure_theory/venn_diagram_disjoint.png, id=144, 794.97pt x 325.215pt>
+File: figures/measure_theory/venn_diagram_disjoint.png Graphic file (type png)
+<use figures/measure_theory/venn_diagram_disjoint.png>
+Package pdftex.def Info: figures/measure_theory/venn_diagram_disjoint.png  used on input line 485.
+(pdftex.def)             Requested size: 426.79135pt x 174.60115pt.
+
+
+[31 <./figures/measure_theory/venn_diagram_disjoint.png>]
+
+[32]
+Overfull \hbox (6.66663pt too wide) in paragraph at lines 558--558
+  []    
+ []
+
+
+
+[33]) (./probability.tex
+
+[34]
+Chapter 3.
+
+
+[35
+
+]
+
+[36]
+
+[37]
+
+[38]
+<figures/probability/prob_birthday.pdf, id=176, 462.52798pt x 346.89601pt>
+File: figures/probability/prob_birthday.pdf Graphic file (type pdf)
+<use figures/probability/prob_birthday.pdf>
+Package pdftex.def Info: figures/probability/prob_birthday.pdf  used on input line 204.
+(pdftex.def)             Requested size: 320.0935pt x 240.08366pt.
+
+Overfull \hbox (6.66663pt too wide) in paragraph at lines 211--211
+  []    
+ []
+
+
+
+[39 <./figures/probability/prob_birthday.pdf>]
+
+[40
 
 ]
 Chapter 4.
@@ -823,38 +882,38 @@ Underfull \vbox (badness 1092) has occurred while \output is active []
 
 
 
-[29]
-Overfull \hbox (1.7355pt too wide) detected at line 218
+[41]
+Overfull \hbox (1.7355pt too wide) detected at line 258
 []
  []
 
 
 
-[30]
+[42]
 
-[31]
+[43]
 
-[32]
+[44]
 
-[33]
+[45]
 
-[34]) (./electromagnetism.tex
+[46]) (./electromagnetism.tex
 
-[35]
+[47]
 
-[36
+[48
 
 ]
 Chapter 5.
 
 
-[37]) (./optics.tex
+[49]) (./optics.tex
 
-[38]
+[50]
 Chapter 6.
 
 
-[39
+[51
 
 ]
 Overfull \hbox (6.66663pt too wide) in paragraph at lines 39--39
@@ -863,32 +922,32 @@ Overfull \hbox (6.66663pt too wide) in paragraph at lines 39--39
 
 
 
-[40]
+[52]
 Overfull \hbox (6.66663pt too wide) in paragraph at lines 70--70
   []    
  []
 
 ) (./image_analysis.tex
 
-[41]
+[53]
 
-[42
+[54
 
 ]
 Chapter 7.
 
 
-[43]) (./compsci.tex
+[55]) (./compsci.tex
 
-[44]
+[56]
 Chapter 8.
 
 
-[45
+[57
 
 ]
 
-[46]
+[58]
 Overfull \hbox (56.20444pt too wide) in paragraph at lines 109--109
 []                                                                  \OT1/cmtt/m/n/10 Y: 512, X: 512)> Size: 2GB[] 
  []
@@ -905,7 +964,7 @@ Overfull \hbox (14.2048pt too wide) in paragraph at lines 109--109
 
 
 
-[47]
+[59]
 Overfull \hbox (35.20462pt too wide) in paragraph at lines 149--149
 []    \OT1/cmtt/m/n/10 $(CC) $(CXXFLAGS)iterate.cpp execute.cpp finalize.cpp initialize.cpp wait.cpp -o one[] 
  []
@@ -925,7 +984,7 @@ Underfull \vbox (badness 1210) has occurred while \output is active []
 
 
 
-[48]
+[60]
 Underfull \hbox (badness 10000) in paragraph at lines 222--223
 
  []
@@ -935,24 +994,24 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[49] (./machineshop.tex
+[61] (./machineshop.tex
 
-[50]
+[62]
 Chapter 9.
 
 Underfull \vbox (badness 4479) has occurred while \output is active []
 
 
 
-[51
+[63
 
 ]
-<figures/machine-shop/box_dim.png, id=245, 293.095pt x 283.0575pt>
+<figures/machine-shop/box_dim.png, id=293, 293.095pt x 283.0575pt>
 File: figures/machine-shop/box_dim.png Graphic file (type png)
 <use figures/machine-shop/box_dim.png>
 Package pdftex.def Info: figures/machine-shop/box_dim.png  used on input line 53.
 (pdftex.def)             Requested size: 213.39568pt x 206.08603pt.
-<figures/machine-shop/circle_dim.png, id=247, 327.2225pt x 278.03876pt>
+<figures/machine-shop/circle_dim.png, id=294, 327.2225pt x 278.03876pt>
 File: figures/machine-shop/circle_dim.png Graphic file (type png)
 <use figures/machine-shop/circle_dim.png>
 Package pdftex.def Info: figures/machine-shop/circle_dim.png  used on input line 63.
@@ -963,10 +1022,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[52 <./figures/machine-shop/box_dim.png>]
+[64 <./figures/machine-shop/box_dim.png>]
 
-[53 <./figures/machine-shop/circle_dim.png>]
-<figures/machine-shop/line_styles.png, id=257, 446.66875pt x 577.15625pt>
+[65 <./figures/machine-shop/circle_dim.png>]
+<figures/machine-shop/line_styles.png, id=303, 446.66875pt x 577.15625pt>
 File: figures/machine-shop/line_styles.png Graphic file (type png)
 <use figures/machine-shop/line_styles.png>
 Package pdftex.def Info: figures/machine-shop/line_styles.png  used on input line 79.
@@ -975,7 +1034,7 @@ Package pdftex.def Info: figures/machine-shop/line_styles.png  used on input lin
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/machine-shop/coil_phantom.png, id=258, 268.00125pt x 141.52875pt>
+<figures/machine-shop/coil_phantom.png, id=304, 268.00125pt x 141.52875pt>
 File: figures/machine-shop/coil_phantom.png Graphic file (type png)
 <use figures/machine-shop/coil_phantom.png>
 Package pdftex.def Info: figures/machine-shop/coil_phantom.png  used on input line 88.
@@ -985,38 +1044,38 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[54
+[66
 
 ]
 
-[55 <./figures/machine-shop/line_styles.png>]
+[67 <./figures/machine-shop/line_styles.png>]
 
-[56 <./figures/machine-shop/coil_phantom.png>]
-<figures/machine-shop/projections.jpg, id=271, 722.7pt x 1045.9075pt>
+[68 <./figures/machine-shop/coil_phantom.png>]
+<figures/machine-shop/projections.jpg, id=317, 722.7pt x 1045.9075pt>
 File: figures/machine-shop/projections.jpg Graphic file (type jpg)
 <use figures/machine-shop/projections.jpg>
 Package pdftex.def Info: figures/machine-shop/projections.jpg  used on input line 103.
 (pdftex.def)             Requested size: 426.79135pt x 617.67058pt.
-<figures/machine-shop/example_drawing.png, id=272, 612.2875pt x 467.7475pt>
+<figures/machine-shop/example_drawing.png, id=318, 612.2875pt x 467.7475pt>
 File: figures/machine-shop/example_drawing.png Graphic file (type png)
 <use figures/machine-shop/example_drawing.png>
 Package pdftex.def Info: figures/machine-shop/example_drawing.png  used on input line 114.
 (pdftex.def)             Requested size: 554.83005pt x 423.8737pt.
 
 
-[57
+[69
 
 ]
 
-[58 <./figures/machine-shop/projections.jpg>]
+[70 <./figures/machine-shop/projections.jpg>]
 
-[59 <./figures/machine-shop/example_drawing.png>]
-<figures/machine-shop/a3_martin.pdf, id=283, 1195.01462pt x 845.0471pt>
+[71 <./figures/machine-shop/example_drawing.png>]
+<figures/machine-shop/a3_martin.pdf, id=329, 1195.01462pt x 845.0471pt>
 File: figures/machine-shop/a3_martin.pdf Graphic file (type pdf)
 <use figures/machine-shop/a3_martin.pdf>
 Package pdftex.def Info: figures/machine-shop/a3_martin.pdf  used on input line 120.
 (pdftex.def)             Requested size: 1195.0117pt x 845.04504pt.
-<figures/machine-shop/a3_martin.pdf, id=285, page=1, 1195.01462pt x 845.0471pt>
+<figures/machine-shop/a3_martin.pdf, id=331, page=1, 1195.01462pt x 845.0471pt>
 File: figures/machine-shop/a3_martin.pdf Graphic file (type pdf)
 <use figures/machine-shop/a3_martin.pdf, page 1>
 Package pdftex.def Info: figures/machine-shop/a3_martin.pdf , page1 used on input line 120.
@@ -1039,18 +1098,18 @@ File: figures/machine-shop/a3_martin.pdf Graphic file (type pdf)
 <use figures/machine-shop/a3_martin.pdf, page 1>
 Package pdftex.def Info: figures/machine-shop/a3_martin.pdf , page1 used on input line 120.
 (pdftex.def)             Requested size: 597.50584pt x 422.52252pt.
-[60
+[72
 
 
  <./figures/machine-shop/a3_martin.pdf>])
 
-[61]
+[73]
 
-[62
+[74
 
 ]
 
-[63] (./main.aux)
+[75] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1060,18 +1119,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 16127 strings out of 473190
- 303249 string characters out of 5715801
- 1163946 words of memory out of 5000000
- 39090 multiletter control sequences out of 15000+600000
+ 16156 strings out of 473190
+ 304489 string characters out of 5715801
+ 1164129 words of memory out of 5000000
+ 39119 multiletter control sequences out of 15000+600000
  573078 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,17n,93p,1124b,1252s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on main.pdf (63 pages, 1525480 bytes).
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
+Output written on main.pdf (75 pages, 1819021 bytes).
 PDF statistics:
- 466 PDF objects out of 1000 (max. 8388607)
- 257 compressed objects within 3 object streams
+ 521 PDF objects out of 1000 (max. 8388607)
+ 290 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 88 words of extra memory for PDF output out of 10000 (max. 10000000)
 

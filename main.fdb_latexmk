@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1791301605.61924 "main.bcf" "main.bbl" "main" 1791918789.12434 0
-  "main.bcf" 1791918788.99798 108629 ccc166f4e652466e5a5b494189689441 "pdflatex"
+["biber main"] 1793293830.97808 "main.bcf" "main.bbl" "main" 1793295390.71303 0
+  "main.bcf" 1793295390.5868 108629 ccc166f4e652466e5a5b494189689441 "pdflatex"
   "references.bib" 1790032005.81243 606 d3bfbe008f5a24d936c61d77efde0d7f ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1791918787.6241 "/Users/korsk/Documents/Github/LifeWork/main.tex" "main.pdf" "main" 1791918789.12463 0
+["pdflatex"] 1793295388.89651 "/Users/korsk/Documents/Github/LifeWork/main.tex" "main.pdf" "main" 1793295390.71332 0
   "/Users/korsk/Documents/Github/LifeWork/main.tex" 1790374210.48246 1088 3f14bbfbdf335c7a9f98c2fe2f5a10d8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -55,6 +55,7 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1248133631 37912 77d683123f92148345f3fc36a38d9ab1 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1248133631 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
@@ -66,6 +67,7 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb" 1248133631 32915 7bf7720c61a5b3a7ff25b0964421c9b6 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1248133631 31099 c85edf1dd5b9e826d67c9c7293b6786c ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb" 1248133631 30457 bc0868ebece724ed7c3d37e3d9bff7bd ""
@@ -169,7 +171,7 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1753406041 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1741450574 3345740 46b66fdb0378f7bf5921b5eabf1762b8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "calculus12.tex" 1790121616.82622 33612 1094961b17e37ec1a13c8dd50368d8c3 ""
+  "calculus12.tex" 1793295385.81541 45009 da8bf36cad702aeb35d73b8ed6e90b99 ""
   "compsci.tex" 1791301600.52458 12770 8f743bba491aa7d8c76d300fadb62f54 ""
   "electromagnetism.tex" 1775615794.2229 2811 97ac17f8a2604cd39c32e7c83c85b15a ""
   "figures/machine-shop/a3_martin.pdf" 1790034201.24866 640036 8c2a6aff5d867a34fb2962dacfd89d3f ""
@@ -179,19 +181,22 @@
   "figures/machine-shop/example_drawing.png" 1790033739.16566 111653 8a847f5e834268a2d51531bdd43c5622 ""
   "figures/machine-shop/line_styles.png" 1790032306.83053 85558 4a27fcbc9db9fae2ecbed6a8304c28ae ""
   "figures/machine-shop/projections.jpg" 1790033537.59213 136862 e1e75cb1e763528260dc2868f9fc9c7e ""
+  "figures/measure_theory/dyadic_function.png" 1792426149.8885 170206 18746fab7f88e00c437174870a4686bd ""
+  "figures/measure_theory/venn_diagram_disjoint.png" 1792504760.92099 59195 33777f6a81635b243a12595f6dc4e20e ""
+  "figures/measure_theory/venn_diagram_split.png" 1792506078.67703 70091 abb9aa585d414750de61023152853365 ""
   "figures/probability/prob_birthday.pdf" 1775017267.65528 12640 7aa3fb06cc086e1a428e6f900e867c7c ""
   "figures/real_analysis/triangle_inequality.png" 1781290037.0777 15073 9efe96d9738bf84ba734bb575623950b ""
   "figures/set_theory/function-mapping.pdf" 1780638387.08557 20945 052bef2e888363c9a654ed95a8cb5dbf ""
   "image_analysis.tex" 1774549051.54176 5415 e816ae4aacec89a35b474bc188555ded ""
   "machineshop.tex" 1790034311.0738 7303 6c9c93a158d95edc0c1e6a25b97dc376 ""
-  "main.aux" 1791918788.99641 13431 5013f8e72c121864b5cb4291d8c739c4 "pdflatex"
-  "main.bbl" 1791301607.00196 3482 b3a996674007d70083574b3fce460572 "biber main"
-  "main.run.xml" 1791918788.99858 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
+  "main.aux" 1793295390.58406 16683 ad5dd616074e85b5ed309d684a2179c1 "pdflatex"
+  "main.bbl" 1793293841.50693 3482 b3a996674007d70083574b3fce460572 "biber main"
+  "main.run.xml" 1793295390.58772 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
   "main.tex" 1790374210.48246 1088 3f14bbfbdf335c7a9f98c2fe2f5a10d8 ""
-  "measure_theory.tex" 1791918787.10412 14836 7eedbcf9e9918aa1d1298f373876e94f ""
+  "measure_theory.tex" 1792596341.64577 39937 ebec8f5991050556611dd1dab11359db ""
   "mjbook.sty" 1781290443.36622 1086 63158194559b1079f4e3a595a462da66 ""
   "optics.tex" 1776718158.27572 3469 4b994e6e25d813194953d590a967ebc1 ""
-  "probability.tex" 1791881934.8447 24919 f8b6f9385f592b1d3c7e3fb83cf03475 ""
+  "probability.tex" 1792595574.69884 27276 9e91371b06221ffd0180a33b086af3c6 ""
   (generated)
   "main.aux"
   "main.bcf"
