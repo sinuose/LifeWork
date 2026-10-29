@@ -29,7 +29,7 @@ For a finite set $E$, the set itself and its complement must be included in the 
 
 A sigma-algebra is a special kind of algebra which is closed under complements and countable unions.
 \begin{definition}
-	A non-empty collection of subsets $\sigma_E$ is known as a sigma-algebra on $E$ if 
+	A non-empty collection of subsets $\sigma_E$, which consist of measurable sets $E_i$, is known as a sigma-algebra on $E$ if 
 	\begin{enumerate}
 		\item $A \in \sigma_E,  \quad \rightarrow E\setminus A \in \sigma_E\,,$
 		\item $A_1, A_2, \dots \in \sigma_E, \quad \rightarrow \bigcup_n A_n \in \sigma_E\,.$
@@ -37,8 +37,129 @@ A sigma-algebra is a special kind of algebra which is closed under complements a
 	Some properties are that every sigma-algebra on $E$ contains at least $E$ and $\emptyset$. That is the simplest sigma-algebra is $\sigma_E = \{E, \emptyset\}$.
 \end{definition}
 
+Since a sigma-algebra is fundamentally a collection of sets, one can intersect a family of sigma-algebras on $E$, which when generates again a sigma-algebra on $E$. 
+
+For example, consider an arbitrary collection of subsets of $E$, $\mathcal{C}$. Then, a sigma-algebra which contains $\mathcal{C}$ can be generated. Suppose that $\mathcal{C}$ contains finite countable elements $C_i$, then the sigma algebra would be constructed by the following;
+\begin{equation}
+	\sigma = \{E, \emptyset, C_i, C_i \cup C_j, \dots, C_i^c, \dots\}\,,
+\end{equation}
+which specifically consists of all elements of $\mathcal{C}$, as well as ensuring closure under complement and union. 
+
+Another such example is known as the power set, or the sigma-algebra consisting of each and every possible subset of $E$. To imagine this, consider a partition into 3 components. The explicit power set is then;
+\begin{equation}
+	2^E = \{C_1\cup(C_2 \cup C_3), C_1 \cup C_2, C_1 \cup C_3, C_2 \cup C_3, C_1, C_2, C_3, \emptyset \}\,.
+\end{equation}
+The set $E$ contains 3 partitions, which is expressed as $2^3 = 8$ elements in the power set. The proof for this can be done via induction. An intuitive explanation is the fact that the set operation $\cup$ acts between 2 elements without parity. Thus, for all possible unions of 3 elements, there are 3 possible combinations. For 4 elements, there are 6 combinations. in addition, one must add the higher order additions as well.  As one can see, this is related to the sum of all subsets with $k$ connections. 
+
+Given a set of $n$ elements, the size of the power set will consist of the sum of all possible subsets. This contains the combinatoric collection of unions between each of union-orders. By the binomial theorem;
+\begin{equation}
+	\sum_{k=0}^n \frac{n!}{k!(n-k)!} = (1+1)^n = 2^n\,.
+\end{equation}
+
+Returning to $\mathcal{C}$, if one takes all sigma-algebras that contain $\mathcal{C}$ and intersect them, they will arrive at the smallest possible sigma-algebra that contains $\mathcal{C}$, which is known as the generator of $\mathcal{C}$ and is denoted $\sigma\mathcal{C}$.
+
+Remarks; the countable intersection of two (or more) sigma-algebra is again a sigma-algebra. The the union of two (or more) sigma-algebras is not necessarily a sigma-algebra.
+\begin{proof}
+	By example, let $\Omega$ be a set and $A,B \subset \Omega$. The sigma-algebra $\mathcal{F}_i$ consists of 
+	\begin{equation}
+		\mathcal{F}_1 = \{\emptyset, \Omega, A, A^c\}\,,
+	\end{equation}
+	and
+	\begin{equation}
+		\mathcal{F}_2 = \{\emptyset, \Omega, B, B^c\}\,.
+	\end{equation}
+	The intersection of the two is simply the $\{\emptyset, \Omega\}$ is the simplest sigma-algebra by definition. 
+
+	The union of the two, $\mathcal{F}_3 = \mathcal{F}_1 \cup \mathcal{F}_2$;
+	\begin{equation}
+		\mathcal{F}_3 = \{\emptyset, \Omega, A, A^c, B, B^c\}\,,
+	\end{equation}
+	is not closed under finite union or complement as $A \cup B \notin \mathcal{F}_3$. 
+\end{proof}
+It should be noted that the \textbf{uncountable intersection} of sigma-algebras are also sigma-algebras.
 
 
+\subsection{p, d systems}
+
+A collection of subsets $\mathcal{P}$ is a p-system if it is closed under intersection. 
+
+A collection of subsets $\mathcal{D}$ is a d-system if it satisfies the following properties;
+\begin{enumerate}
+	\item $E\in \mathcal{D}$,
+	\item $A, B \in \mathcal{D}$ and $A\supset B$ then $A\setminus B \in \mathcal{D}$,
+	\item $(A_n) \subset \mathcal{D}$ and $A_n \nearrow A$ then $A\in \mathcal{D}$,
+\end{enumerate}
+
+The notation $(A_n)$ denotes a sequence. The notation $A_n \nearrow A$ implies that as the sequence continues, the limit of the sequence approaches the value of $A$. 
+
+\begin{definition}
+	A collection of subsets of $E$ is a sigma-algebra if and only if it is both a p-system and a d-system on $E$.
+	\begin{proof}
+		To prove this statement, it is trivial that a sigma-algebra satisfies all of the criteria of both p and d systems. Thus, it is our task to show the converse.
+
+		Let the collection $\mathcal{E}$ on $E$ be both a p-system and a d-system. It is closed under intersection. We require for it to be a sigma-algebra that is it closed under finite union and complement. 
+		
+		Since $\mathcal{E}$ is a d-system, it contains $E$ and is closed under set subtraction. By clause 2 of the d-system, 
+		\begin{align*}
+			A \in \mathcal{E}, \rightarrow E\setminus A \in \mathcal{E}\,,
+		\end{align*}
+		which implies that $E^c \in \mathcal{E}$. This can be repeated for any element $E_i = E_k \cup E_j, E_k, E_j \in \mathcal{E}$. 
+		
+		Since $\mathcal{E}$ is closed under complement and intersection $(A^c \cap B^c) \in \mathcal{E}$. Thus, since this is closed under complement, then the complement is in $\mathcal{E}$:
+		\begin{equation}
+			(A^c \cap B^c) = (A \cup B)\,,
+		\end{equation}
+		which is precisely closure under union by the property of being a p-system.
+
+		This idea is extended to finite unions as given a sequence $(A_n) \subset \mathcal{E}$, then one can define a sequence $B_1 = A_1, B_2 = A_1 \cup A_2, \dots$. Since here $B_n \nearrow \bigcup_n A_n$, then by clause 3 of the d-system, $\bigcup_n A_n \in \mathcal{E}$.
+	\end{proof}
+\end{definition}
+\fullpageboxline
+
+
+\begin{definition}
+	Let $\mathcal{D}$ be a d-system on $E$. Fix $D$ in $\mathcal{D}$ and let 
+	\begin{equation}
+		\hat{\mathcal{D}} = \{A\in \mathcal{D}: A\cap D \in \mathcal{D}\}\,.
+	\end{equation}
+	Then, $\hat{\mathcal{D}}$ is again a d-system.
+\end{definition}
+\begin{proof}
+	To show that $\hat{\mathcal{D}}$ is a d-system on $E$ it is sufficient to check all of its requirements. Firstly, the set notation is written as all elements $A$ in $\mathcal{D}$ such that $A \cap D \in \mathcal{D}$. Naturally, this implies that $E \in \hat{\mathcal{D}}$. $E\in \mathcal{D}, E\cap D = D, D \in \mathcal{D}$.
+	
+	To show set subtraction on $\hat{\mathcal{D}}$, note that for all $A,B \in \mathcal{D}$ such that $A\supset B$, $A\setminus B \in \mathcal{D}$. By definition, all elements with an intersection between $A$ and $D$ are in the set $\hat{\mathcal{D}}$. This implies that all elements $A,B \in \hat{\mathcal{D}} \supset \mathcal{D}$. Since $A,B \in \mathcal{D}$, then $A\setminus B \in \mathcal{D}$ by the definition of a d-system.
+
+	Lastly, consider a sequence $(A_n)$. It is sufficient to show that the union of this sequence is contained in $\hat{\mathcal{D}}$. 
+	\begin{align*}
+		\hat{\mathcal{D}} &= \{\cup_nA_n \in \mathcal{D}\} \& \{\cup_nA_n \cap D \in \mathcal{D}\} \\
+		&= \{\cup_nA_n \in \mathcal{D}\} \& \{\cup_n(A_n \cap D) \in \mathcal{D}\} \\
+	\end{align*}
+	Since $A_n \cap D \in \mathcal{D}$ by the property of the d-system, then $A\in \hat{\mathcal{D}}$.
+\end{proof}
+
+The next property is known as the Monotone class theorem. 
+\begin{definition}
+	If a d-system contains a p-system, it also then contains the sigma-algebra generated by that p-system.
+	\begin{proof}
+		Let $\mathcal{C}$ be a p-system. Let $\mathcal{D}$ be the smallest d-system on $E$ that contains $\mathcal{C}$. We want to prove $\mathcal{D} \supset \sigma\mathcal{C}$.
+		It is sufficient to show that $\mathcal{D}$ is a sigma-algebra, however, since a d-system is a sigma-algebra if and only if it is both a d and p system, it is necessary to show that $\mathcal{D}$ is also a p-system.
+
+		We aim to show closure under intersection.
+
+		Let $B$ be fixed in $\mathcal{C}$;
+		\begin{align*}
+			\mathcal{D}_1 = \{A \in \mathcal{D}: A \cap B \in \mathcal{D}\}\,.
+		\end{align*}
+		By the previous lemma, since $B\in \mathcal{D}$, $\mathcal{D}_1$ is a d-system.
+		Similarly, for a fixed $A \in \mathcal{D}$,
+		\begin{align*}
+			\mathcal{D}_2 = \{B \in \mathcal{D}: A \cap B \in \mathcal{D}\}\,,
+		\end{align*}
+		which is a d-system as $B \in \mathcal{D}$. The key here is that since $\mathcal{C}$ is contained in $\mathcal{D}$, the set $B$ is in $\mathcal{D}$. Also, $\mathcal{D}_1$ is a d-system that contains $\mathcal{C}$ if $A\in \mathcal{C}$ and $B \in \mathcal{C}$ then $A\cap B \in \mathcal{C}$ under closure. Thus, $\mathcal{D}_1$ must be the smallest  d-system containing $\mathcal{C}$, or $\mathcal{D}_1 \supset \mathcal{D}$. In other words, $A \cap B \in \mathcal{D}$ for all $A,B \in \mathcal{C}$.
+
+		Thus, $A\cap B \in \mathcal{D}$ whenever $A$ and $B$ are in $\mathcal{D}$. This implies closure under intersection, which implies $\mathcal{D}$ is a p-system.
+	\end{proof}
+\end{definition}
 
 
 
@@ -157,10 +278,171 @@ A sigma-algebra is a special kind of algebra which is closed under complements a
 
 \fullpageboxline
 \section{Measurable Functions}
+
+Functions from a set $E$ to $F$ is a rule that assigns an element $f(x)$ of $F$ to each $x$ in $E$; $f:E\rightarrow F$. Given a subset $B$ of $F$, the inverse image of $B$ under $f$:
+\begin{equation}
+	f^{-1}B = \{x\in E: f(x) \in B\}\,.
+\end{equation}
+The properties of these functions are as follows;
+\begin{definition}
+	Properties of the set function;
+	\begin{enumerate}
+		\item $f^{-1}\emptyset = \emptyset$.
+		\item $f^{-1}F = E$.
+		\item $f^{-1}B\setminus C = (f^{-1}B)\setminus (f^{-1}C)$.
+		\item $f^{-1}\bigcup_i B_i = \bigcup_i f^{-1} B_i$
+		\item $f^{-1}\bigcap_i B_i = \bigcap_i f^{-1} B_i$
+	\end{enumerate}
+	\begin{proof}
+		\begin{enumerate}
+			\item Since $\emptyset$ has no elements, there is no $f(x)$ in $\emptyset$. Thus, there is no such $x$ that satisfies this.
+			\item Since $f$ is a map from $E \rightarrow F$, each value of $F$ has an inverse mapping to some element in $E$. This mapping need not be bijective, however, it is surjective. Thus, The inverse set of $F$ must be $E$ by construction.
+			\item Let $x \in f^{-1}B\setminus C$. Then, $f(x) = B\setminus C$. Here $f(x) \in B$, and $f(x) \notin C$. So define the inverse image, $f^{-1}B = \{x\in E:f(x) \in B\}$, and $f^{-1}C = \{x\in E:f(x) \in C\}$. It is apparent that $x \in f^{-1}B$. Similarly, $x\notin f^{-1}C$ as $B\setminus C \notin C$. Thus, $x\in f^{-1}B$ and $x\notin f^{-1}B$. So $f^{-1}B\setminus C = f^{-1}B\setminus f^{-1}C$.
+			\item For all $f(x) = \cup_i B_i$ there exists a pre-image $y = f^{-1}(\cup_i B_i)$. Thus, there exists an $i$ such that $y \in B_i$. This implies that if there is at least 1 $i$ that conditions this, then there is at least 1 pre-image $y = f^{-1}B_i$. Then, to ensure all values on $E$ are contained, $y = \bigcup_i f^{-1}B_i$. Hence, $f^{-1}\bigcup_iB_i=\bigcup_i f^{-1}B_i$.
+			\item Since for all $f(x) = \cap_i B_i$ then $f(x) \in B_i$ for all $i$. This implies that the pre-image, $y$ such that $y = f^{-1}(\cap_i B_i)$ is contained within all each and every $f(x)$ simultaneously. That is $y = \cap_i f^{-1}(B_i)$. Thus  $f^{-1}(\cap_i B_i)= \cap_i f^{-1}(B_i)$.
+		\end{enumerate}
+	\end{proof}
+\end{definition}
+
 Measurable functions are defined as maps between measurable spaces. Let $(E, \mathcal{E})$ and $(F, \mathcal{F})$ be measurable spaces. A measurable function is defined as 
-\[
-f : E \rightarrow F, \quad f^{-1}B \in \epsilon \quad \forall B \in \mathcal{F}
-\]
+\begin{equation}
+	f : E \rightarrow F, \quad f^{-1}B \in \mathcal{E} \quad \forall B \in \mathcal{F}
+\end{equation}
+In english, this is stating that for some function $f$ from $E$ to $F$ there exists a pre-image $f^{-1}$ that maps from some element $B$ in $\mathcal{F}$ to some element in $\mathcal{E}$. Or that there is a pre-image map between the subsets in the sigma-algebras of each of the spaces. 
+
+In order for $f:E\rightarrow F$ to be measurable, it is necessary that for some collection $\mathcal{F}_0$ that generates $\mathcal{F}$, meaning that the intersection of all sigma-algebras containing $\mathcal{F}_0$ is equal to $\mathcal{F}$, we have that $f^{-1}B \in \mathcal{E}$ for all $B \in \mathcal{F}_0$.
+
+In english, if one wants to test that a function is measurable, it is only necessary to test on a subset that generates it.
+
+\begin{proof}\label{prop:2p3}
+	Why is this necessary? Suppose that there is no such $\mathcal{F}_0$. If the sigma-algebra then does not exist then $\mathcal{F}$ is not the smallest sigma-algebra that exists on $E$. This fact implies that $F$ is not a measurable space. 
+
+	Sufficiency of this claim is now proved. Let $\mathcal{F}$ be the smallest sigma-algebra generated by $\mathcal{F}_0$. Then, we need to show that the inverse of $E$ is contained within $\mathcal{F}$. Here, 
+	\begin{equation}
+		\mathcal{F}_1 = \{B\in \mathcal{F}: f^{-1}B \in \mathcal{E}\}\,.
+	\end{equation}
+	Thus, we need to show that $\mathcal{F}_1$ is a sigma-algebra. By the properties of functions, this map is obviously closed under union and since it contains the sample space, it is also closed under complement via the property of set subtraction. 
+\end{proof}
+
+The composition of functions is defined by 
+\begin{equation}
+	g\circ f (x) = g(f(x)), \quad x \in  E\,,
+\end{equation}
+for a mapping $f: E\rightarrow F$ and a mapping $g: F\rightarrow G$
+. The inverse composition is defined by
+\begin{equation}
+	(g\circ f)^{-1} (x) = f^{-1}(g^{-1}(x)), \quad x \in  G\,.
+\end{equation}
+We can prove that measurable functions of measurable functions are measurable. Let $f$ be a measurable function on $E$ from $\mathcal{E} \rightarrow \mathcal{F}$. Let $g$ be a measurable function on $F$ from $\mathcal{F} \rightarrow \mathcal{G}$. Then, $(g\circ f)$ is measurable from $\mathcal{E} \rightarrow \mathcal{G}$;
+\begin{proof}
+	The inverse, $(g\circ f)^{-1}$, can be expanded and acted on some $C\in \mathcal{G}$;
+	\begin{align*}
+		(g\circ f)^{-1}C &= f^{-1}(g^{-1}C)\,,\\
+		&= f^{-1}(B), \quad \mathrm{where} B \in \mathcal{F}\,,\\
+		&= A, \quad \quad \mathrm{    where }A \in \mathcal{E}\,.
+	\end{align*}
+	Thus, $g\circ f$ is measurable.
+\end{proof}
+
+\subsection{Numerical Functions}
+
+A numerical function in measure theory is a function whose codomain is a set of numbers (such as real numbers \(\mathbb{R}\), extended real numbers \(\overline{\mathbb{R}}\), or complex numbers \(\mathbb{C}\)), rather than general abstract spaces. Before diving into the weeds, define notation for the real numbers;
+\begin{align*}
+	\mathbb{R} &= (-\infty, \infty)\,,\\
+	\bar{\mathbb{R}} &= [-\infty, \infty]\,,\\
+	\mathbb{R}_+ &= [0, \infty)\,,\\
+	\bar{\mathbb{R}}_+ &= [0, \infty]\,,\\
+\end{align*}
+where $\bar{\cdot}$ represents the extended number system, which adds absolute minima and maxima to the set of real numbers. Define the Borel sigma-algebra as $\mathcal{B}(\bar{\mathbb{R}})$, which is the smallest sigma-algebra on the set of real-numbers.
+
+\begin{definition}
+	The mapping $f:E\rightarrow \bar{\mathbb{R}}$ is $\mathcal{E}$-measurable if and only if for every $r$ in $\mathbb{R}, f^{-1}[-\infty, r] \in \mathcal{E}$.
+	\begin{proof}
+		This is just an application of Prop. \ref{prop:2p3}. Let $B$ be an element of a subset $\mathcal{F}_0$ of the real numbers. Then, for $f$ to be measurable wrt $\mathcal{E}$, for each $B$, $f^{-1}B\in \mathbb{R}$.
+	\end{proof}
+\end{definition}
+
+\subsection{Positive and negative parts of a function.}
+
+A function $f$ can be decomposed into negative and positive parts. Let the notation $a \wedge b$ and $a\vee b$ denote the minimum and maximum between $a$ and $b$ respectfully. 
+
+Let $f$ be a numerical function on $E$. Then,
+\begin{equation}
+	f^+ = f \vee 0, \quad f^- = -(f \wedge 0),
+\end{equation}
+denote the positive and negative parts of the functions. 
+\begin{definition}
+	The function $f$ is $\mathcal{E}$-measurable, meaning that is is a map $f:E\rightarrow \mathbb{R}$ and is measurable from $\mathcal{E}$ to $\mathcal{B}(\mathbb{R})$ if and only if both $f^+$ and $f^-$ are. 
+	\begin{proof}
+		The decomposition of $f$ is shown below;
+		\begin{equation}
+			f = f^+ - f^-,
+		\end{equation}
+		where, 
+		\begin{eqnarray}
+			f^+ = f \vee 0, \quad f^- = -(f\wedge 0)
+		\end{eqnarray}
+		To prove this, we need to show that the decomposition is measurable using Prop 2.3 in Cinlar. 
+
+		For a pair $(E, \mathcal{E})$, the domain of both of these functions are elements of $E$, or some subset in $\mathcal{E}$. From this, it is obvious that when one of the functions has a non-zero image, the other part will be zero. It should be noted that the quantities $f^+$ and $f^-$ are both greater than or zero to 0. 
+
+		Now, the proof relies on checking for measurability. Let $\mathcal{E}_0$ be the subset of $\mathcal{E}$ which returns a non-zero value in $f^+$. This collection of subsets, $\mathcal{E}_0 \subset \mathcal{E}$. This set is a generator of $\sigma\mathcal{E}$. Thus, it is necessary to show measurability on this subset. 
+
+		By construction of a numerical function, every element in $\mathcal{E}$ is measurable with respect to $\mathcal{B}(\mathbb{R})$.
+
+		In other words, if $f$ is measurable, the functions $f^+, f^-$ are measurable as the transformations
+		\begin{equation}
+			f^+ = \frac{|f|+f}{2}, f^- = \frac{|f|-f}{2},
+		\end{equation}
+		are continuous, which implies that $f^+, f^-$ are measurable if $f$ is measurable. The converse is an application of the composition of measurable functions. 
+	\end{proof}
+\end{definition}
+
+\subsection{Indicators and simple functions}
+
+Define the indicator as the function below;
+\begin{equation}
+	1_A(x) = \begin{cases}
+		1 & \mathrm{if } x\in A\,, \\
+		0 & \mathrm{if } x\notin A\,. \\
+	\end{cases}
+\end{equation}
+We can see that this function is $\mathcal{E}$-measurable if and only if $A \in E$. A function $f$ is considered simple if it has the form;
+\begin{equation}
+	f = \sum_{i=1}^na_i 1_{A_i}\,,
+\end{equation}
+where $n$ is a natural number, $a_i$ is a real number, and $A_i$ is a measurable set.  
+
+\subsection{Limits of sequences of functions}
+Let $(f_n)$ be a sequence of numerical functions on $E$. The functions 
+\begin{equation}\label{thm:215_stuff}
+	\inf f_n, \quad \sup f_n, \quad \lim \inf f_n, \quad \lim \sup f_n
+\end{equation}
+are defined on $E$ point-wise. In general, if the function at $x$ has a limit inferior equal to the limit superior, then the function is said to have a point-wise limit $f$ and we write 
+\begin{equation}
+	f = \lim f_n\,.
+\end{equation}
+\begin{definition}
+	Let $(f_n)$ be a sequence of $\mathcal{E}$-measurable functions. Then, each of the functions in Eqn. \ref{thm:215_stuff} is $\mathcal{E}$-measurable. Moreover, if it exists, $\lim f_n$ is $\mathcal{E}$-measurable.
+\end{definition}
+
+\subsection{Approximation of measurable functions}
+For each $n\in \mathbb{N}^+$, let $d_n(r)$ denote the dyadic function:
+\begin{equation}
+	d_n(r) = \sum_{k=1}^{n2^n}\frac{k-1}{2^n}1_{\left[\frac{k-1}{2^n}, \frac{k}{2^n}\right)}(r)+ n1_{\left[n, \infty\right]}(r)\,.
+\end{equation}
+Naturally, this looks confusing, so we can plot a couple examples.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{figures/measure_theory/dyadic_function.png}
+	\caption{Dyadic functions drawn using code written by \textsc{Claude Sonnet 5.5 (Medium)} in \textsc{python}. Panel 1 shows the approximations of the dyadic to the function $r$, which it is approximating. Panel 2 shows the truncation at the height of $n$. Panel.3 shows the error, as a function of $r$. Panel 4 then shows the point-wise convergence. It is clear as $n\rightarrow \infty$ the dyadic $d_n(r) \nearrow r$.}
+\end{figure}
+
+Using this function, a very useful and powerful theorem can be stated with reduces measurable functions to a set of simple functions and a limit. 
+
+\begin{definition}\label{thm:217}
+	A positive function on $E$ is $\mathcal{E}$-measurable if and only if it is the limit of an increasing sequence of positive simple functions. 
+\end{definition}
 
 \subsection{Problems}
 
@@ -187,34 +469,94 @@ f : E \rightarrow F, \quad f^{-1}B \in \epsilon \quad \forall B \in \mathcal{F}
 \end{solution}
 
 \section{Measures}
-Let $(E, \mathcal{E})$ be a measurable space. A measure on $(E, \mathcal{E})$ is defined as a map $\mu : \mathcal{E} \rightarrow \bar{\mathbb{R}}_+$ where $\bar{\mathbb{R}}_+ = [0, +\infty]$. The measure has properties;
+Let $(E, \mathcal{E})$ be a measurable space. A measure on $(E, \mathcal{E})$ is defined as a map $\mu : \mathcal{E} \rightarrow \bar{\mathbb{R}}_+$ where $\bar{\mathbb{R}}_+ = [0, +\infty]$ is the extended real number line. 
+
+The measure has properties. Let the sequence $A_1, A_2, \dots \in \mathcal{E}$ be disjoint, meaning $A_i \cap A_j = \emptyset \forall i,j$;
 \begin{align*}
 	\mu(\emptyset) &= 0 \\
-	\mu\left(\bigcup_n A_n\right) &= \sum_n \mu\left( A_n\right)\text{ for every disjointed sequence }(A_n) \in \mathcal{E} \\
+	\mu\left(\bigcup_n A_n\right) &= \sum_n \mu\left( A_n\right)\,,\\
+	& \text{ for every disjointed sequence }(A_n) \in \mathcal{E}\,. \\
 \end{align*}
 
-The definition of the measure contains several properties;
+The idea of the countable additivity can be reasoned by the logic of the Venn-diagram overlap. The area, or measure of these sets only add up together if there is no overlap between the sets. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{figures/measure_theory/venn_diagram_disjoint.png}
+	\caption{Venn-diagram of disjoint and non-disjoint sets.}
+\end{figure}
+
+The definition of the measure can be rephrased such that it contains several properties about the measure and the elements of the measure. 
 \begin{enumerate}
+	\item At least one set in $\mathcal{E}$ has finite measure. $\mu(A) = \mu(A \cup \emptyset) = \mu(A) + \mu(\emptyset) = \mu(A)$
 	\item If $A\cap B = \emptyset$ Then $\mu(A\cap B) = \mu(A) + \mu(B)$
 	\item If $A\subset B$ Then $\mu(A) \leq \mu(B)$
 	\item If $A_n \nearrow A$ Then $\mu(A_n) \nearrow \mu(A)$
 	\item $\mu\left(\bigcup_n A_n\right) \leq \sum_n \mu(A_n)$ 
 \end{enumerate}
+\begin{proof}
+	\begin{enumerate}
+		\item Def.
+		\item proof 1.
+		\item If $A\subset B$, then one can write that 
+		\begin{equation}
+			B = (B \cap A)\cup(B\cap A^c)\,,
+		\end{equation}
+		as shown in Fig. \ref{fig:split}. Then, the measure of $B$ is given by;
+		\begin{align*}
+			\mu(B) &= \mu((B \cap A)\cup(B\cap A^c)) \\
+			&= \mu(B \cap A) + \mu(B\cap A^c)\,.
+		\end{align*}
+		If $A\subset B$, then $B \cap A = A$;
+		\begin{align*}
+			&= \mu(B \cap A) + \mu(B\cap A^c)\,, \\
+			&= \mu(A) + \mu(B\cap A^c) \geq \mu(A)\,.
+		\end{align*}
+		Thus, $\mu(A) \leq \mu(B)$ if $A \subset B$.
+		\item proof 3
+		\item Expanding the LHS;
+		\begin{align*}
+			\mu\left(\bigcup_{i}^\infty A_i\right) &= \mu(A_1, \cup A_2, \dots)\\
+			&= \mu(A_1 \cup (A_2\setminus A_1) \cup (A_3\setminus (A_2\setminus A_1))\cup \dots)\\
+			\text{Disjoint sets} &= \mu(A_1) + \mu(A_2\setminus A_1) + \mu(A_3\setminus (A_2\setminus A_1)) + \dots \\
+			&\leq \sum_{i}^{\infty} \mu(A_i)\,.
+		\end{align*}
+		which is trivial as the sets 
+	\end{enumerate}
+\end{proof}
 
-Some examples of measures are listed below for the measureable space $(E, \mathcal{E})$;
+Some examples of measures are listed below for the measurable space $(E, \mathcal{E})$;
 \begin{enumerate}
 	\item Dirac Measure: \[\delta_x(A) = \begin{cases}
 		1 & x \in A \\ 0 & x\notin A 
 	\end{cases}\]
 	\item Counting Measure: Let D be a fixed subset of $E$. The counting measure counts the number of points $A\cap D$. We interpret this as all elements outside D have zero measure and all elements of D have equal measure. \[ \#_D(A) = \sum_{x\in D} \delta_x(A),\quad A \in \mathcal{E}\]
 	\item Discrete Measure: Let $D$ be a countable subset of $E$, and $m(x)$ a positive number.  \[\mu(A) = \sum_{x\in D} m(x) \delta_x(A), \quad A\in \mathcal{E}\]
+	\item Probability Measure: Let $(E, \mathcal{E})$ be a measurable space. A function $\mathbb{P}: \mathcal{E} \rightarrow [0, 1]$ that is a measure and has $\mathbb{P}(E) = 1$. The triplet $(E, \mathcal{E}, \mathbb{P})$ is known as a probability space. For ease, $\mathbb{P}(\cdot)$ is sometimes written as $p(\cdot)$.
+	\item Lebesgue Measure: The Lebesgue measure, $\lambda(\cdot)$ denotes the length of a subset of the Borel set. For example, if $E = \mathbb{R}$, then $\lambda((a, b)) = b-a$ if $b > a$.
 \end{enumerate}
+
+A triplet $(E, \mathcal{E}, \mu)$ is known as a measure space.
+
+\subsection{Probability Measure}
+
+If $p: \mathcal{E} \rightarrow [0, 1]$ is a probability measure for any $A \in \mathcal{E}$. Then, by the countable additivity of the measure, 
+\begin{align*}
+	1=p(\Omega)\,,\\
+	&= p(A\cup A^c)\,,\\
+	&= p(A) + p(A^c)\,.\\
+\end{align*}
+which is the definition of the total probability. 
+
+ 
+
+
 
 \subsection{Problems}
 
 \fullpageboxline
 \section{Integration}
-Let $(E, \mathcal{E}, \mu)$ be a measure space. Here we define $\mathcal{E}$ as the sigma algebra of all $\mathcal{E}$-measureable functions, which are all measurable functions mapping to the Borel sigma-algebra. 
+Let $(E, \mathcal{E}, \mu)$ be a measure space. Here we define $\mathcal{E}$ as the sigma algebra of all $\mathcal{E}$-measurable functions, which are all measurable functions mapping to the Borel sigma-algebra. 
 
 We define the 'integral of $f$ with respect to $\mu$' as:
 \begin{equation}
@@ -222,7 +564,13 @@ We define the 'integral of $f$ with respect to $\mu$' as:
 \end{equation}
 
 \begin{definition}
-	Let $f$ be simple and positive, such that it has the form $f(x0) = \sum_{i =1}^{n} a_i 1_{A_i}(x)$. Then we define \[\mu f = \sum_{i= 1}^{n} a_i \mu(A_i)\]
+	\begin{itemize}
+	\item Let $f$ be simple and positive, such that it has the form $f = \sum_{i =1}^{n} a_i 1_{A_i}(x)$. Then we define \[\mu f = \int  \sum_{i =1}^{n} a_i 1_{A_i}(x) d\mu =  \sum_{i= 1}^{n} a_i \mu(A_i)\]
+	\item Let $f$ be in the set of positive $\mathcal{E}$-measurable functions, denoted $\mathcal{E}^+$. Put $f_n = f(d_n(r))$ where $d_n(r)$ is the dyadic function approximating a numerical function. Then, each $f_n$ is simple and positive, and the sequence $(f_n)$ increases to $f$ as per Thm. \ref{thm:217}. The integral $\mu f_n$ for each $n$ is defined by item (a). Define the limit as \begin{equation}
+		\mu f= \lim \mu f_n
+	\end{equation}
+	\item Let $f \in \mathcal{E}$. The functions $f^+, f^-$ belong to $\mathcal{E}^+$ and the integrals $\mu(f^{+/-})$ are defined as per (b). Noting the functional decomposition, if at least one integral of these functions is finite, it exists. Otherwise, if $\mu(f^+) = \mu(f^-) = \infty$ then $\mu f$ is undefined.
+	\end{itemize}
 \end{definition}
 
 This definition can be used on different measures to see how the integral is defined. 
@@ -232,4 +580,54 @@ This definition can be used on different measures to see how the integral is def
 	\item Lebesgue Integrals:\[\mu f = \text{Leb}_E f = \int_E \text{Leb}_E(dx) f(x) = \int_E dx f(x)\] Note that if the lebesgue exists, so does the riemann integral, which is reminded by the notation in the last equality. Note that the converse is false. 
 \end{enumerate}
 
-The main idea of the integral with respect to a measure is packaged in how the measure acts on infintesimal pieces $dx$. Since the measure gives different weights to different parts of the set. We can use a result that approximates a measureable function $f$ as a convergent sequence of simple functions. That is, we can approximate $f$ using simple functions that partition the domain in a way that converges to the value of the integral. 
+The main idea of the integral with respect to a measure is packaged in how the measure acts on infinitesimal pieces $dx$. Since the measure gives different weights to different parts of the set. We can use a result that approximates a measurable function $f$ as a convergent sequence of simple functions. That is, we can approximate $f$ using simple functions that partition the domain in a way that converges to the value of the integral. 
+
+\subsection{Integrability}
+
+A function is $f$ in $\mathcal{E}$ is said to be integrable if $\mu f$ exists and is a real number. Thus, $f$ in $\mathcal{E}$ is integrable if and only if $\mu f^+ < \infty$ and $\mu f^- < \infty$. Additionally, the absolute value, $\mu |f| < \infty$. 
+
+\begin{definition}
+	Every integrable function is real-valued almost everywhere. 
+	\begin{proof}
+		?.
+		% Almost everywhere denotes that the measure is non-zero. To show integrability, we intend to show that $\mu f$ is non-zero for all $x$ for which $f(x)$ is real-valued. For a given non-zero measure $\mu$, the integral of $f$, which is real-valued is given by,
+		% \begin{align*}
+		% 	\lim \mu f_n &=\lim \mu f_n^+ - \mu f_n^- \\
+		% 	\mathrm{In cannonical form via a dyadic transformation}&= \lim \mu(d_n(r) \circ f^+) - \mu(d_n(r) \circ f^-) \\
+		% 	\mathrm{limit property}&=  \mu f^+ - \mu f^- \\
+		% \end{align*}
+		% These last two terms are integrals of positive functions, which, if finite, are integrable. 
+	\end{proof}
+\end{definition}
+\subsection{Monotone Convergence Theorem}
+
+\begin{definition}
+	Let $(f_n)$ be an increasing sequence in $\mathcal{E}^+$. Then,
+	\begin{equation}
+		\mu(\lim f_n) = \lim \mu f_n
+	\end{equation}
+	\begin{proof}
+		Let $f = \lim f_n$. Since $(f_n)$ is increasing, the integrals $\mu f_n$ form an increasing sequence of numbers by the monotonicity property, thus $\lim \mu f_n$ exists. Since $f \geq f_n$ for all $n$, $\mu f \geq \mu f_n$.
+
+		The reverse inequality is outlined in Sec 4 of Erlan Cinlar. 
+	\end{proof}
+\end{definition}
+
+\section{Transforms and Indefinite Integrals}
+
+\subsection{Image measures}
+
+Let $(F, \mathcal{F})$, $(E, \mathcal{E})$ be measurable spaces. Let $\nu$ be a measure on $(F, 
+\mathcal{F})$. Let the function $h:F \rightarrow E$. The mapping $\nu \circ h^{-1}$ maps from the sigma-algebra $\mathcal{E}$ into $\mathbb{R}^+$. 
+\begin{equation}
+	\nu(h^{-1}(B)), \quad B \in \mathcal{E}\,.
+\end{equation}
+To see this, $h^{-1}$ is the pre-image of $h$, which maps from $E\rightarrow F$. The measure on $F$ maps from $F$ to the real numbers. Here, the composition function is known as the image of $\nu$ under $h$. 
+
+\subsection{Radon-Nikodym Theorem}
+Given a measurable space \((X, \mathcal{X})\), suppose $\mu$ and $\nu$ are $\sigma$-finite measures. If $\nu$ is absolutely continuous with respect to $\mu$ (written as \(\nu \ll \mu\)), meaning \(\mu(E) = 0 \implies \nu(E) = 0\) for all measurable sets E, then there exists a measurable function \(f: X \to [0, \infty)\) such that:
+
+\begin{equation}
+	\nu (E)=\int _{E}f\,d\mu \quad \text{for\ all\ }E\in \mathcal{X}
+\end{equation}
+

@@ -29,6 +29,19 @@ We can use these operations to discuss some interesting groups of numbers. The f
     \end{itemize}
 \end{definition}
 
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{figures/measure_theory/venn_diagram_split.png}
+    \caption{Splitting identity of two sets.}
+    \label{fig:split}
+\end{figure}
+
+The splitting property for the overlap of two sets is defined by a useful identity. Let $A, B$ be two non-empty, non-disjoint sets. The set $B$ can be written as;
+\begin{equation}
+    B = (B \cap A) \cup (B \cap A^c)\,.
+\end{equation}
+this is illustrated in Fig \ref{fig:split}.
+
 \subsection{Properties of Set Operations}
 The operations of set union and intersection allow us to learn about the properties of sets under union, intersection, and compliment. We can define a few interesting theorems or results that allow us to start getting some logic in the world. 
 
@@ -74,7 +87,7 @@ We can furthermore define functions as sets by adressing rules. Depending on the
     \end{equation}
 \end{example}
 
-We can classifty functions based on the uniqueness of their mappings. For a function $f: A \rightarrow B$, we assume that each element in $A$ maps to at most one element in $B$. A general function takes an element in $A$ and maps to at most one value in $B$. Not all elements need to be mapped to, and some points can be visited multiple times. \textbf{Injectivity} implies that each input on $A$ produces a unique result in $B$. Ie, there are no duplicates. However, not all elements in $B$ are nessecarily covered. \textbf{Surjectivity} implies that all outputs in $B$ are mapped to, however, multiple $x\in A$ may map to elements in $B$. A map is \textbf{bijective} if every point in $A$ uniquely maps to a point in $B$. This is also known as a set which is injective and surjective. See Fig. \ref{fig:bijective} for a visualization.
+We can classify functions based on the uniqueness of their mappings. For a function $f: A \rightarrow B$, we assume that each element in $A$ maps to at most one element in $B$. A general function takes an element in $A$ and maps to at most one value in $B$. Not all elements need to be mapped to, and some points can be visited multiple times. \textbf{Injectivity} implies that each input on $A$ produces a unique result in $B$. Ie, there are no duplicates. However, not all elements in $B$ are nessecarily covered. \textbf{Surjectivity} implies that all outputs in $B$ are mapped to, however, multiple $x\in A$ may map to elements in $B$. A map is \textbf{bijective} if every point in $A$ uniquely maps to a point in $B$. This is also known as a set which is injective and surjective. See Fig. \ref{fig:bijective} for a visualization.
 
 There are some useful notation. Here, for $f:X \rightarrow Y$, define the \textbf{image} as the set $Y = f(X)$. similarily, define the inverse image, or \textbf{preimage} as the set $X = f^{-1}(Y)$. 
 
@@ -205,8 +218,236 @@ Remark that if $f$ is a bijective map, then $f^{-1}(f(A)) = f(f^{-1}(A))$.
 
 
 \clearpage
-\section{The Real Number System}
 
+\section{Fields}
+
+In real analysis, one tends to discuss the real-number system. This system, although intuitive in early math courses, must be built up from an abstract sense.
+
+\begin{definition}
+    A field, $F$, is a set along with the operations of addition and multiplication. Let $a,b,c$ be elements of $F$;
+    \begin{enumerate}
+        \item Commutativity: $a + b = b + a$
+        \item Additivity: $(a + b) + c = a + (b + c)$
+        \item Distributivity: $a(b + c) = ab + ac$
+        \item Additive Identity: $a + 0 = a$
+        \item Additive Inverse: $a + (-a) = 0$
+        \item Multiplicative Identity: $1\cdot a  = a$
+        \item Multiplicative Inverse: $a \cdot a^{-1} = 1$ 
+    \end{enumerate}
+\end{definition}
+
+The rest is this section is treated as problems with proofs due to the nature of the subject.
+
+Naturally, given one has proven that the additive inverse of 1 is -1 and that $-1 \cdot a = -a$, then one can define addition and subtraction;
+\begin{enumerate}
+\item Subtraction: $a-b$
+\item Quotient: if $b\neq 0$, then $\frac{a}{b} = a b^{-1}$.
+\end{enumerate}
+
+\subsection{Ordered Fields}
+
+An ordered field is defined by the notion of $a < b$ where $a,b \in P$ where $P$ defines a positive subset of a field. 
+
+\begin{definition}\label{thm:ordered_field}
+    An ordered field, $F$, is a field with a positive subset $P$ that abides by the following properties;
+    \begin{enumerate}
+        \item if $a \in F$ either $a=0$, $a \in P$, or $-a \in P$.
+        \item if $a \in P$ then $-a \notin P$
+        \item if $a,b \in P$ then $a + b \in P$.
+    \end{enumerate}
+\end{definition}
+
+In addition, ordered fields have several properties that arise from these. For example, that of multiplicative inverse.
+\begin{problem}
+    Show that if $a\in P$, $a^{-1} \in P$.
+\end{problem}
+\begin{proof}
+    Suppose that $a\in P$. Then, if $-a^{-1}$ were to be in $P$ one can check by closure of multiplicative inverse. Specifically, we can see if $-1 = a(-a^{-1}) \in P$ is true. This is a contradiction by bullet 2 of Def. \ref{thm:ordered_field}, which implies that $a^{-1}$ must be in an ordered set.
+\end{proof}
+
+The positive set $P$ can then be used to define operations on less than or larger than:
+\begin{definition}
+    The less than or larger than symbols are defined under elements of $P$. Suppose $F$ is an ordered field. Suppose $a,b \in F$;
+    \begin{enumerate}
+        \item if $ a < b$ than $b-a \in P$
+        \item if $a\leq b$ than $a < b$ or $a = b$
+        \item if $ a > b$ than $ b < a$
+        \item if $a \geq b$ than $b < a$ or $a = b$
+    \end{enumerate} 
+\end{definition}
+
+We can then prove transitivity;
+
+\begin{problem}
+    Show that an ordered field $F$ is transitive, that is, for elements $a,b,c \in F$, if $a < b$ and $b < c$ then $ a < c$.
+\end{problem}
+\begin{proof}
+    By definition, $a < b$, then $b - a \in P$. Similarly, $c - b \in P$. Since $P$ is closed under addition, we have that $b - a + (c - b) = c - a \in P$. By definition, $a < c$.
+\end{proof}
+
+Next, we have the definition of absolute value. 
+\begin{definition}
+    Suppose $F$ is an ordered field and $b\in F$. The absolute value of $b$, denoted as $|b|$ is defined as:
+    \begin{equation}
+        |b| = 
+        \begin{cases}
+        b & \text{if }b \geq 0 \\ 
+        -b & \text{if }b < 0 \\   
+        \end{cases}
+    \end{equation}
+\end{definition}
+
+The absolute value is a useful tool that allows use to define and prove the existence of the triangle inequality;
+\begin{problem}
+    Suppose $F$ is an ordered field and $a,b \in F$ show that 
+    \begin{equation}
+        |a + b| \leq |a| + |b|\,.
+    \end{equation}
+\end{problem}
+\begin{proof}\label{proof:triangle_inequality}
+    This can be shown in cases of the signs of each element.
+    \begin{enumerate}
+        \item $a, b > 0$; Then, $a + b \in P$ and by definition of the absolute value, $|a + b| = a + b = |a| + |b|$
+        \item $a, b < 0$; If both terms are less than 0, then we can use the distributive property of multiplication: $|a + b| = |-(a + b)| = a + b = |a| + |b|$.
+        \item $a < 0, b > 0$; Here, $a + b$ is not necessarily larger than 0. What matters is the output. If the sum of $a,b$ is negative, it falls into (2.) and if positive it falls into (1.). Otherwise, one can write that  if $b > a$, then $b + a < b$. By this logic, we have that $|b + a| < |b| < |b| + |a|$.
+        \item $b < 0, a > 0$; Same as (3.).
+        \item The logic of sum is if $a + b >0$, then $|a + b| = a + b$. if $a + b < 0$, then $|a + b| = -(a + b) = (-a) + (-b) \leq |a| + |b|$. 
+    \end{enumerate} 
+\end{proof}
+
+Lastly, we can show that the ordered field of rational numbers $\mathbf{Q}$ as contained in each ordered field.
+\begin{definition}
+    Let $\varphi:\mathbf{Q} \rightarrow F$ such that $\varphi(0) = 0$ and;
+    \begin{equation}
+        \varphi\left(\frac{m}{n}\right) = \frac{\sum_{i=1}^{m} 1}{\sum_{i=1}^{n} 1}\,.
+    \end{equation}
+    As well as;
+    \begin{equation}
+        \varphi\left(-\frac{m}{n}\right) = \frac{\sum_{i=1}^{m} (-1)}{\sum_{i=1}^{n} 1}
+    \end{equation}
+\end{definition}
+\begin{proof}
+    First we show that this function is one-to-one, or surjective and bijective. Let $m,n,p,q$ be positive integers. We have that $\varphi(m/n) = \varphi(p/q)$ if;
+    \begin{align*}
+        (\sum_{i=1}^{m} 1)(\sum_{i=1}^{q} 1) &= (\sum_{i=1}^{p} 1)(\sum_{i=1}^{n} 1) \\
+        mq &= pn\,.
+    \end{align*}
+    Thus, we have that $\frac{m}{n} = \frac{p}{q}$, which implies that for the rational functions this is fully one-to-one for all positive rational numbers.
+
+    For negative rational numbers, we can use a similar logic. Let $m,p$ be negative rational numbers, we have that $-mq = -pn$ which shows that this function is one-to-one for all negative rational numbers. Thus, $\varphi$ is one-to-one on all of $\mathbf{Q}$.
+
+    To verify that this map preserves properties of an ordered field, we can verify the properties one by one.
+    \begin{enumerate}
+        \item $\varphi(a + b) = \sum_{i=1}^{a + b} 1 = \sum_{i=1}^{a} 1 + \sum_{i=a+1}^{a + b} 1 = \sum_{i=1}^{a} 1 + \sum_{i=1}^{ b} 1 = \varphi(a) + \varphi(b)\,.$
+        \item $\varphi(ab) = \sum_{i=1}^{ab} 1 = ab$. However, $\varphi(a) = a$ and $\varphi(b) = b$. so, $\varphi(a) \cdot \varphi(b) = ab = \varphi(ab)$.
+        \item $\varphi(-a) = \sum_{i=1}^{a} -1 = -1 \cdot a = -a = -1 \cdot \varphi(a)\,.$
+        \item $\varphi(a^{-1}) = \varphi(\frac{1}{a}) =\frac{1}{\sum_{i=1}^{a}} = \frac{1}{\varphi(a)}$.
+    \end{enumerate}
+\end{proof}
+This results means that we can treat $\mathbf{Q}$ as a subset of the ordered field $F$ for all ordered fields.
+
+\subsection{Completeness}
+
+We start with the pythagorean theorem.
+\begin{problem}
+    Show that there is no rational number who's square is 2.
+\end{problem}
+\begin{proof}
+    Let $m, n$ be integers such that there exists no common factor between them greater than 1. We aim to find a number $\left(\frac{m}{n}\right)^2 = 2$. Expanding the square, we have that $m^2 = 2 n^2$. It is clear that $m^2$ is even. Thus, $m=2k$ for some integer $k$. thus, $4k^2 = 2n^2$, or $2k^2 = n^2$. Thus $n^2$ is even as well. However, this is a contradiction as $m$ and $n$ are to have no common factors greater than 1. This is impossible if they are both even. Thus, there exists no $m,n$ that satisfy the above. This shows that the square root of $2$, $\sqrt{2}$ is a real number, that is not rational. 
+\end{proof}
+This shows that the ordered field of rational numbers, $\mathbf{Q}$, must have more properties to include a description of the real numbers.
+
+\begin{definition}
+    Suppose $F$ is an ordered field and $A$ is a subset of $F$; $A \subset F$. Then, let $b\in F$. The upper bound of $A$ is defined as $b$ such that for all $a \in A$, $a \leq b$. 
+
+    The \textbf{least upper bound} is defined as $a \leq b$ such that;
+    \begin{enumerate}
+        \item $b$ is an upper bound of $A$.
+        \item $b \leq c$ for all other upper bound $c \in F$.
+    \end{enumerate}
+\end{definition}
+
+The existence of a least upper bound is so important that it has a name.
+\begin{definition}
+    An ordered field $F$ is called complete if every non-empty subset of $F$ that has an upper bound has a least upper bound.
+\end{definition}
+
+This is actually enough to define the real numbers.
+
+\begin{definition}
+    Let $\mathbf{R}$ define a complete ordered field. $\mathbf{R}$ is known as the field of real numbers.
+\end{definition}
+
+\clearpage
+\subsection{Problems}
+
+\begin{problem}
+    Show that $a0 = 0$ for all $a$ in a field $F$.
+\end{problem}
+\begin{proof}
+    Let $a\in F$. The element $0$ is defined as the additive identity such that if
+    \begin{align*}
+        0 &= 0\,,
+        0 + 0 = 0\,.
+    \end{align*}
+    Using this property, one can use the distributivity of the field $F$ to show that;
+    \begin{align*}
+        a0 &= a(0 + 0)\,\\
+        &= a0 + a0\,.\\
+    \end{align*}
+    Using the additive inverse, 
+    \begin{equation}
+        0 = a0\,
+    \end{equation}
+    which concludes the proof.
+\end{proof}
+
+\fullpageboxline
+
+\begin{problem}
+    Show the following. Let $F$ be a field. 
+    \begin{itemize}
+        \item For each $a \in F$, show that the additive inverse of $a$ is unique.
+        \item $-(-a) = a$ for each $a \in F$.
+        \item $(-1)a = -a$ for each $a \in F$. 
+    \end{itemize}
+\end{problem}
+\begin{proof}
+    The three proofs are shown in order.
+    \begin{itemize}
+        \item Let $a,b,c \in F$ such that $a + b = 0$ and $a + c = 0$. Then, if both of these equations are equal to 0, one can set them to be equal. That is,
+        \begin{align*}
+            a + b = a + c\,.
+        \end{align*}
+        The additive inverse of $a$, which is $-a$ can be added to both sides, which implies that;
+        \begin{equation*}
+            b = c\,.
+        \end{equation*}
+        However, since $b$ is the additive inverse by definition, there is at most $1$ additive inverse of $a$, which is defined as $-a$. 
+        \item Let $a \in F$. Let $b \in F$ such that $ab = (-a)$. Using the multiplicative inverse,
+        \begin{align*}
+            ab \cdot a^{-1} &= (-a) \cdot a^{-1}\,,\\
+            \text{distributivity} & \\
+            b a a^{-1} &= -(a a^{-1})\,,\\
+            b &= -1\,.
+        \end{align*}
+        Thus, using the definition of the additive inverse, one finds that;
+        \begin{align*}
+            a + (-a) &= 0\,,\\
+            -a + -(-a) &= -1 \cdot 0\,,\\
+            -a + -(-a) &= 0\,,\\
+            -a + a + -(-a) &= a \,,\\
+            -(-a) &= a\,.
+        \end{align*}
+        which concludes the proof. We have also shown that since $b$ is unique, there is a $b$ that exists and $ba = -a$.
+    \end{itemize}
+\end{proof}
+
+
+
+\fullpageboxline
+
+\section{The Real Number System}
 
 The real numbers are defined by a set of axioms. There are various ways to treat this. I am going to just state all of the properties upfront and then proceed with the consequences of their existence. 
 
@@ -323,7 +564,7 @@ The absolute value has several properties;
     \item $|a - b| \geq ||a| - |b||$ for all $a,b \in \R$.
 \end{enumerate}
 
-The triangle inequality (4.) is of utmost importance. See in Fig. \ref{fig:tri_ineq}.
+The triangle inequality (4.) is of utmost importance as has been previously proved in Prf \ref{proof:triangle_inequality}. See in Fig. \ref{fig:tri_ineq}.
 
 \begin{figure}
     \centering
@@ -331,10 +572,6 @@ The triangle inequality (4.) is of utmost importance. See in Fig. \ref{fig:tri_i
     \caption{visualization of the triangle inequality; $|x + y| \leq |x| + |y|$ for all $x,y \in \R$.}
     \label{fig:tri_ineq}
 \end{figure}
-
-\begin{proof}
-    The proof of (4.) will be finished.
-\end{proof}
 
 \subsection{Least Upper Bound Property.}
 
@@ -556,3 +793,11 @@ such that $p$ is an integer factor of $a_0$ and $q$ is an integer factor of $a_n
 
 The applications of the polynomials are wide. For example, see Gaussian integrals, Legendre polynomials, and free-energy landscapes, where quadratic solutions are generally made to ensure Gaussianeity.
 
+
+\subsection{Binomial Theorem}
+
+The binomial theorem is a way to expand binomials;
+\begin{equation}
+    (x+y)^n = \sum_{k=0}^{n}\binom{n}{k}x^{n-k} y^{k}\,.
+\end{equation}
+It is useful. 
