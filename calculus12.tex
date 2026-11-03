@@ -238,7 +238,7 @@ In real analysis, one tends to discuss the real-number system. This system, alth
 
 The rest is this section is treated as problems with proofs due to the nature of the subject.
 
-Naturally, given one has proven that the additive inverse of 1 is -1 and that $-1 \cdot a = -a$, then one can define addition and subtraction;
+Naturally, given one has proven that the additive inverse of 1 is -1, as in Prob. \ref{prob:0p3} and that $-1 \cdot a = -a$, then one can define addition and subtraction;
 \begin{enumerate}
 \item Subtraction: $a-b$
 \item Quotient: if $b\neq 0$, then $\frac{a}{b} = a b^{-1}$.
@@ -404,7 +404,7 @@ This is actually enough to define the real numbers.
 
 \fullpageboxline
 
-\begin{problem}
+\begin{problem}\label{prob:0p3}
     Show the following. Let $F$ be a field. 
     \begin{itemize}
         \item For each $a \in F$, show that the additive inverse of $a$ is unique.
@@ -424,29 +424,129 @@ This is actually enough to define the real numbers.
             b = c\,.
         \end{equation*}
         However, since $b$ is the additive inverse by definition, there is at most $1$ additive inverse of $a$, which is defined as $-a$. 
-        \item Let $a \in F$. Let $b \in F$ such that $ab = (-a)$. Using the multiplicative inverse,
+        \item Let $(-a) = b$. Then, the inverse of $b$ is the inverse of the inverse of $a$. However, the inverse of $a$ is by definition $a$. Thus, 
+        \begin{equation*}
+            a = (-b) = -(-a)\,.
+        \end{equation*}
+        \item Let $a0 = 0$. Then, by the additive inverse;
+        \begin{equation*}
+            1 + (-1) = 0\,,
+        \end{equation*}
+        one can write that
         \begin{align*}
-            ab \cdot a^{-1} &= (-a) \cdot a^{-1}\,,\\
-            \text{distributivity} & \\
-            b a a^{-1} &= -(a a^{-1})\,,\\
-            b &= -1\,.
+            a0 &= a(1 + (-1))\,,\\
+            0 &= a1 + (-1)a\,, \\
+            0 = a + (-1)a\,.
         \end{align*}
-        Thus, using the definition of the additive inverse, one finds that;
-        \begin{align*}
-            a + (-a) &= 0\,,\\
-            -a + -(-a) &= -1 \cdot 0\,,\\
-            -a + -(-a) &= 0\,,\\
-            -a + a + -(-a) &= a \,,\\
-            -(-a) &= a\,.
-        \end{align*}
-        which concludes the proof. We have also shown that since $b$ is unique, there is a $b$ that exists and $ba = -a$.
+        Adding the additive inverse to both sides returns the identity that
+        \begin{equation*}
+            (-1)a = -a\,.
+        \end{equation*}
     \end{itemize}
 \end{proof}
-
-
+\fullpageboxline
+\begin{problem}
+    Show the following. Let $F$ be a field.
+    \begin{itemize}
+        \item For each $a \in F$, show that the multiplicative inverse of $a$ is unique.
+        \item $(a^{-1})^{-1} = a$.
+        \item $\frac{1}{a} = a^{-1}$.
+    \end{itemize}
+\end{problem}
+\begin{proof}
+    The three proofs are shown in order.
+    \begin{enumerate}
+        \item Let $a,b,c \in F$ such that $ab = 1$ and $ac = 1$. Multiple by the inverses of $b$ and $c$ on each side respectfully and equate the sides that are equal to $a$;
+        \begin{align*}
+            a = b^{-1} = c^{-1}\,.
+        \end{align*}
+        Thus, the inverses of $b$ and $c$ must equate, which implies that they must be the same. Ie, $b = c = a$.
+        \item Let $(a^{-1})b = 1$. Here, $b$ is the inverse of $(a^{-1})$. However, multiplying by the inverse of $(a^{-1}) = a$ returns;
+        \begin{equation*}
+            b = a\,,
+        \end{equation*}
+        or stating the $b$ is the inverse of the multiplicative inverse of $a$;
+        \begin{equation*}
+            (a^{-1})^{-1} = a\,.
+        \end{equation*}
+        \item By definition of the division operator;
+        \begin{align*}
+            \frac{a}{b} &= a b^{-1}\,.
+        \end{align*}
+            Let $a=1$,
+        \begin{align*}    
+            \frac{1}{b} &= b^{-1}\,.
+        \end{align*}
+    \end{enumerate}
+\end{proof}
 
 \fullpageboxline
+\begin{problem}
+    Show $(-a)(-b) = ab$.
+\end{problem}
 
+\fullpageboxline
+\begin{problem}
+    Show $\frac{ac}{bc} = \frac{a}{b}$.
+\end{problem}
+
+\fullpageboxline
+\begin{problem}
+    Show $\frac{a}{b} - \frac{c}{d} = \frac{ad - bc}{bd}$.
+\end{problem}
+
+\fullpageboxline
+\begin{problem}
+    Show $\frac{a}{b} \div \frac{c}{d}$
+\end{problem}
+
+\fullpageboxline
+\begin{problem}
+Suppose $F$ is an ordered field and $a, b, c, d \in F$. Prove that if $a < b$ and $c \le d$, then $a + c < b + d$.
+\end{problem}
+
+\fullpageboxline
+\begin{problem}
+Suppose $F$ is an ordered field and $a, b, c, d \in F$. Prove that if $0 \le a < b$ and $0 < c \le d$, then $ac < bd$.
+\end{problem}
+
+\fullpageboxline
+\begin{problem}
+Suppose $F$ is an ordered field and $a, b \in F$. Prove that if $a < b$ and $ab > 0$, then $a^{-1} > b^{-1}$.
+\end{problem}
+
+\fullpageboxline
+\begin{problem}
+Prove that if $a$ and $b$ are elements of an ordered field, then $|ab| = |a|\,|b|$.
+\end{problem}
+
+\fullpageboxline
+\begin{problem}
+Prove that if $a$ and $b$ are elements of an ordered field, then
+\[
+\bigl|\,|a| - |b|\,\bigr| \le |a - b|.
+\]
+\end{problem}
+
+\fullpageboxline
+\begin{problem}
+Prove that every ordered field has at most one positive element whose square equals $2$ (where $2$ is defined to be $1 + 1$).
+\end{problem}
+
+\fullpageboxline
+\begin{problem}
+Suppose $F$ is an ordered field. Prove that there does not exist $i \in F$ such that $i^2 = -1$. (Thus the set of complex numbers, with its usual operation of multiplication, cannot be made into an ordered field.)
+\end{problem}
+
+\fullpageboxline
+\begin{problem}
+Suppose $F$ is the field of rational functions with coefficients in $\mathbf{R}$. This means that an element of $F$ has the form $\dfrac{p}{q}$, where $p$ and $q$ are polynomials with real coefficients and $q$ is not the $0$ polynomial. Rational functions $\dfrac{p}{q}$ and $\dfrac{r}{s}$ are declared to be equal if $ps = rq$, and addition and multiplication are defined in $F$ as you would naturally assume.
+\begin{enumerate}
+  \item[(a)] Let $P$ denote the subset of $F$ consisting of rational functions that can be written in the form $\dfrac{p}{q}$, where the highest order terms of $p$ and $q$ both have positive coefficients. Show that $F$ is an ordered field with this definition of $P$.
+  \item[(b)] Show that $F$, with $P$ defined as above, is not a complete ordered field.
+\end{enumerate}
+\end{problem}
+\clearpage
 \section{The Real Number System}
 
 The real numbers are defined by a set of axioms. There are various ways to treat this. I am going to just state all of the properties upfront and then proceed with the consequences of their existence. 
