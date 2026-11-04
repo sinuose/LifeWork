@@ -484,21 +484,68 @@ This is actually enough to define the real numbers.
 \begin{problem}
     Show $(-a)(-b) = ab$.
 \end{problem}
+\begin{proof}
+    The proof assumes the above problems. Start with the multiplicative null and use the distributive property;
+    \begin{align*}
+        ab0 &= 0\,,\\
+        ab(1 + (-1)) &= 0\,, \\
+        ab + (-1)ab &= 0\,. \\
+    \end{align*}
+    By the distributive property of multiplication, we can add the inverse of $(-1)ab$ and equate both sides such that each combination agrees with the proof.
+    \begin{align*}
+        ab &= (-1)(-1a)(b)\,,\\
+           &= (-1)(a)(-1b)\,,\\
+           &= (-1a)(-1b)\,.\\
+    \end{align*}
+    Thus, using a previous result, we have shown that
+    \begin{equation*}
+        ab = (-a)(-b)\,.
+    \end{equation*}
+\end{proof}
 
 \fullpageboxline
 \begin{problem}
     Show $\frac{ac}{bc} = \frac{a}{b}$.
 \end{problem}
+\begin{proof}
+    This proof uses the distributive property of the multiplication. Suppose that $ac = x$ and $bc = y$. The fraction then becomes that $\frac{x}{y} = \frac{a}{b}$. However, this is equivalent to the multiplication of inverses $xy^{-1} = a b^{-1}$. Then, we can expand and use the property of inverse distributivity:
+    \begin{align*}
+        (ac)(bc)^{-1} &= (ac)(b^{-1})(c^{-1})\,, \\
+        &= ab^{-1}cc^{-1}\,, \\
+        &= a b^{-1}\,,\\
+        &= \frac{a}{b}\,.
+    \end{align*}
+\end{proof}
 
 \fullpageboxline
 \begin{problem}
     Show $\frac{a}{b} - \frac{c}{d} = \frac{ad - bc}{bd}$.
 \end{problem}
+\begin{proof}
+    \begin{align*}
+        \frac{a}{b} - \frac{c}{d} &= a b^{1} - c d^{-1}\,, \\
+        &= a b^{-1} d d^{-1} -  c d^{-1} b b^{-1}\,, \\
+        &= (a  d - c b)b^{-1}d^{-1}\,, \\
+        &= \frac{ad-bc}{bd}\,.
+    \end{align*}
+\end{proof}
+
 
 \fullpageboxline
 \begin{problem}
-    Show $\frac{a}{b} \div \frac{c}{d}$
+    Show $\frac{a}{b} \div \frac{c}{d} = \frac{ad}{bc}$.
 \end{problem}
+\begin{proof}
+    Let $x = \frac{a}{b}, y = \frac{c}{d}$. The fraction is written as;
+    \begin{align*}
+        \frac{a}{b}\div \frac{c}{d} &= x \div y\,, \\
+         &= \frac{x}{y}\,, \\
+        &= x y^{-1}\,,\\ &
+        = a b^{-1} c^{-1}(d^{-1})^{-1}\,, \\
+        &= a b^{-1} c^{-1} d\,, \\
+        &= \frac{ad}{bc}\,.
+    \end{align*}
+\end{proof}
 
 \fullpageboxline
 \begin{problem}
