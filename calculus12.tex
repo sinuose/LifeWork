@@ -551,21 +551,54 @@ This is actually enough to define the real numbers.
 \begin{problem}
 Suppose $F$ is an ordered field and $a, b, c, d \in F$. Prove that if $a < b$ and $c \le d$, then $a + c < b + d$.
 \end{problem}
+\begin{proof}
+    Since $a < b$, then $a + c < b + c$. However, since, $c \leq d$, $b + c \leq b + d$. Thus, 
+    \begin{equation*}
+        a + c < b +c < b  + d\,.
+    \end{equation*}
+    Thus, we have shown that as long as $ b \neq 0$,
+    \begin{equation*}
+        a + c < b + d\,.
+    \end{equation*}
+\end{proof}
 
 \fullpageboxline
 \begin{problem}
 Suppose $F$ is an ordered field and $a, b, c, d \in F$. Prove that if $0 \le a < b$ and $0 < c \le d$, then $ac < bd$.
 \end{problem}
+\begin{proof}
+    Since $0 \leq a < b$, $0 \leq ac < bc$. Similarly, $0 < c \leq d$, $0 < bc \leq bd$. Since $bc \leq bd$, we have that $ac < bc < bd$. Thus, by the transitivity of $F$, we have that 
+    \begin{equation*}
+        ac < bd\,.
+    \end{equation*}
+\end{proof}
 
 \fullpageboxline
 \begin{problem}
 Suppose $F$ is an ordered field and $a, b \in F$. Prove that if $a < b$ and $ab > 0$, then $a^{-1} > b^{-1}$.
 \end{problem}
+\begin{proof}
+    Writing out the definition of the inverse, we find that $a < b$, which is equivalent to 
+    \begin{equation*}
+        \frac{1}{a^{-1}} < \frac{1}{b^{-1}}\,.
+    \end{equation*}
+    Multiplying by the product $a^{-1}b^{-1}$ on both sides, we find the relation
+    \begin{equation*}
+        \frac{a^{-1}b^{-1}}{a^{-1}} < \frac{a^{-1}b^{-1}}{b^{-1}}\,.
+    \end{equation*}
+    Thus, dividing out terms using a prior arithmetic rule, we find that 
+    \begin{equation*}
+        b^{-1} < a^{-1},\quad a < b\,.
+    \end{equation*}
+\end{proof}
 
 \fullpageboxline
 \begin{problem}
 Prove that if $a$ and $b$ are elements of an ordered field, then $|ab| = |a|\,|b|$.
 \end{problem}
+\begin{proof}
+    For the reader.
+\end{proof}
 
 \fullpageboxline
 \begin{problem}
@@ -574,16 +607,38 @@ Prove that if $a$ and $b$ are elements of an ordered field, then
 \bigl|\,|a| - |b|\,\bigr| \le |a - b|.
 \]
 \end{problem}
+\begin{proof}
+    For the reader.
+\end{proof}
 
 \fullpageboxline
 \begin{problem}
 Prove that every ordered field has at most one positive element whose square equals $2$ (where $2$ is defined to be $1 + 1$).
 \end{problem}
+\begin{proof}
+    Suppose that $a^2 = 2$ and $b^2 = 2$. Then, subtract the two relations:
+    \begin{equation*}
+        a^2 - b^2 = 0\,.
+    \end{equation*}
+    Completing the square, we find that;
+    \begin{equation*}
+        (a + b)(a - b) = 0\,.
+    \end{equation*}
+    Since we assume that these elements are positive, we find that $a + b$ must be greater than zero.  Thus, the equality $a - b = 0$ must hold true, which implies that 
+    \begin{equation*}
+        a = b.
+    \end{equation*}
+\end{proof}
 
 \fullpageboxline
 \begin{problem}
 Suppose $F$ is an ordered field. Prove that there does not exist $i \in F$ such that $i^2 = -1$. (Thus the set of complex numbers, with its usual operation of multiplication, cannot be made into an ordered field.)
 \end{problem}
+\begin{proof}
+    Citing the statement that if $a,b \in P$ then $ab \in P$. In addition, if $a \in F$, then at $a \in P$, or $-a \in P$, or $a = 0$ must be true. 
+
+    Looking at $i^2 = -1$, it is clear that if $i$ is in $F$ it must belong in some category. By definition, $-1 \notin P$, so we assume that $i \notin P$. However, this implies by the above definition that $-i \in P$. However, $(-i)(-i) = i^2 = -1$. This statement contradicts the definition, which implies that $i$ cannot be in the ordered set as neither $i$ nor $-i$ are in the set $P$. 
+\end{proof}
 
 \fullpageboxline
 \begin{problem}
@@ -596,9 +651,17 @@ Suppose $F$ is the field of rational functions with coefficients in $\mathbf{R}$
 \clearpage
 \section{The Real Number System}
 
-The real numbers are defined by a set of axioms. There are various ways to treat this. I am going to just state all of the properties upfront and then proceed with the consequences of their existence. 
+The properties of the real number system are taken as axioms, or as a result of the real numbers being defined as a complete, ordered field. 
 
-\subsection{Axioms and Order}
+\begin{definition}
+    \begin{itemize}
+        \item An ordered field $F$ is called complete if every nonempty subset of $F$ that has an upper bound has a least upper bound.
+        \item The symbol $\mathbb{R}$ denotes a complete ordered field.
+        \item $\mathbb{R}$ is called the field of real numbers.
+    \end{itemize}    
+\end{definition}
+
+\subsection{Axiomatic treatment}
 
 \begin{theorem}
     \label{thm:realnumber}
@@ -753,6 +816,47 @@ The consequences of the LUB are listed;
         Thus, We have that $|x - \frac{n}{N}| < a$
     \end{proof}
 \end{enumerate}
+
+\subsection{Supremum and Infimum}
+The least upper bound and greatest upper bound properties are useful to show completeness. These are defined below.
+\begin{definition}
+    The supremum is defined as the following 
+    \begin{equation}
+        \sup A = \begin{cases}
+            \mathrm{LUB}(A) & \text{if $A$ has an upper bound and is not 
+            $\emptyset$.} \\
+            \infty & \text{if $A$ does not have an upper bound.}\\
+            -\infty & \text{if $A = \emptyset$.}
+        \end{cases}
+    \end{equation}
+    Similarily, the infimum is defined as 
+    \begin{equation}
+        \inf A = \begin{cases}
+            \mathrm{GLB}(A) & \text{if $A$ has a lower bound and is not 
+            $\emptyset$.} \\
+            -\infty & \text{if $A$ does not have a lower bound.}\\
+            \infty & \text{if $A = \emptyset$.}
+        \end{cases}
+    \end{equation}
+\end{definition}
+
+\subsection{Irrational numbers}
+The existence of irrational numbers can be shown by the existence of a positive number whose square is 2. 
+\begin{problem}
+    Show the real numbers contains a number whose square is 2. 
+\end{problem}
+\begin{proof}
+    Let $b = \sup\{a\in \mathbb{R}: a^2 < 2\}$. 
+    \begin{itemize}
+        \item if $b^2 < 2$, we can find a number in $\{a\in \mathbb{R}: a^2 < 2\}$ that is slightly larger than $b$ which contradicts the definition of $b$. 
+        \item if $b^2 > 2$, we can find a number in $\{a\in \mathbb{R}: a^2 < 2\}$ that is slightly smaller than $b$ that is an upper bound, which is again, a contradiction.
+    \end{itemize}
+    Thus, this definition of $b$ is a number whose square is $2$ and is written as $\sqrt{2}$.
+\end{proof}
+
+
+\section{Misc Math. at this time}
+
 \subsection{Decimals}
 For a given set of integers, $a_1, a_2, \dots a_n \in \{0, 1, 2, \dots, 9\}$, we can write the decimal representation as \[a_0.a_1a_2a_3\dots = \frac{a_0}{10^0} +\frac{a_1}{10^1} + \frac{a_2}{10^2} + \dots + \frac{a_n}{10^n}\]
 

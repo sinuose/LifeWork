@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1793720397.94679 "main.bcf" "main.bbl" "main" 1793721410.099 0
-  "main.bcf" 1793721409.97017 108629 ccc166f4e652466e5a5b494189689441 "pdflatex"
+["biber main"] 1793720397.94679 "main.bcf" "main.bbl" "main" 1793838454.08067 0
+  "main.bcf" 1793838453.94312 108629 ccc166f4e652466e5a5b494189689441 "pdflatex"
   "references.bib" 1790032005.81243 606 d3bfbe008f5a24d936c61d77efde0d7f ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1793721408.11882 "/Users/korsk/Documents/Github/LifeWork/main.tex" "main.pdf" "main" 1793721410.09927 0
+["pdflatex"] 1793838452.04592 "/Users/korsk/Documents/Github/LifeWork/main.tex" "main.pdf" "main" 1793838454.08094 0
   "/Users/korsk/Documents/Github/LifeWork/main.tex" 1790374210.48246 1088 3f14bbfbdf335c7a9f98c2fe2f5a10d8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -171,7 +171,7 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1753406041 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1741450574 3345740 46b66fdb0378f7bf5921b5eabf1762b8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "calculus12.tex" 1793721406.97535 50630 29cd311f67a77081c9481e441db30604 ""
+  "calculus12.tex" 1793838450.81047 54942 35facc6e6af232853d10ca4f151ab992 ""
   "compsci.tex" 1793314808.14995 13454 17d0d7a4ade462b1f3ad98e79e719d6e ""
   "electromagnetism.tex" 1775615794.2229 2811 97ac17f8a2604cd39c32e7c83c85b15a ""
   "figures/machine-shop/a3_martin.pdf" 1790034201.24866 640036 8c2a6aff5d867a34fb2962dacfd89d3f ""
@@ -189,9 +189,9 @@
   "figures/set_theory/function-mapping.pdf" 1780638387.08557 20945 052bef2e888363c9a654ed95a8cb5dbf ""
   "image_analysis.tex" 1774549051.54176 5415 e816ae4aacec89a35b474bc188555ded ""
   "machineshop.tex" 1790034311.0738 7303 6c9c93a158d95edc0c1e6a25b97dc376 ""
-  "main.aux" 1793721409.96824 16733 085473951a41242ad062cbbff7a00411 "pdflatex"
+  "main.aux" 1793838453.94059 17080 e3e8d0f31afd38bf4205a5c3b920b589 "pdflatex"
   "main.bbl" 1793720548.25254 3482 b3a996674007d70083574b3fce460572 "biber main"
-  "main.run.xml" 1793721409.9708 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
+  "main.run.xml" 1793838453.94422 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
   "main.tex" 1790374210.48246 1088 3f14bbfbdf335c7a9f98c2fe2f5a10d8 ""
   "measure_theory.tex" 1792596341.64577 39937 ebec8f5991050556611dd1dab11359db ""
   "mjbook.sty" 1781290443.36622 1086 63158194559b1079f4e3a595a462da66 ""
