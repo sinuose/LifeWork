@@ -854,6 +854,41 @@ The existence of irrational numbers can be shown by the existence of a positive 
     Thus, this definition of $b$ is a number whose square is $2$ and is written as $\sqrt{2}$.
 \end{proof}
 
+\subsection{Problems}
+\begin{problem}
+    Prove or give a counterexample: Suppose
+$a_1, a_2, a_3, \dots$ is a sequence of rational numbers such that
+\[
+  \sup\{a_1, a_2, a_3, \dots\} = \sqrt{2}.
+\]
+Then
+\[
+  \sup\{a_n, a_{n+1}, a_{n+2}, \dots\} = \sqrt{2}\,,
+\]
+for every positive integer $n$.
+\end{problem}
+\begin{proof}
+    If the sequence is bounded from above starting from $n=1$, then the claim suggests that for all proceeding integers, the bound must be true. 
+
+    By contradiction, assume that this is false, specifically, that the supremum of a proceeding subsequence is smaller or larger than the full sequence. A counter-example to this is the sequence
+    \begin{equation*}
+        (A) = \begin{cases}
+            \frac{1}{n} & \text{$n$ is even}\,, \\
+            \sqrt{2} & \text{$n$ is odd}\,. \\
+        \end{cases}
+    \end{equation*}
+    This sequence obeys the original statement, and clearly shows that any subsequence $n \gg 1$ has a supremum of $\sqrt{2}$.
+\end{proof}
+\fullpageboxline
+\begin{problem}
+    Let the non-empty sets $A, B \subset \mathbb{R}$. Show that \begin{equation*}
+        \sup(A + B) = \sup(A) + \sup(B)\,.
+    \end{equation*}
+\end{problem}
+\begin{proof}
+    Define the set addition $A + B = \{a + b: a \in A, b \in B\}$. Let $A$ be bounded from above by $\alpha = \sup{A}$ and $\beta = \sup B$.
+\end{proof}
+\fullpageboxline
 
 \section{Misc Math. at this time}
 
